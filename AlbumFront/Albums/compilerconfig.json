@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "CssExtra/css.css",
+    "inputFile": "CssExtra/css.less"
+  },
+  {
+    "outputFile": "CssExtra/TreeViewPretty.css",
+    "inputFile": "CssExtra/TreeViewPretty.less"
+  },
+  {
+    "outputFile": "CssExtra/TreeViewSimple.css",
+    "inputFile": "CssExtra/TreeViewSimple.less"
+  }
+]

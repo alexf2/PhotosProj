@@ -1,0 +1,100 @@
+﻿body
+{
+	SCROLLBAR-FACE-COLOR: #EAEAF8; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #f6f6fc;
+	SCROLLBAR-3DLIGHT-COLOR: #CECEEE;
+	SCROLLBAR-ARROW-COLOR: #5454B8;
+	SCROLLBAR-TRACK-COLOR: #F0F0F0;
+	SCROLLBAR-DARKSHADOW-COLOR: #CECEEE;
+	BACKGROUND-COLOR: #f6f6fc;
+	color:black;	
+	
+	/*height:auto !important; min-height:100%; height:100%;  position: relative*/
+	
+	padding: 10px;
+	position: relative;
+
+	min-height: 100%;
+    height: 100%;
+    border: 0;
+	/*background: #800000;*/
+
+box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html 
+{
+	margin:0; padding:0;	
+	width: 100%;
+    height: 100%;            
+   
+}
+
+* {margin:0; padding:0;}
+
+
+.container 
+{	
+    height: 100%; /* для IE6 */
+    min-height: 100%;    
+    
+    
+    overflow: hidden;
+    float: left; /* IE 5.01 */
+    float/**/: none;
+    
+    border-color: #B0B0E7;
+	border-width: 1px;
+	border-style: solid;
+	
+	position: relative;
+
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.header
+{
+	background-color: blue;
+	left: 0;
+	width: 100%;
+	height: 1.5em;	
+	position: relative;
+}
+
+.left
+{
+	background-color: gray;
+	width: 20%;
+	float: left;
+	height:80%;	
+	position: relative;
+}
+
+.right
+{
+	background-color: red;
+	width: 80%;
+	float: right;	
+	height:80%;
+	position: relative;
+}
+
+.footer
+{
+	background-color: green;
+	
+	width: 100%;
+	height: 1.5em;
+	position: relative;
+	left:0;
+	bottom: 0;
+
+box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}

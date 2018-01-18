@@ -1,0 +1,32 @@
+[
+  {
+    "outputFileName": "Scripts/BrowserDetect.js",
+    "inputFiles": [
+      "Scripts/BrowserDetect.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/commonUtils.js",
+    "inputFiles": [
+      "Scripts/commonUtils.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/EventInterop.js",
+    "inputFiles": [
+      "Scripts/EventInterop.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/Master.js",
+    "inputFiles": [
+      "Scripts/Master.js"
+    ]
+  },
+  {
+    "outputFileName": "Scripts/MemberHandlerAdapter.js",
+    "inputFiles": [
+      "Scripts/MemberHandlerAdapter.js"
+    ]
+  }
+]

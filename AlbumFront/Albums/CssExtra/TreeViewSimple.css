@@ -1,0 +1,42 @@
+﻿.SampleTreeView div.AspNet-TreeView ul li {
+  white-space: nowrap;
+  padding: 3px 0 2px 0;
+}
+.SampleTreeView div.AspNet-TreeView ul ul {
+  margin: 2px 0 2px 10px;
+}
+.SampleTreeView div.AspNet-TreeView ul li img {
+  border: none;
+  vertical-align: middle;
+  margin: 0 2px 0 0;
+}
+.SampleTreeView div.AspNet-TreeView li a {
+  text-decoration: none;
+}
+.SampleTreeView div.AspNet-TreeView li.AspNet-TreeView-Leaf {
+  margin-left: 18px;
+}
+.SampleTreeView div.AspNet-TreeView .AspNet-TreeView-ClickableNonlink {
+  cursor: pointer;
+}
+.SampleTreeView div.AspNet-TreeView .AspNet-TreeView-Collapse {
+  background: url(collapse.gif) 0 -2px no-repeat;
+  width: 15px;
+  float: left;
+  cursor: pointer;
+}
+.SampleTreeView div.AspNet-TreeView .AspNet-TreeView-Expand {
+  background: url(expand.gif) 0 -2px no-repeat;
+  width: 15px;
+  float: left;
+  cursor: pointer;
+}
+.SampleTreeView .AspNet-TreeView-Selected {
+  background-color: #FAFAD2 !important;
+}
+.SampleTreeView .AspNet-TreeView-ChildSelected {
+  background-color: #F5FFFA !important;
+}
+.SampleTreeView .AspNet-TreeView-ParentSelected {
+  background-color: #FFE4E1 !important;
+}

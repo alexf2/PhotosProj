@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test layout</title>
+
+    <link rel="stylesheet" type="text/css" href="CssExtra/normalize.css" />
+
+    <style type="text/css">
+        body {
+            SCROLLBAR-FACE-COLOR: #EAEAF8;
+            SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+            SCROLLBAR-SHADOW-COLOR: #f6f6fc;
+            SCROLLBAR-3DLIGHT-COLOR: #CECEEE;
+            SCROLLBAR-ARROW-COLOR: #5454B8;
+            SCROLLBAR-TRACK-COLOR: #F0F0F0;
+            SCROLLBAR-DARKSHADOW-COLOR: #CECEEE;
+            BACKGROUND-COLOR: #f6f6fc;
+
+            color: black;
+
+            margin: 0;
+            padding: 8px 11px 11px 8px; /*top right bottom left*/
+        }
+
+        html {
+            width: 100%;
+            height: 100%;            
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /*height: auto !important;*/
+            min-height: 100%;
+            height: 100%;
+            border: 0;
+
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        /* IE7 Fix */
+        * html .MainContainer {
+            display: table;
+            height: 100%;
+        }
+
+        /* Opera Fix */
+        body:before {
+            content: "";
+            height: 100%;
+            float: left;
+            width: 0;
+            margin-top: -32767px;
+        }
+
+        .MainContainer {
+            border: 2px solid #B0B0E7;
+            margin: 0 auto; /*top, right*/
+            width: 100%;
+            /*height: auto !important;*/
+            height: 100%;
+            min-height: 100%;
+
+            /*overflow: hidden !important;*/ /*закомментить для отладки*/
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -khtml-border-radius: 4px;
+
+            border-radius: 4px;
+            padding-bottom: 70px; /*компенсирует высоту хидера и футера в сумме: для этого они должны быть фиксированными*/
+
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        .MainHeader {
+            border-bottom: 1px solid #B0B0E7;
+            vertical-align: middle;
+            padding: 1px 4px 2px 4px;
+            text-align: left;
+            font-size: 1pt;
+            
+            width: 100%;
+            height: 28px; /*фиксируем высоту, чтобы скомпенсировать height 100% у средней резиновой строки пэддингоом*/
+
+
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        .MainContent {
+            height: 100%;
+            width: 100%;                        
+        }
+
+        .MainFooter {
+            border-top: 1px solid #B0B0E7;
+            padding: 4px;
+            width: 100%;
+            height: 42px; /*высота фиксированная, чтобы знать сколько вычитать из высоты MainContent: вычитание будет за счёт пэддинга MainContainer*/
+            clear: both; /*на всякий случай*/
+
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+
+            position: relative; /*чтобы рамка футера лежала поверх остального*/
+        }
+
+        div.TreePane {
+            padding: 0;
+            vertical-align: top;
+            padding-top: 4px;
+            height: 100%;
+            width: 20%;
+            border-right: 1px solid #B0B0E7;
+            
+            overflow: auto;
+            overflow-x: auto;
+            overflow-y: auto;
+            
+            float: left;
+
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+
+        div.ImagePane {
+            padding-top: 2px;
+            padding-right: 4px;
+            padding-left: 4px;
+            padding-bottom: 0;
+            vertical-align: top;
+            text-align: center;
+            height: 100%;
+
+            overflow-x: auto;
+
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        
+
+        .CopDiv {
+            width: 100%;
+            text-align: center;
+            font-family: Tahoma;
+            font-size: 10pt;
+            color: #4444aa;
+        }
+
+    </style>
+</head > 
+
+<body>
+    <form id="form1" style="height: 100%;">
+
+        <div class="MainContainer" role="main">
+            <header class="MainHeader">
+                <img alt="" src='images/Home.png' style="margin-left: 0.5em; margin-top:5px" /><span style="font-size: medium">&nbsp;&nbsp;&nbsp;Some Header</span>
+            </header>
+
+            <article class="MainContent">
+                <div id="idDivLeft" class="TreePane">
+                    <div style="padding: 6px 12px 6px 12px">
+                        1 Some Text<br />
+                        2 Some Text<br />
+                        3 Some Text<br />
+                        4 Some Text<br />
+                        5 Some Text<br />
+                        6 Some Text<br />
+                        7 Some Text<br />
+                        8 Some Text<br />
+                        9 Some Text<br />
+                        10 Some Text<br />
+                        11 Some Text<br />
+                        12 Some Text<br />
+                        13 Some Text<br />
+                        14 Some Text<br />
+                        15 Some Text<br />
+                        16 Some Text<br />
+                        17 Some Text<br />
+                        18 Some Text<br />
+                        19 Some Text<br />
+                        20 Some Text<br />
+                    </div>
+                </div>
+
+                <div id="idTdRight" class="ImagePane">
+
+                    
+
+                        <div style="display: inline-block">
+                            <br />
+                            <img width="153" height="91" title="0:44:03" class="ImagePhotoFld" alt="0:44:03" src="images/folder2.gif">&nbsp;
+                            <img width="153" height="91" title="0:44:03" class="ImagePhotoFld" alt="0:44:03" src="images/folder2.gif">&nbsp;
+                            <img width="153" height="91" title="0:44:03" class="ImagePhotoFld" alt="0:44:03" src="images/folder2.gif">
+                        </div>
+
+                    
+
+                    </div>
+            </article>
+
+            <footer class="MainFooter">
+                <div class="CopDiv">Some footer line 1<br />Some footer line 2</div>
+            </footer>            
+       </div>
+
+        
+    </form>
+</body> 
+
+</html>
+ 

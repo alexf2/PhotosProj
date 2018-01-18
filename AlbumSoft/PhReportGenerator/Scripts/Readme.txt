@@ -1,0 +1,1 @@
+﻿my.helpers.js надо положить в ../LightBox/

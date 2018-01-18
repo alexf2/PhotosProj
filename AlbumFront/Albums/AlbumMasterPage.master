@@ -1,0 +1,203 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="AlbumMasterPage" Codebehind="AlbumMasterPage.master.cs" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="yandex-verification" content="6abd2b78b2a7f6c7" />
+    
+    <title><asp:Localize runat = "server" meta:resourcekey = "TitleMaster">Photoalbums</asp:Localize></title>    
+
+    <asp:PlaceHolder runat="server">
+        <% = Styles.Render("~/bundles/extra-css") %>
+        <% = Styles.Render("~/Scripts/LightBox/themes/classic/lightbox") %>
+        <!--[if IE 6]>
+            <% = Styles.Render("~/Scripts/LightBox/themes/classic/lightbox-ie6") %>
+        <![endif]-->
+        <% = Scripts.Render("~/bundles/jquery") %>
+        <% = Scripts.Render("~/bundles/myscripts") %>
+    </asp:PlaceHolder>
+
+    <script type="text/javascript" lang = "javascript" >
+        function onResize( e )
+        {    
+            posDiv( document.getElementById("idTdLeft"), document.getElementById("idDivLeft") );
+            posDiv( document.getElementById("idTdRight"), document.getElementById("idDivRight") );
+        }
+        function posDiv( td, div )
+        {    
+            setWidth( div, getCliWidth(td) );
+            setHeight( div, getCliHeight(td) );
+        }
+        function setWidth( obj, v )
+        {
+            obj.style.width = v.toString() + "px";
+        }
+        function setHeight( obj, v )
+        {
+            obj.style.height = v.toString() + "px";    
+        }
+        function getCliWidth( obj )
+        {
+            return obj.clientWidth ? obj.clientWidth:obj.offsetWidth;
+        }
+        function getCliHeight( obj )
+        {
+            return obj.clientHeight ? obj.clientHeight:obj.offsetHeight;
+        }
+    </script>
+</head>
+
+<body id="idBody" runat="server" >
+    <iframe id="__historyFrame" style="display:none;" ></iframe> 
+    <form id="form1" runat="server" style="height: 100%">
+
+        <asp:ScriptManager ID="ScriptManagerMain" runat="server" ScriptMode="Auto" EnablePartialRendering="true" EnableCdn="true"
+			               EnableHistory="true" EnableSecureHistoryState="false" OnNavigate = "OnScmNavigateHistory" >
+            <%--Scripts>
+                <asp:ScriptReference Name="BrowserDetect" />
+                <asp:ScriptReference Name="commonUtils" />
+                <asp:ScriptReference Name="MemberHandlerAdapter" />
+                <asp:ScriptReference Name="EventInterop" />
+                <asp:ScriptReference Name="Master" />                
+            </Scripts--%>
+
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+
+                <asp:ScriptReference Name="WebFormsBundle" />
+            </Scripts>
+        </asp:ScriptManager>
+
+<%--asp:UpdatePanel ID="UpdTest" runat="server" UpdateMode = "Always">
+	<ContentTemplate>
+		<asp:Label id="L1" runat="server" EnableViewstate="false" /><asp:Label id="L2" runat="server" EnableViewstate="false" />
+	</ContentTemplate>
+</asp:UpdatePanel--%>
+
+        
+        <div class = "MainContainer" role="main">
+            <header class="MainHeader">
+                <table width="100%" border="0" style="table-layout:fixed; border-spacing:0; ">
+                    <colgroup>
+                        <col width = "20px" />
+                        <col />
+                        <col width = "*" />
+                    </colgroup>
+                    <tr>
+
+                <td class="VNowrap"><asp:ImageButton id="btnHome" ImageAlign="AbsMiddle" CssClass = "CHideFocus" hidefocus="true" runat="server"  ImageUrl = "~/images/Home.png" ToolTip = "Home" CommandName="home" meta:resourcekey="btnHomeResource1" /></td>
+
+                <td valign = "middle"><div style="float: left;"><asp:UpdatePanel ID="UpdSiteMap" runat="server" UpdateMode = "Always" class="BreadCrumbs">
+                    <ContentTemplate>                    
+					    <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="10pt"
+								    PathSeparator="->" meta:resourcekey="SiteMapPath1Resource1" 
+								    SiteMapProvider="" >
+						    <PathSeparatorStyle Font-Bold="True" ForeColor="#5D7B9D" />
+						    <CurrentNodeStyle ForeColor="#333333" />
+						    <NodeStyle Font-Bold="True" ForeColor="#7C6F57" />
+						    <RootNodeStyle Font-Bold="True" ForeColor="#5D7B9D" />
+					    </asp:SiteMapPath>
+				    </ContentTemplate>
+			    </asp:UpdatePanel></div><asp:UpdateProgress Visisble="false" ID="ProgressHdr" runat="server" DynamicLayout="false">                        
+				    <ProgressTemplate><img alt="" src='<%=ResolveClientUrl("~/images/preloader.gif") %>' style="margin-left: 8px; margin-top:5px" /></ProgressTemplate>
+			    </asp:UpdateProgress></td>
+
+                        <td class="VNowrap"   align = "right" style="font-size:10pt" ><asp:ImageButton id="btnRus" ImageAlign="AbsMiddle" CssClass = "CHideFocus" hidefocus="true" runat="server" ImageUrl =  "~/images/iRussia.gif"  ToolTip = "Russian" CommandName="ru" meta:resourcekey="btnRusResource1" />&nbsp;&nbsp;<asp:ImageButton id="btnEng" ImageAlign="AbsMiddle" CssClass = "CHideFocus" hidefocus="true" runat="server"  ImageUrl = "~/images/iUsa.gif" ToolTip = "English" CommandName="en" meta:resourcekey="btnEngResource1" /></td>
+                    </tr>
+                </table>
+            </header>
+
+            <article class="MainContent">
+
+                    <asp:Panel id="idDivLeft" runat="server" CssClass = "TreePane">
+
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode = "Always">
+                            <ContentTemplate><asp:TreeView ID="TreeView1" runat="server"
+                                NodeIndent="15" 
+                                
+                                ShowLines="True" DataSourceID="SiteMapDataSource1" ExpandDepth="1"
+                                OnSelectedNodeChanged="TreeView1_SelectedNodeChanged"
+                                OnAdaptedSelectedNodeChanged="TreeView1_SelectedNodeChanged"
+                                PathSeparator="~" meta:resourcekey="TreeView1Resource1"
+                                EnableViewState = "True"
+                                PopulateNodesFromClient = "True"                                
+                                EnableClientScript = "True"
+                                ImageSet="XPFileExplorer" SkinID ="SrcCodeViewerTree"
+                                CssSelectorClass="PrettyTree"
+                             >
+
+                                <ParentNodeStyle Font-Bold="False" />
+                            
+                                <SelectedNodeStyle BackColor="#B5B5B5" Font-Underline="False" HorizontalPadding="0px"
+                                    VerticalPadding="0px" />
+                                
+                                <NodeStyle  CssClass = "CTreeNode" NodeSpacing = "0px"/>
+
+                                <DataBindings>
+                                    <asp:TreeNodeBinding PopulateOnDemand = "True" DataMember="SiteMapNode" NavigateUrlField="Url" TextField="Title"
+                                        ToolTipField="Description" ValueField="Key" />
+                                </DataBindings>
+                            </asp:TreeView>
+						</ContentTemplate>
+						</asp:UpdatePanel>
+                    </asp:Panel>
+
+
+                <div id="idTdRight" class="ImagePane">
+                    
+                        <table id = "Table1" border="0" cellspacing = "0" cellpadding = "0" style="width:100%; height:100%; font-size:1pt;" >
+                        <tr height="10px">
+                            <td><asp:ImageButton id="btnHideTree" CssClass = "CHideFocus" hidefocus="true" runat="server" ImageUrl="~/images/ShowHideNavTree.gif"  ToolTip = "Hide/show left tree" CommandName="no" meta:resourcekey="btnHideTreeResource1" />&nbsp;&nbsp;&nbsp;&nbsp;
+								<asp:UpdatePanel ID="UpdButtons" runat="server" UpdateMode ="Always" RenderMode="Inline" >
+									<ContentTemplate>
+										<asp:ImageButton id="btnPrev" runat="server" CssClass = "CHideFocus" hidefocus="true" aws-url = "~/images/Prev.gif" aws-url-d = "~/images/Prev_d.gif" ToolTip = "Previous" CommandName="PrevNode" meta:resourcekey="btnPrevResource1"  />&nbsp;<asp:ImageButton id="btnNext" runat="server" CssClass = "CHideFocus" hidefocus="true" aws-url = "~/images/Next.gif" aws-url-d = "~/images/Next_d.gif" ToolTip = "Next"  meta:resourcekey="btnNextResource1" />&nbsp;&nbsp;&nbsp;&nbsp;<asp:ImageButton id="btnUp" runat="server" CssClass = "CHideFocus" hidefocus="true" aws-url = "~/images/Parent.gif" aws-url-d = "~/images/Parent_d.gif" ToolTip = "Up"  meta:resourcekey="btnUpResource1"  />
+									</ContentTemplate>
+								</asp:UpdatePanel>
+			    </td>
+			    <td style="text-align:right;">&nbsp;&nbsp;&nbsp;&nbsp;
+				<asp:Button  Text="Log off" id="btnLogOff" runat="server" CssClass = "CtlButtons" hidefocus="true"  ToolTip = "Log off"  meta:resourcekey="btnLogOffResource1" CommandName="logoff" />
+			    </td>
+                        </tr>
+			<tr>
+			  <td colspan = "2" style="padding-top: 2px; vertical-align: top; text-align: center; height:100%"  >
+			        											
+				<asp:UpdatePanel ID="UpdImage" runat="server" UpdateMode ="Always" class="RightImgPanel">
+					<ContentTemplate>
+						<asp:contentplaceholder id="idPhotosPlace" runat="server" />
+					</ContentTemplate>
+				</asp:UpdatePanel>
+														        
+			  </td>
+			</tr>
+                        </table>
+                </div>
+            </article>
+
+            <footer class="MainFooter">
+			    <div class="CopDiv" ><asp:Localize ID="Localize1" runat = "server" meta:resourcekey = "Copyright1">Photographics content: � 2006 - 2014 Aleksey Fedorov. All rights reserved.</asp:Localize><br /><asp:Localize ID="Localize2" runat = "server" meta:resourcekey = "Copyright2">AWS Photoalbums Web engine: � 2006 - 2014 Aleksey Fedorov. All rights reserved.</asp:Localize></div>				
+			</footer>
+        </div> <!-- Main -->
+
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" OnDataBinding="SiteMapDataSource1_DataBinding" EnableViewState = "True" SiteMapProvider="" />
+
+    </form>
+
+    <script type="text/javascript" language = "javascript" >    
+        //hookEventZero( document.getElementById("idMainTable"), "onresize", onResize );        
+    </script>
+    
+    
+</body>
+</html>

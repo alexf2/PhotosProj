@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "css/css-ext.css",
+    "inputFile": "css/css-ext.less"
+  },
+  {
+    "outputFile": "css/fonts.css",
+    "inputFile": "css/fonts.less"
+  }
+]

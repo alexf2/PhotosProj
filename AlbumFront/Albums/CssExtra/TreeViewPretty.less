@@ -1,0 +1,70 @@
+﻿.PrettyTree div.AspNet-TreeView {
+    ul {
+        li {
+          white-space: nowrap;
+          padding: 3px 0 2px 0;
+          font-size: small;
+          font-family: Tahoma;
+        }
+        ul {
+          margin: 2px 0 2px 10px;
+        }
+        li img {
+          border: none;
+          vertical-align: middle;
+          margin: 0 4px 0 0;
+        }
+    }
+    
+    li {
+        a {
+          text-decoration: none;
+        }
+        &.AspNet-TreeView-Leaf {
+          margin-left: 20px;
+        }
+    }
+          
+    /* Consider changing the cursor value (below) to something like */
+    /*     cursor: n-resize;                                        */
+    .AspNet-TreeView-ClickableNonlink {
+      cursor: pointer;
+    }
+    /* Consider changing the cursor value (below) to something like */
+    /*     cursor: n-resize;                                        */
+    .AspNet-TreeView-Collapse {
+      background: url(../images/collapse.gif) 0 0 no-repeat;
+      width: 15px;
+      margin-right: 5px;
+      float: left;
+      cursor: pointer;
+      font-family: Courier;
+      font-size: large;
+      line-height: 15px;
+    }
+    /* Consider changing the cursor value (below) to something like */
+    /*     cursor: n-resize;                                        */
+    .AspNet-TreeView-Expand {
+      &:extend(.PrettyTree div.AspNet-TreeView .AspNet-TreeView-Collapse);
+      background: url(../images/expand.gif) 0 0 no-repeat;      
+    }
+    
+    a, a:visited, a:link, a:active {
+      color: #00008B;
+    }
+    
+    .AspNet-TreeView-Selected {
+        a{
+          font-weight: bold !important;
+          /*color: #8A2BE2;*/
+        }
+        ul a {
+          font-weight: normal !important;
+          color: #00008B !important;
+        }
+    }    
+}
+
+.AspNet-TreeView-Hover {
+    color: #0000FB !important;
+}
