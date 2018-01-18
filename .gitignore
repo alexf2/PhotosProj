@@ -294,8 +294,8 @@ certreq.txt
 Demo.cer
 Logins.txt
 Content/
-Pub/
-!Pub/include/
+AlbumFront/Pub/*
+!AlbumFront/Pub/Include/
 counters.txt 
 Web.Release.config 
 
