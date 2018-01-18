@@ -1,7 +1,8 @@
 ﻿<%@ Page Language="C#"    
-    EnableEventValidation="True"            
+    EnableEventValidation="True"
     MasterPageFile = "~/OuterMasterPage.master"
-    MetaKeywords = "Aleksey Fedorov, Photography, Albums"
+    MetaKeywords = "Алексей Федоров, фотографии, альбомы, Одиссей, Крым, Адыгея, Греция, Италия, Норвегия, Исландия, Испания, Франция, Индия, Киргизия, Египет, Раджастан, Марокко, Сахара, США, Аризона, Юта, Невада, Мьянма, Бирма, Чехия, Словакия, Южная Моравия"
+    MetaDescription="Фотоальбомы Одиссея, экспедиции и автопробеги, отчеты"
     Culture="auto"  UICulture="auto" Title = "Ὀδύσσεια ---== Odyssey's Photos ==--- Ὀδύσσεια" %>
 
 <script language="c#" runat="server">
@@ -22,7 +23,7 @@
 
 <asp:Content ContentPlaceHolderID = "idIndicatorsInit" runat = "server" >    
 <!-- Rating@Mail.ru counter -->
-        <script type="text/javascript">
+        <script language="javascript1.1" type="text/javascript">
 //<![CDATA[
             var _tmr = _tmr || [];
             _tmr.push({ id: "2448879", type: "pageView", start: (new Date()).getTime() });

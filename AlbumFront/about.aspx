@@ -1,7 +1,8 @@
-﻿<%@ Page Language="C#"    
-    EnableEventValidation="True"      
-    MasterPageFile = "~/OuterMasterPage.master"      
-    MetaKeywords = "Aleksey Fedorov, Photography, Albums, About"
+﻿<%@ Page Language="C#"
+    EnableEventValidation="True"
+    MasterPageFile = "~/OuterMasterPage.master"
+    MetaKeywords = "Алексей Федоров, фотографии, альбомы, Одиссей, фотографии, 500px"
+    MetaDescription = "Об авторе"
     Culture="auto"  UICulture="auto" Title="About" %>
 
 <script language="c#" runat="server">

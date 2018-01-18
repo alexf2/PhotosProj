@@ -2,8 +2,9 @@
     enableViewState="True"  Title="Photos content page" EnableEventValidation="False"
     SmartNavigation="False" MaintainScrollPositionOnPostback = "True"
     MasterPageFile = "~/AlbumMasterPage.master"
-    EnableSessionState = "True" 
- Codebehind="PageGen.aspx.cs" %>
+    EnableSessionState = "True"
+    meta:resourcekey="PageResource1"
+    Codebehind="PageGen.aspx.cs" %>
 <%@Register  TagPrefix="fragment" TagName="PageGen" Src="PageGenCtl.ascx" %>
 
 <asp:Content ID = "idPhotosContent" ContentPlaceHolderID = "idPhotosPlace" runat = "server" >    

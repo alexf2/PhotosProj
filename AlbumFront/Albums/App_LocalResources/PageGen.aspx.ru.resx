@@ -117,55 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Login1Resource1.CreateUserText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Login1Resource1.FailureText" xml:space="preserve">
-    <value>Your login attempt was not successful. Please try again.</value>
-  </data>
-  <data name="Login1Resource1.HelpPageText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Login1Resource1.InstructionText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Login1Resource1.LoginButtonText" xml:space="preserve">
-    <value>Log In</value>
-  </data>
-  <data name="Login1Resource1.PasswordLabelText" xml:space="preserve">
-    <value>Password:</value>
-  </data>
-  <data name="Login1Resource1.PasswordRecoveryText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Login1Resource1.PasswordRequiredErrorMessage" xml:space="preserve">
-    <value>Password is required.</value>
-  </data>
-  <data name="Login1Resource1.RememberMeText" xml:space="preserve">
-    <value>Remember me next time</value>
-  </data>
-  <data name="Login1Resource1.TitleText" xml:space="preserve">
-    <value>Log In</value>
-  </data>
-  <data name="Login1Resource1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Login1Resource1.UserNameLabelText" xml:space="preserve">
-    <value>User Name:</value>
-  </data>
-  <data name="Login1Resource1.UserNameRequiredErrorMessage" xml:space="preserve">
-    <value>User Name is required.</value>
-  </data>
   <data name="PageResource1.MetaDescription" xml:space="preserve">
-    <value>Login page to photoalbums</value>
-  </data>
-  <data name="PageResource1.MetaKeywords" xml:space="preserve">
-    <value>Photoalbums, Aleksey Fedorov</value>
+    <value>Фотоальбомы Алексея Федорова</value>
   </data>
   <data name="PageResource1.Title" xml:space="preserve">
-    <value>Login page</value>
-  </data>
-  <data name="TitleLogin.Text" xml:space="preserve">
-    <value>Login page</value>
+    <value>Содержимое фотоальбомов</value>
   </data>
 </root>

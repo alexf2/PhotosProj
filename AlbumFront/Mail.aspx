@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="AlbumFront.Mail" 
     EnableEventValidation="True" Title="Contact page" 
-    EnableSessionState = "true" ViewStateMode = "Enabled" MetaKeywords = "Aleksey Fedorov, Contacts"
+    EnableSessionState = "true" ViewStateMode = "Enabled"
+    MetaDescription = "Форма для связи, почта"
+    MetaKeywords = "Алексей Федоров, контакты, форма связи"
     Culture="auto" meta:resourcekey="MailPageResource" UICulture="auto" Codebehind="Mail.aspx.cs" %>
 
 <script language="c#" runat="server">
@@ -23,7 +25,7 @@
 
 <asp:Content ContentPlaceHolderID = "idMainPls" runat = "server" >    
     
-    <script type="text/javascript">
+    <script language="javascript1.1" type="text/javascript">
      function mySubmit (el) {
          if (!Page_ClientValidate()) 
              return false;

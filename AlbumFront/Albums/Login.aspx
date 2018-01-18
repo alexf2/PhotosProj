@@ -8,10 +8,17 @@
 <!DOCTYPE html>
 
 
-<html>
+<html lang="<%=System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName%>">
 
 <head runat="server">
     <title><asp:Localize runat = "server" meta:resourcekey = "TitleLogin">Login page</asp:Localize></title>        
+
+    <link rel="icon" type="image/png" sizes="16x16" href="images/photo_album_blue.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="images/photo_album.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="images/photo_album.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="images/manifest.json">
+
     <asp:PlaceHolder runat="server">  
         <% = Styles.Render("~/bundles/extra-css") %>        
     </asp:PlaceHolder>

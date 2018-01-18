@@ -118,6 +118,8 @@
     <Content Include="img\Morocco2013RepThumb.jpg" />
     <Content Include="img\Norway2010RepThumb.jpg" />
     <Content Include="img\Norway2016Thumb.jpg" />
+    <Content Include="img\photo_album.png" />
+    <Content Include="img\photo_album_blue.png" />
     <Content Include="img\section_header.jpg" />
     <Content Include="img\section_header_bg.jpg" />
     <Content Include="img\section_header_bg_cap.jpg" />
@@ -139,6 +141,7 @@
     <Content Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
+    <Content Include="img\manifest.json" />
     <None Include="Properties\PublishProfiles\AlbumFront.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />

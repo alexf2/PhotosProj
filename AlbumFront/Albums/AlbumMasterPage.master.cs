@@ -272,17 +272,34 @@ public partial class AlbumMasterPage: System.Web.UI.MasterPage, IPostBackDataHan
     {
     }
 
-  
+    string GetKeywords()
+    {
+        var root = Provider.RootNode;
+        var bld = new StringBuilder();
+        if (root != null && root.HasChildNodes)
+        {
+            foreach (SiteMapNode node in root.ChildNodes)
+            {
+                if (bld.Length > 0)
+                    bld.Append(", ");
+                bld.Append(node.Title);
+            }
+        }
+        return bld.ToString();
+    }
 
     protected void Page_Load( object sender, EventArgs e )
     {
         SwitchSiteMapProvider( true );
 
         //if( !Page.IsCallback )
-            //SyncTree();
+        //SyncTree();
 
-        if( !Page.IsCallback )
-            Page.RegisterRequiresPostBack( this );        
+        if (!Page.IsCallback)
+        {
+            Page.RegisterRequiresPostBack(this);
+            Page.MetaKeywords = GetKeywords();
+        }
         
         //Membership.
 

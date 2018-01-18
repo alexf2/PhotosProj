@@ -21,6 +21,7 @@
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -135,6 +136,7 @@
     <Content Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
+    <Content Include="images\manifest.json" />
     <None Include="Properties\PublishProfiles\Albums.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="images\collapse.gif" />
@@ -148,6 +150,8 @@
     <Content Include="images\Next_d.gif" />
     <Content Include="images\Parent.gif" />
     <Content Include="images\Parent_d.gif" />
+    <Content Include="images\photo_album.png" />
+    <Content Include="images\photo_album_blue.png" />
     <Content Include="images\preloader.gif" />
     <Content Include="images\Prev.gif" />
     <Content Include="images\Prev_d.gif" />
@@ -279,6 +283,12 @@
     <Content Include="App_LocalResources\Login.aspx.ru.resx" />
     <Content Include="App_LocalResources\Mail.aspx.resx" />
     <Content Include="App_LocalResources\Mail.aspx.ru.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\PageGen.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\PageGen.aspx.ru.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
