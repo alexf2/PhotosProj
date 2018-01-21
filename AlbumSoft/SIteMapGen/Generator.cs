@@ -345,6 +345,12 @@ namespace Alexf.SiteMapGen
                 string shotInfo = info.GetShotCaption(true);
                 if (!string.IsNullOrEmpty(shotInfo))
                     el.SetAttribute("shot", shotInfo);
+
+                if (info.Latitude.HasValue)
+                {
+                    el.SetAttribute("lat", XmlConvert.ToString(info.Latitude.Value));
+                    el.SetAttribute("long", XmlConvert.ToString(info.Longitude.Value));
+                }
             }
 
             el.SetAttribute( "date", XmlConvert.ToString(dt, XmlDateTimeSerializationMode.Local) );

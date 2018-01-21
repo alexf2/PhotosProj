@@ -99,7 +99,7 @@ public partial class PageGenCtl: System.Web.UI.UserControl
         }
 
         if (!string.IsNullOrEmpty(item.Lat))
-            bld.Append($"&nbsp;&nbsp;<a href='https://www.google.com/maps/search/?api=1&query={item.Lat},{item.Long}'>(map)</a>");
+            bld.Append($"&nbsp;&nbsp;<a href=&quot;https://www.google.com/maps/search/?api=1&query={item.Lat},{item.Long}&quot;>(map)</a>");
 
         var shot = item.Shot;
 

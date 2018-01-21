@@ -215,22 +215,19 @@ public sealed class PhotoPageData
     [Serializable]
     public sealed class PhotoItem
     {
-        private String _title, _description, _url, _link, _dt, _lat, _long;
-        private Int32 _width = 0, _height = 0;
+        private String _title, _description, _url, _dt;
         private Int32 _maxWidth = 0, _maxHeight = 0;
-        private Boolean _isFolder = false;
-        private Boolean _isThumb = false;
 
         public PhotoItem( String title, String description, String url, String link, String dt, string underlyingImageUrl, string latitude = null, string longitude = null)
         {
             _title = title;
             _description = description;
             _url = url;
-            _link = link;
+            Link = link;
             _dt = dt;
             UnderlyingUrl = underlyingImageUrl;
-            _lat = latitude;
-            _long = longitude;
+            Lat = latitude;
+            Long = longitude;
         }
 
         internal void DetectSize( String realPath )
@@ -239,8 +236,8 @@ public sealed class PhotoPageData
             String url = realPath == null ? _url:realPath;
             using( System.Drawing.Image img = System.Drawing.Image.FromFile(pg.MapPath(url)) )
             {                
-                _width = img.Width;
-                _height = img.Height;
+                Width = img.Width;
+                Height = img.Height;
             }
         }
         internal static void CalculateMaxSize( ICollection coll )
@@ -258,25 +255,14 @@ public sealed class PhotoPageData
             }
         }
 
-        public Boolean IsFolder
-        {
-            get { return _isFolder; }
-            set { _isFolder = value; }
-        }
-        public Boolean IsThumb
-        {
-            get { return _isThumb; }
-            set { _isThumb = value; }
-        }
+        public Boolean IsFolder { get; set; }
+        
+        public Boolean IsThumb { get; set; }
 
-        public Int32 Width
-        {
-            get { return _width; }            
-        }
-        public Int32 Height
-        {
-            get { return _height; }            
-        }
+        public Int32 Width { get; private set; }
+        
+        public Int32 Height { get; private set; }
+        
         public Int32 MaxWidth
         {
             get { return _maxWidth; }
@@ -311,11 +297,7 @@ public sealed class PhotoPageData
         /// For thumbinal level keeps underlying image.
         /// </summary>
         public string UnderlyingUrl { get; private set; }
-        public String  Link
-        {
-            get { return _link; }
-            set { _link = value; }
-        }
+        public String Link { get; set; }
 
         public String DivWidth
         {
@@ -332,7 +314,7 @@ public sealed class PhotoPageData
         public String ImageClass
         {
             get{
-                return _isFolder ? "ImagePhotoFld":"ImagePhoto";
+                return IsFolder ? "ImagePhotoFld":"ImagePhoto";
             }
         }
         public String Date
@@ -341,8 +323,8 @@ public sealed class PhotoPageData
                 return _dt;
             }
         }
-        public string Lat { get; }
-        public string Long { get; }
+        public string Lat { get; private set; }
+        public string Long { get; private set; }
 
         public string Shot { get; set; }
     }
