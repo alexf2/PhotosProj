@@ -4,14 +4,22 @@
 
   <xsl:output method = "xml" indent = "yes" omit-xml-declaration = "yes" encoding = "UTF-8" />
     <xsl:param name = "title" />
+    <xsl:param name = "keywords" />
+    <xsl:param name = "description" />
+    <xsl:param name = "lang" />
 	
     <xsl:template match = "photos">
-      <html>
+<html lang="{$lang}">
     
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <xsl:if test = "$description">
+      <meta name="description" content="{$description}" />
+    </xsl:if>
+    <xsl:if test = "$keywords">
+      <meta name="keywords" content="{$keywords}" />
+    </xsl:if>
 		<title><xsl:value-of select="$title" /></title>
-
 
     <link rel="stylesheet" type="text/css" href="../LightBox/themes/classic/jquery.lightbox.css" />
     
@@ -21,53 +29,50 @@
     <![endif]-->
 ]]></xsl:text>
 
-    <xsl:text disable-output-escaping="yes"><![CDATA[<script type = "text/javascript" src = "http://code.jquery.com/jquery-1.10.2.min.js"></script>]]></xsl:text>
-    
-    <xsl:text disable-output-escaping="yes"><![CDATA[<script type = "text/javascript" src = "../LightBox/jquery.lightbox.min.js"></script>
-]]></xsl:text>
-    <xsl:text disable-output-escaping="yes"><![CDATA[<script type = "text/javascript" src = "../Include/my.helpers.js"></script>
-]]></xsl:text>
-
     <link rel="stylesheet" type="text/css" href="../Include/pub.css" />
-
-    <script type = "text/javascript">
-      var galeryOn = false;
-      if (getUrlVars()["noviewer"] != "1")
-      {
-          galeryOn = true;
-          jQuery(document).ready(
-            function($){
-              $('div#n a').lightbox({'move': false});
-          });
-      }
-
-      jQuery(document).ready(
-	      function($) {
-		      $('#chGal').prop('checked', galeryOn == true ? true:false);
-		      $('#chGal').on('change', switchGalery);
-	    });
-      
-      function switchGalery (e)
-	    {	
-	      e.stopPropagation();
-	      if (e.target.checked === false) {
-	         window.location.href = jQuery(window.location).attr('href').split(/\?/)[ 0 ] + '?noviewer=1';
-	      }
-	      else {
-	         window.location.href = jQuery(window.location).attr('href').split(/\?/)[ 0 ];
-	      }
-	    }
-    </script>
 	</head>
 
 	<body>
     <xsl:call-template name = "Controls" />
 		<xsl:apply-templates select = "f" />
+    <xsl:call-template name = "BootstrapScript" />
     <xsl:call-template name = "Counter" />
 	</body>
 </html>
 </xsl:template>
 
+  <xsl:template name = "BootstrapScript">
+    <xsl:text disable-output-escaping="yes"><![CDATA[<script type = "text/javascript" src = "http://code.jquery.com/jquery-1.10.2.min.js"></script>]]></xsl:text>
+    <xsl:text disable-output-escaping="yes"><![CDATA[<script type = "text/javascript" src = "../LightBox/jquery.lightbox.min.js"></script>]]></xsl:text>
+    <xsl:text disable-output-escaping="yes"><![CDATA[<script type = "text/javascript" src = "../Include/my.helpers.js"></script>]]></xsl:text>
+
+
+    <script type = "text/javascript">
+      var galeryOn = false;
+      (function($) {
+        if (getUrlVars()["noviewer"] !== "1")
+        {
+          galeryOn = true;
+          $('div#n a').lightbox({'move': false});
+        }
+      
+        function switchGalery (e)
+        {
+          e.stopPropagation();
+          if (e.target.checked === false) {
+            window.location.href = $(window.location).attr('href').split(/\?/)[ 0 ] + '?noviewer=1';
+          }
+          else {
+            window.location.href = $(window.location).attr('href').split(/\?/)[ 0 ];
+          }
+        }
+
+        $('#chGal').prop('checked', galeryOn == true ? true:false);
+        $('#chGal').on('change', switchGalery);
+      })(jQuery);
+    </script>
+  </xsl:template>
+  
   <xsl:template name = "Controls">
     <xsl:element name="input" >
       <xsl:attribute name = "type">checkbox</xsl:attribute>
@@ -138,7 +143,7 @@
     <xsl:param name="shot-info" />
 
 		<xsl:element name="a" >
-			<xsl:attribute name = "href"><xsl:value-of select="$pub-img" /></xsl:attribute>            
+			<xsl:attribute name = "href"><xsl:value-of select="$pub-img" /></xsl:attribute>
       <xsl:attribute name = "title">Publication Size</xsl:attribute>
       <xsl:attribute name = "data-rel">pub</xsl:attribute>
       <xsl:attribute name = "data-title">
@@ -181,13 +186,19 @@
   <xsl:template name = "FormatTitle">
     <xsl:param name="caption" />
     <xsl:param name="date" />
-    <xsl:param name="shot-info" />
+    <xsl:param name="shot-info" />    
 
     
     <xsl:if test="string-length($caption) > 0">
       <xsl:text disable-output-escaping="yes"><![CDATA[<b>]]></xsl:text>
       <xsl:value-of select="$caption" />
       <xsl:text disable-output-escaping="yes"><![CDATA[</b>]]></xsl:text>
+    </xsl:if>
+
+    <xsl:if test="string-length(@lat) > 0">
+      <xsl:text disable-output-escaping="yes"><![CDATA[&#160;&#160;<a href="https://www.google.com/maps/search/?api=1&query=]]></xsl:text>
+      <xsl:value-of select="concat(@lat, ',', @long)" />
+      <xsl:text disable-output-escaping="yes"><![CDATA[">(map)</a>]]></xsl:text>
     </xsl:if>
 
     <xsl:if test="(string-length($date) > 0 or string-length($shot-info) > 0) and string-length($caption) > 0">

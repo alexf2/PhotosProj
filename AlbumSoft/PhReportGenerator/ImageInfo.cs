@@ -9,6 +9,7 @@ namespace Alexf.PhotoUtils
         //basic
         public string Caption;
         public DateTime Shot;
+        public double? Latitude, Longitude, Altitude;
         public int W, H;
         public int FileSize;
         public bool FileNameIsUsed; //empty description/title/comment

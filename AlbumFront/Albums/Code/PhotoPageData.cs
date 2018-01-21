@@ -111,7 +111,7 @@ public sealed class PhotoPageData
                     }
 
                     PhotoItem item = new PhotoItem( node.Title, node.Description, 
-                        path, GetLink(node), GetDate(node["date"]), origPath
+                        path, GetLink(node), GetDate(node["date"]), origPath, node["lat"], node["long"]
                     );
                     item.DetectSize( realPath );
                     if( isImg == true )
@@ -215,13 +215,13 @@ public sealed class PhotoPageData
     [Serializable]
     public sealed class PhotoItem
     {
-        private String _title, _description, _url, _link, _dt;
+        private String _title, _description, _url, _link, _dt, _lat, _long;
         private Int32 _width = 0, _height = 0;
         private Int32 _maxWidth = 0, _maxHeight = 0;
         private Boolean _isFolder = false;
         private Boolean _isThumb = false;
 
-        public PhotoItem( String title, String description, String url, String link, String dt, string underlyingImageUrl )
+        public PhotoItem( String title, String description, String url, String link, String dt, string underlyingImageUrl, string latitude = null, string longitude = null)
         {
             _title = title;
             _description = description;
@@ -229,6 +229,8 @@ public sealed class PhotoPageData
             _link = link;
             _dt = dt;
             UnderlyingUrl = underlyingImageUrl;
+            _lat = latitude;
+            _long = longitude;
         }
 
         internal void DetectSize( String realPath )
@@ -339,6 +341,8 @@ public sealed class PhotoPageData
                 return _dt;
             }
         }
+        public string Lat { get; }
+        public string Long { get; }
 
         public string Shot { get; set; }
     }

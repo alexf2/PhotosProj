@@ -225,7 +225,9 @@ namespace Alexf.SiteMapGen
             
             _outDoc.DocumentElement.AppendChild( el );
 
-            generate( el, _pathToGather ); //генерирует Xml для одного уровня
+            DateTime? filesDt = generate( el, _pathToGather ); //генерирует Xml для одного уровня
+            if (filesDt.HasValue)
+                el.SetAttribute("date", XmlConvert.ToString(filesDt.Value, XmlDateTimeSerializationMode.Local));
 
             if (loadOldDescriptions(SiteMapFullName)) //забираем дескрипшены из старого файла (если он есть), а затем переписываем новым файлом            
                 File.Move(SiteMapFullName, SiteMapFullName + ".bak");
@@ -318,19 +320,14 @@ namespace Alexf.SiteMapGen
         /// <summary>
         /// Забираем данные из Exif'а
         /// </summary>        
-        static void setMetadata (XmlElement el, String path, Boolean isFolder)
+        static DateTime setMetadata (XmlElement el, String path, Boolean isFolder)
         {
             DateTime dt;
-            string targetObj = Path.Combine( path, el.GetAttribute("path2") );
+            var targetObj = Path.Combine( path, el.GetAttribute("path2") );
 
             ImageInfo info;
             if (isFolder)
-            {
-                var d1 = Directory.GetCreationTime(targetObj);
-                var d2 = Directory.GetLastWriteTime(targetObj);
-
-                dt = d1 < d2 ? d1 : d2;
-            }                    
+                dt = Directory.GetCreationTime(targetObj);
             else
             {
                 //dt = File.GetCreationTime(targetObj);
@@ -351,11 +348,14 @@ namespace Alexf.SiteMapGen
             }
 
             el.SetAttribute( "date", XmlConvert.ToString(dt, XmlDateTimeSerializationMode.Local) );
+
+            return dt;
         }
 
-        void generate (XmlNode parent, string path)
+        DateTime? generate (XmlNode parent, string path)
         {
-            int prefId = Math.Abs( _rootID );
+            var prefId = Math.Abs( _rootID );
+            DateTime? res = null;
             foreach (string dir in Directory.EnumerateDirectories(path)) //проходим по вложенным директориям
             {
                 XmlElement el = _outDoc.CreateElement( "siteMapNode", ROOT_URI );
@@ -363,12 +363,15 @@ namespace Alexf.SiteMapGen
                 el.SetAttribute( "url", prefId.ToString() + _currId++.ToString() );
                 el.SetAttribute( "path2", subj );
                 el.SetAttribute( "title", subj );
-                //el.SetAttribute( "description", "" );
                 setMetadata( el, path, true );
                 parent.AppendChild( el );
-                generate( el, dir ); //рекурсивно заполняем содержимым
+                DateTime? filesDt = generate( el, dir ); //рекурсивно заполняем содержимым
+                if (res == null || filesDt < res)
+                    res = filesDt;
+                if (filesDt.HasValue)
+                    el.SetAttribute("date", XmlConvert.ToString(filesDt.Value, XmlDateTimeSerializationMode.Local));
             }
-
+            
             foreach (string f in Directory.EnumerateFiles(path, "*.jpg").Union(Directory.EnumerateFiles(path, "*.jpeg")))
             {
                 if( _rxThumb.IsMatch(f) ) //пропускаем превьюшки
@@ -379,10 +382,13 @@ namespace Alexf.SiteMapGen
                 el.SetAttribute( "path2", subj );
                 el.SetAttribute( "title", Path.GetFileNameWithoutExtension(subj) );
                 el.SetAttribute("f", string.Empty); //маркер, что title взят из имени файла
-                //el.SetAttribute( "description", "" );
-                setMetadata( el, path, false );
+                DateTime dtCalc = setMetadata( el, path, false );
                 parent.AppendChild( el );
+                if (res == null || dtCalc < res)
+                    res = dtCalc;
             }
+
+            return res;
         }
 
         static void resportEx ( Exception ex )

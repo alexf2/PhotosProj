@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="ExifUtils.cs" />
     <Compile Include="ImageInfo.cs" />
+    <Compile Include="Metadata.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

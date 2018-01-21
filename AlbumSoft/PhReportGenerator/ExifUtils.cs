@@ -63,6 +63,11 @@ namespace Alexf.PhotoUtils
                     else                    
                         res.Shot = f.CreationTime < f.LastWriteTime ? f.CreationTime:f.LastWriteTime;
 
+                    //место съемки
+                    res.Latitude = tagSharp.ImageTag.Latitude;
+                    res.Longitude = tagSharp.ImageTag.Longitude;
+                    res.Altitude = tagSharp.ImageTag.Altitude;
+
                     //название и модель фотоаппарата
                     res.Camera = tagSharp.ImageTag.Model;
                     //параметры объектива

@@ -31,7 +31,7 @@ public partial class PageGenCtl: System.Web.UI.UserControl
     protected override void OnPreRender( EventArgs e )
     {
         SetLayout();
-        base.OnPreRender( e );        
+        base.OnPreRender( e );
     }
 
     protected override void Render(HtmlTextWriter writer)
@@ -98,12 +98,15 @@ public partial class PageGenCtl: System.Web.UI.UserControl
             bld.Append(HttpUtility.HtmlEncode(item.Description));
         }
 
+        if (!string.IsNullOrEmpty(item.Lat))
+            bld.Append($"&nbsp;&nbsp;<a href='https://www.google.com/maps/search/?api=1&query={item.Lat},{item.Long}'>(map)</a>");
+
         var shot = item.Shot;
 
         if ((!string.IsNullOrEmpty(item.Title) || !string.IsNullOrEmpty(item.Description)) && (!string.IsNullOrEmpty(item.Date) || !string.IsNullOrEmpty(shot)))
             bld.Append("<br/>");
 
-        if (!string.IsNullOrEmpty(item.Date))        
+        if (!string.IsNullOrEmpty(item.Date))
             bld.Append(item.Date);
         
         if (!string.IsNullOrEmpty(shot))

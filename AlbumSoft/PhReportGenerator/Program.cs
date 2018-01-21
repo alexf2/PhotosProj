@@ -19,8 +19,9 @@ namespace Alexf.PhotoReportGenerator
 	public sealed class Program
 	{
 		const string TemplateName = "GenPhotoReport.xslt";
+        const string MetaFile = "meta.xml";
 
-		[STAThread]
+        [STAThread]
 		static int Main (string[] args)
 		{
 			int res = 0;
@@ -56,9 +57,9 @@ namespace Alexf.PhotoReportGenerator
                             wrPref.WriteLine("<!DOCTYPE html>");
 
 							XsltArgumentList prms = new XsltArgumentList();
-							//Console.WriteLine( getLastDir(srcPath) );
-							prms.AddParam("title", string.Empty, getLastDir(srcPath));
-                            tr.Transform(getFileList(srcPath).CreateNavigator(), prms, wrPref);
+                            //Console.WriteLine( getLastDir(srcPath) );
+                            var meta = AddMeta(prms, srcPath);
+                            tr.Transform(getFileList(srcPath, meta).CreateNavigator(), prms, wrPref);
 						}
 					}
 					catch (Exception ex)
@@ -73,7 +74,16 @@ namespace Alexf.PhotoReportGenerator
 			return res;
 		}
 
-		static string getLastDir (string path)
+        static Metadata AddMeta(XsltArgumentList prms, string photosDirPath)
+        {
+            var meta = Metadata.FileFactory(Path.Combine(photosDirPath, MetaFile));
+            if (string.IsNullOrEmpty(meta.Title))
+                meta.Title = getLastDir(photosDirPath);
+            meta.AddTo(prms);
+            return meta;
+        }
+
+        static string getLastDir (string path)
 		{
 			string[] comps = path.Split('\\');			
 			return comps.LastOrDefault( s => !string.IsNullOrEmpty(s) );
@@ -92,8 +102,9 @@ namespace Alexf.PhotoReportGenerator
 			Main, Thumb, Pub
 		};
 
-        static XDocument getFileList (string path)
+        static XDocument getFileList (string path, Metadata meta)
 		{
+            double timeShift = meta.TimeShift ?? 0;
             XElement root;
             XDocument res = new XDocument(root = new XElement("photos"));
 
@@ -153,9 +164,15 @@ namespace Alexf.PhotoReportGenerator
                         //Console.WriteLine(ExifUtils.DumpGdiExifTags(f));
                         fi.SetAttributeValue("caption", info.FileNameIsUsed ? baseName:info.Caption);
 						fi.SetAttributeValue("w", info.W.ToString()); fi.SetAttributeValue("h", info.H.ToString());
-                        fi.SetAttributeValue("date", info.Shot.ToString("dd-MMMM-yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture));
+                        fi.SetAttributeValue("date", info.Shot.AddHours(timeShift).ToString("dd-MMMM-yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture));
                         fi.SetAttributeValue("shot-info", info.GetShotCaption(true));
-						break;
+                        if (info.Latitude.HasValue)
+                        {
+                            fi.SetAttributeValue("lat", info.Latitude);
+                            fi.SetAttributeValue("long", info.Longitude);
+                        }
+
+                        break;
 
 					case NameType.Pub:
                         fi.SetAttributeValue("pub", name);
@@ -164,6 +181,7 @@ namespace Alexf.PhotoReportGenerator
 
                 fi.SetAttributeValue("size", ExifUtils.GetSize(f).ToString());
 			}
+
 
 			return res;
 		}
