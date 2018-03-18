@@ -109,7 +109,7 @@
         });
     }
 
-    static readonly Regex _exParseVer = new Regex(@"\d+\.(\d+\.)*", RegexOptions.CultureInvariant | RegexOptions.Singleline);
+    static readonly Regex _exParseVer = new Regex(@"\d+\.(\d+[\.\-])*", RegexOptions.CultureInvariant | RegexOptions.Singleline);
 
     static string GetJqueryVer(string filePattern)
     {
@@ -123,7 +123,7 @@
 
             string res = m.Groups[0].Value;
 
-            return res.EndsWith(".") ? res.Substring(0, res.Length - 1) : res;
+            return res.EndsWith(".") || res.EndsWith("-") ? res.Substring(0, res.Length - 1) : res;
         }
         else
         {

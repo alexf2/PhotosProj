@@ -296,6 +296,7 @@ Logins.txt
 Content/
 AlbumFront/Pub/*
 !AlbumFront/Pub/Include/
+!AlbumFront/Pub/LightBox/
 counters.txt 
 Web.Release.config 
 

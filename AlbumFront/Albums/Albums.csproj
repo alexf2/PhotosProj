@@ -138,7 +138,6 @@
     </Content>
     <Content Include="images\manifest.json" />
     <None Include="Properties\PublishProfiles\Albums.pubxml" />
-    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="images\collapse.gif" />
     <Content Include="images\expand.gif" />
     <Content Include="images\folder.gif" />
@@ -169,10 +168,8 @@
     <Content Include="Scripts\EventInterop.min.js">
       <DependentUpon>EventInterop.js</DependentUpon>
     </Content>
-    <Content Include="Scripts\jquery-2.1.1.js" />
-    <Content Include="Scripts\jquery-2.1.1.min.js" />
-    <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -187,6 +184,9 @@
     <Content Include="Logins.txt" />
     <Content Include="PageGen.aspx" />
     <Content Include="PageGenCtl.ascx" />
+    <None Include="Scripts\jquery-3.3.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\LightBox\jquery.lightbox.js" />
     <Content Include="Scripts\LightBox\jquery.lightbox.min.js" />
     <Content Include="Scripts\LightBox\themes\classic\images\jquery-lightbox-theme.gif" />
