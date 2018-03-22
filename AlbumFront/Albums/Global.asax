@@ -205,7 +205,7 @@
             "~/Scripts/EventInterop.js",
             "~/Scripts/Master.js",
             "~/Scripts/MemberHandlerAdapter.js",
-            "~/Scripts/LightBox/jquery.lightbox.js"
+            "~/Scripts/LightBox/jquery.lightbox3.js"
         ));
 
         bundles.Add(new StyleBundle("~/bundles/extra-css").Include(

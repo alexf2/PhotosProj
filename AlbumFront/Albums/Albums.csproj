@@ -187,8 +187,8 @@
     <None Include="Scripts\jquery-3.3.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\LightBox\jquery.lightbox.js" />
-    <Content Include="Scripts\LightBox\jquery.lightbox.min.js" />
+    <Content Include="Scripts\LightBox\jquery.lightbox3.js" />
+    <Content Include="Scripts\LightBox\jquery.lightbox3.min.js" />
     <Content Include="Scripts\LightBox\themes\classic\images\jquery-lightbox-theme.gif" />
     <Content Include="Scripts\LightBox\themes\classic\images\loading.gif" />
     <Content Include="Scripts\LightBox\themes\classic\jquery.lightbox.css" />
