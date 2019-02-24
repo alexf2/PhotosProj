@@ -137,6 +137,11 @@
             </div>
             <a href="<%=ResolveClientUrl("Pub/Montblanc2017/Montblanc2017.htm")%>"><img src="<%=ResolveClientUrl("img/Montblanc2017Thumb.jpg ")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Альпы 2017: трек вокруг Монблана (TMB)" alt="Альпы 2017: трек вокруг Монблана (TMB)" /></a> <br /><br />
 
+	    <div class="pad">
+                <a href="<%=ResolveClientUrl("Pub/Scotland2017/Scotland2017.htm")%>">Экспедиция в Шотландию 2017</a>&nbsp;&nbsp;
+            </div>
+            <a href="<%=ResolveClientUrl("Pub/Scotland2017/Scotland2017.htm")%>"><img src="<%=ResolveClientUrl("img/Scotland2017Thumb.jpg ")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Экспедиция в Шотландию 2017" alt="Экспедиция в Шотландию 2017" /></a> <br /><br />
+
             <div class="pad">
                 <a href="<%=ResolveClientUrl("Pub/Cappadocia2018/Cappadocia2018.htm")%>">Каппадокия 2018</a>&nbsp;&nbsp;
             </div>
