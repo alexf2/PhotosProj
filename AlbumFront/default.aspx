@@ -150,7 +150,7 @@
             <div class="pad">
                 <a href="<%=ResolveClientUrl("Pub/Madeira2018/Madeira2018.htm")%>">Мадейра 2018</a>&nbsp;&nbsp;
             </div>
-            <a href="<%=ResolveClientUrl("Pub/Madeira2018/Madeira2018.htm")%>"><img src="<%=ResolveClientUrl("img/Madeira2018Thumb.jpg ")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Мадейра 2018" alt="Мадейра 2018" /></a> <br /><br />
+            <a href="<%=ResolveClientUrl("Pub/Madeira2018/Madeira2018.htm")%>"><img src="<%=ResolveClientUrl("img/Madeira2018Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Мадейра 2018" alt="Мадейра 2018" /></a> <br /><br />
         </div>
 
         <div class="SectionHeaderBg">
