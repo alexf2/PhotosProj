@@ -155,7 +155,7 @@
             <div class="pad">
                 <a href="<%=ResolveClientUrl("Pub/Laplandia2020/Laplandia2020.htm")%>">Лапландия 2020</a>&nbsp;&nbsp;
             </div>
-            <a href="<%=ResolveClientUrl("Pub/Laplandia2020/Laplandia2020.htm")%>"><img src="<%=ResolveClientUrl("img/Laplandia2020.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Лапландия 2020" alt="Лапландия 2020" /></a> <br /><br />
+            <a href="<%=ResolveClientUrl("Pub/Laplandia2020/Laplandia2020.htm")%>"><img src="<%=ResolveClientUrl("img/Laplandia2020Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Лапландия 2020" alt="Лапландия 2020" /></a> <br /><br />
 
             <div class="pad">
                 <a href="<%=ResolveClientUrl("Pub/Seliger2019/Seliger2019.htm")%>">Сплав по Селигеру 2019</a>&nbsp;&nbsp;
