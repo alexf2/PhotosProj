@@ -160,7 +160,7 @@
             <div class="pad">
                 <a href="<%=ResolveClientUrl("Pub/DolomiteAlps2016/DolomiteAlps2016.htm")%>">Доломитовые Альпы 2016</a>&nbsp;&nbsp;
             </div>
-            <a href="<%=ResolveClientUrl("Pub/DolomiteAlps2016/DolomiteAlps2016.htm")%>"><img src="<%=ResolveClientUrl("img/DolomiteAlps2016.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Доломитовые Альпы 2016" alt="Доломитовые Альпы 2016" /></a> <br /><br />
+            <a href="<%=ResolveClientUrl("Pub/DolomiteAlps2016/DolomiteAlps2016.htm")%>"><img src="<%=ResolveClientUrl("img/DolomiteAlps2016Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Доломитовые Альпы 2016" alt="Доломитовые Альпы 2016" /></a> <br /><br />
 
             <div class="pad">
                 <a href="<%=ResolveClientUrl("Pub/Seliger2019/Seliger2019.htm")%>">Сплав по Селигеру 2019</a>&nbsp;&nbsp;
