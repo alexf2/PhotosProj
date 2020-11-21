@@ -125,7 +125,7 @@
       <DependentUpon>TreeViewSimple.css</DependentUpon>
     </Content>
     <Content Include="Demo.cer" />
-    <Content Include="IamgeHandler.ashx" />
+    <Content Include="ImageHandler.ashx" />
     <Content Include="App_Browsers\CSSFriendlyAdapters.browser" />
     <Content Include="App_Themes\Default\Basic.skin" />
     <None Include="bundleconfig.json" />
@@ -237,7 +237,7 @@
     <Compile Include="AlbumMasterPage.master.designer.cs">
       <DependentUpon>AlbumMasterPage.master</DependentUpon>
     </Compile>
-    <Compile Include="Code\AWS.ImgHandler.ashx.cs" />
+    <Compile Include="Code\AWS.ImgHandler.cs" />
     <Compile Include="Code\AwsBasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

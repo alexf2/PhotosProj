@@ -83,7 +83,9 @@
       <HintPath>..\libs\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="counters.txt" />
@@ -154,6 +156,7 @@
     <Content Include="OuterMasterPage.master" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="TestFileHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -162,6 +165,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestFileHandler.ashx.cs" />
     <Compile Include="Mail.aspx.designer.cs">
       <DependentUpon>Mail.aspx</DependentUpon>
     </Compile>

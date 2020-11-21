@@ -198,9 +198,9 @@ public sealed class PhotoPageData
         if( _useFullValidation )
         {
             if( isThumbinal )
-                return String.Format( "IamgeHandler.ashx?id={0}&thumb=1", HttpContext.Current.Server.UrlEncode(nd0.Key) );
+                return String.Format( "ImageHandler.ashx?id={0}&thumb=1", HttpContext.Current.Server.UrlEncode(nd0.Key) );
             else
-                return String.Format( "IamgeHandler.ashx?id={0}", HttpContext.Current.Server.UrlEncode(nd0.Key) );
+                return String.Format( "ImageHandler.ashx?id={0}", HttpContext.Current.Server.UrlEncode(nd0.Key) );
         }
         else
             return res;
