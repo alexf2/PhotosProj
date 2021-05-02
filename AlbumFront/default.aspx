@@ -133,6 +133,11 @@
             <a href="<%=ResolveClientUrl("Pub/Moravia2016/Moravia2016.htm")%>"><img src="<%=ResolveClientUrl("img/Moravia2016Thumb.jpg ")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Южная Моравия 2016" alt="Южная Моравия 2016" /></a> <br /><br />
 
             <div class="pad">
+                <a href="<%=ResolveClientUrl("Pub/DolomiteAlps2016/DolomiteAlps2016.htm")%>">Доломитовые Альпы 2016</a>&nbsp;&nbsp;
+            </div>
+            <a href="<%=ResolveClientUrl("Pub/DolomiteAlps2016/DolomiteAlps2016.htm")%>"><img src="<%=ResolveClientUrl("img/DolomiteAlps2016Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Доломитовые Альпы 2016" alt="Доломитовые Альпы 2016" /></a> <br /><br />
+
+            <div class="pad">
                 <a href="<%=ResolveClientUrl("Pub/Montblanc2017/Montblanc2017.htm")%>">Альпы 2017: трек вокруг Монблана (TMB)</a>&nbsp;&nbsp;
             </div>
             <a href="<%=ResolveClientUrl("Pub/Montblanc2017/Montblanc2017.htm")%>"><img src="<%=ResolveClientUrl("img/Montblanc2017Thumb.jpg ")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Альпы 2017: трек вокруг Монблана (TMB)" alt="Альпы 2017: трек вокруг Монблана (TMB)" /></a> <br /><br />
@@ -153,14 +158,14 @@
             <a href="<%=ResolveClientUrl("Pub/Madeira2018/Madeira2018.htm")%>"><img src="<%=ResolveClientUrl("img/Madeira2018Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Мадейра 2018" alt="Мадейра 2018" /></a> <br /><br />
 
             <div class="pad">
+                <a href="<%=ResolveClientUrl("Pub/Solovki2019/Solovki2019.htm")%>">Соловецкие острова 2019, Белое море</a>&nbsp;&nbsp;
+            </div>
+            <a href="<%=ResolveClientUrl("Pub/Solovki2019/Solovki2019.htm")%>"><img src="<%=ResolveClientUrl("img/Solovki2019Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Соловецкие острова 2019" alt="Соловецкие острова 2019" /></a> <br /><br />
+
+            <div class="pad">
                 <a href="<%=ResolveClientUrl("Pub/Laplandia2020/Laplandia2020.htm")%>">Лапландия 2020</a>&nbsp;&nbsp;
             </div>
             <a href="<%=ResolveClientUrl("Pub/Laplandia2020/Laplandia2020.htm")%>"><img src="<%=ResolveClientUrl("img/Laplandia2020Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Лапландия 2020" alt="Лапландия 2020" /></a> <br /><br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/DolomiteAlps2016/DolomiteAlps2016.htm")%>">Доломитовые Альпы 2016</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/DolomiteAlps2016/DolomiteAlps2016.htm")%>"><img src="<%=ResolveClientUrl("img/DolomiteAlps2016Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Доломитовые Альпы 2016" alt="Доломитовые Альпы 2016" /></a> <br /><br />
 
             <div class="pad">
                 <a href="<%=ResolveClientUrl("Pub/Seliger2019/Seliger2019.htm")%>">Сплав по Селигеру 2019</a>&nbsp;&nbsp;
