@@ -188,6 +188,10 @@
             </div>
 
             <div class="pad">
+                <a href="<%=ResolveClientUrl("Pub/Konduki2019-2/Konduki2019-2.htm")%>">Кондуки, осень 2019</a>&nbsp;&nbsp;
+            </div>
+
+            <div class="pad">
                 <a href="<%=ResolveClientUrl("Pub/DivnoGorie2020/Divnogorie2020.htm ")%>">Дивногорье, лето 2020</a>&nbsp;&nbsp;
             </div>
         </div>
@@ -199,7 +203,6 @@
             <a href="<%=ResolveClientUrl("Pub/Jokes/Laps.htm")%>">Таймлапсы</a><br />
             <a href="<%=ResolveClientUrl("Pub/Celebrity/Celerbrity.htm")%>">Знаменитости</a><br />
         </div>
-          
     </article>
     
 </asp:Content>
