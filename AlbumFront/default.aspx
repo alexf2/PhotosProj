@@ -5,6 +5,10 @@
     MetaDescription="Фотоальбомы Одиссея, экспедиции и автопробеги, отчеты"
     Culture="auto"  UICulture="auto" Title = "Ὀδύσσεια ---== Odyssey's Photos ==--- Ὀδύσσεια" %>
 
+<%@ Register TagPrefix="uc" 
+             TagName="CatItem" 
+             Src="./CatItem.ascx" %>
+
 <script language="c#" runat="server">
     public void Page_Load (object sender, EventArgs e)
     {
@@ -21,7 +25,7 @@
     }
 </script>
 
-<asp:Content ContentPlaceHolderID = "idIndicatorsInit" runat = "server" >    
+<asp:Content ContentPlaceHolderID = "idIndicatorsInit" runat = "server" >
 <!-- Rating@Mail.ru counter -->
         <script language="javascript1.1" type="text/javascript">
 //<![CDATA[
@@ -67,133 +71,35 @@
             <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=Greece&amp;pwd=gr19655")%>">Греция 2008</a> <br />
             <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=Italy&amp;pwd=gr19655")%>">Италия 2009</a>&nbsp;&nbsp;<a href="<%=ResolveClientUrl("Pub/Maps/italy2009.htm")%>"><img style="vertical-align: middle" src="<%=ResolveClientUrl("img/map.gif")%>" alt="Карта маршрута" border="0" title="Карта маршрута" /></a> <br />
 
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=Adygeya&amp;pwd=ad1278")%>">Горная Адыгея 2009</a>
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Adygeya/Adygeya2009Pub.htm")%>"><img src="<%=ResolveClientUrl("img/AdygeyaRepThumb.jpg")%>" class="ImgThumbNormal FadeOnLoad EasingShadow" title="Репортаж Горная Адыгея 2009" alt="Репортаж Горная Адыгея 2009" /></a> <br />	<br />
+            <uc:CatItem Name="Adygeya2009" Login="Adygeya" Pwd="ad1278" ImgCss="ImgThumbNormal" Description="Горная Адыгея 2009" runat="server" />
+            <uc:CatItem Name="Norway2010" Login="Norway" Pwd="nrw952" ImgCss="ImgThumbSmall" Description="Автопробег по Норвегии 2010" runat="server" />
+            <uc:CatItem Name="Iceland2011" Login="Iceland" Pwd="ice952" ImgCss="ImgThumbNormal_Ice" Description="Экспедиция Исландия 2011" runat="server" />
+            <uc:CatItem Name="SpainFrance2011" Login="SpainFrance" Pwd="spf127" ImgCss="ImgThumbNormal" Description="Испания - Андорра - Франция/катарские замки 2011" runat="server" />
+            <uc:CatItem Name="Ehypet2012" Group="EhypetGroup" Login="ehypet" Pwd="ehypet08260" ImgCss="ImgThumbNormal" Description="Северная Африка 2012" runat="server" />
+            <uc:CatItem Name="Kirgiz2012" ImgCss="ImgThumbNormal_Kgz" Description="Киргизия 2012" runat="server" />
+            <uc:CatItem Name="India2013" ImgCss="ImgThumbNormal_Ind" Description="Индия 2013 Раджастан" runat="server" />
+            <uc:CatItem Name="Morocco2013" Group="Morocco2013Group" Login="morocco" Pwd="mrk1947845" ImgCss="ImgThumbNormal" Description="Марокко 2013, Север, Юг, Сахара и Атлас" runat="server" />
+            <uc:CatItem Name="Norway2016" Login="norway2016" Pwd="nrw952" ImgCss="ImgThumbNormal_Norw2016" Description="Норвегия 2016, Тюнсет, Оппдал, Науста" runat="server" />
+            <uc:CatItem Name="TrollTunga2016" ImgCss="ImgThumbNormal_TrollTunga2016" Description="Норвегия 2016, Язык Тролля и Хордаланн" runat="server" />
+            <uc:CatItem Name="Usa2017" ImgCss="ImgThumbNormal_Usa2017" Description="Америка 2017: Аризона, Юта, Невада, Калифорния" runat="server" />
+            <uc:CatItem Name="Myanmar2015" Login="myanmar2015" Pwd="mmr2015" ImgCss="ImgThumbNormal_Myanmar2015" Description="Бирма 2015: Янгон, Баган, Мандалай, озеро Инле" runat="server" />
+            <uc:CatItem Name="Moravia2016" ImgCss="ImgThumbNormal_Myanmar2015" Description="Южная Моравия 2016" runat="server" />
+            <uc:CatItem Name="DolomiteAlps2016" ImgCss="ImgThumbNormal_Myanmar2015" Description="Доломитовые Альпы 2016" runat="server" />
+            <uc:CatItem Name="Montblanc2017" ImgCss="ImgThumbNormal_Myanmar2015" Description="Альпы 2017: трек вокруг Монблана (TMB)" runat="server" />
+            <uc:CatItem Name="Scotland2017" ImgCss="ImgThumbNormal_Myanmar2015" Description="Экспедиция в Шотландию 2017" runat="server" />
+            <uc:CatItem Name="Cappadocia2018" ImgCss="ImgThumbNormal_Myanmar2015" Description="Каппадокия 2018" runat="server" />
+            <uc:CatItem Name="Madeira2018" ImgCss="ImgThumbNormal_Myanmar2015" Description="Мадейра 2018" runat="server" />
+            <uc:CatItem Name="Solovki2019" ImgCss="ImgThumbNormal_Myanmar2015" Description="Соловецкие острова 2019, Белое море" runat="server" />
+            <uc:CatItem Name="Laplandia2020" ImgCss="ImgThumbNormal_Myanmar2015" Description="Лапландия 2020" runat="server" />
 
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=Norway&amp;pwd=nrw952")%>">Автопробег по Норвегии 2010</a>
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Norway2010/Norway2010Pub.htm")%>"><img src="<%=ResolveClientUrl("img/Norway2010RepThumb.jpg")%>" class="ImgThumbSmall FadeOnLoad EasingShadow" title="Репортаж Норвегия 2010" alt="Репортаж Норвегия 2010" /></a> <br />	<br />
-
-            <div class="pad" >
-                <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=Iceland&amp;pwd=ice952")%>">Экспедиция Исландия 2011</a>&nbsp;&nbsp;<a href="<%=ResolveClientUrl("Pub/Maps/iceland2010.htm")%>"><img style="vertical-align: middle" src="<%=ResolveClientUrl("img/map.gif")%>" border="0" title="Карта маршрута" alt="Карта маршрута" /></a>
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Iceland2011/Iceland2011Pub.htm")%>"><img src="<%=ResolveClientUrl("img/IcelandRepThumb.jpg")%>" class="ImgThumbNormal_Ice FadeOnLoad EasingShadow" title="Репортаж Исландия 2011" alt="Репортаж Исландия 2011" /></a> <br />	<br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=SpainFrance&amp;pwd=spf127")%>">Испания - Андорра - Франция/катарские замки 2011</a>&nbsp;&nbsp;<a href="<%=ResolveClientUrl("Pub/Maps/spainfrance2011.htm")%>"><img style="vertical-align: middle" src="<%=ResolveClientUrl("img/map.gif")%>" border="0" title="Карта маршрута" alt="Карта маршрута" /></a>
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/SpainFrance2011/SpainFrance2011Pub.htm")%>"><img src="<%=ResolveClientUrl("img/SpainFranceThumb.jpg")%>" class="ImgThumbNormal FadeOnLoad EasingShadow" title="Репортаж Испания - Андорра - Франция/катарские замки 2011" alt="Репортаж Испания - Андорра - Франция/катарские замки 2011" /></a> <br />	<br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=ehypet&amp;pwd=ehypet08260")%>">Северная Африка 2012</a>&nbsp;&nbsp;<a href="<%=ResolveClientUrl("Pub/Maps/ehypet2012.htm")%>"><img style="vertical-align: middle" src="<%=ResolveClientUrl("img/map.gif")%>" border="0" title="Карта маршрута" alt="Карта маршрута" /></a>&nbsp;&nbsp;<a href="<%=ResolveClientUrl("Pub/EhypetGroup/EhypetGroup.htm")%>">Группа</a>
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Ehypet2012/Ehypet2012Pub.htm")%>"><img src="<%=ResolveClientUrl("img/EhypetRepThumb.jpg")%>" class="ImgThumbNormal FadeOnLoad EasingShadow" title="Репортаж Египет 2012" alt="Репортаж Египет 2012" /></a> <br /> <br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Kirgiz2012/Kirgiz2012Pub.htm")%>">Киргизия 2012</a>&nbsp;&nbsp;<a href="<%=ResolveClientUrl("Pub/Maps/Kirgiz2012.htm")%>"><img style="vertical-align: middle" src="<%=ResolveClientUrl("img/map.gif")%>" border="0" title="Карта маршрута" alt="Карта маршрута" /></a>
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Kirgiz2012/Kirgiz2012Pub.htm")%>"><img src="<%=ResolveClientUrl("img/KirgizRepThumb.jpg")%>" class="ImgThumbNormal_Kgz FadeOnLoad EasingShadow" title="Репортаж Киргизия 2012" alt="Репортаж Киргизия 2012" /></a> <br /> <br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/India2013/India2013Pub.htm")%>">Индия 2013 Раджастан</a>
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/India2013/India2013Pub.htm")%>"><img src="<%=ResolveClientUrl("img/India2013RepThumb.jpg")%>" class="ImgThumbNormal_Ind FadeOnLoad EasingShadow" title="Репортаж по Индии 2013, Раджастану" alt="Репортаж по Индии 2013, Раджастану" /></a> <br /><br />
-            
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=morocco&amp;pwd=mrk1947845")%>">Марокко 2013, Север, Юг, Сахара и Атлас</a>&nbsp;&nbsp;<a href="<%=ResolveClientUrl("Pub/Morocco2013Group/Morocco2013Group.htm")%>">Группа</a>
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Morocco2013/Morocco2013.htm")%>"><img src="<%=ResolveClientUrl("img/Morocco2013RepThumb.jpg")%>" class="ImgThumbNormal FadeOnLoad EasingShadow" title="Марокко 2013, Север, Юг, Сахара и Атлас" alt="Марокко 2013, Север, Юг, Сахара и Атлас" /></a> <br />	<br />
-
-	        <div class="pad">
-                <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=norway2016&amp;pwd=nrw952")%>">Норвегия 2016, Тюнсет, Оппдал, Науста</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Norway2016/Norway2016.htm")%>"><img src="<%=ResolveClientUrl("img/Norway2016Thumb.jpg")%>" class="ImgThumbNormal_Norw2016 FadeOnLoad EasingShadow" title="Норвегия 2016, Тюнсет, Оппдал, Науста" alt="Норвегия 2016, Тюнсет, Оппдал, Науста" /></a> <br />	<br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/TrollTunga2016/TrollTunga2016.htm")%>">Норвегия 2016, Язык Тролля и Хордаланн</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/TrollTunga2016/TrollTunga2016.htm")%>"><img src="<%=ResolveClientUrl("img/TrollTunga2016Thumb.jpg")%>" class="ImgThumbNormal_TrollTunga2016 FadeOnLoad EasingShadow" title="Норвегия 2016, Язык Тролля и Хордаланн" alt="Норвегия 2016, Язык Тролля и Хордаланн" /></a> <br />	<br />
-            
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Usa2017/Usa2017.htm")%>">Америка 2017: Аризона, Юта, Невада, Калифорния</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Usa2017/Usa2017.htm")%>"><img src="<%=ResolveClientUrl("img/Usa2017Thumb.jpg")%>" class="ImgThumbNormal_Usa2017 FadeOnLoad EasingShadow" title="Америка 2017: Аризона, Юта, Невада, Калифорния" alt="Америка 2017: Аризона, Юта, Невада, Калифорния" /></a> <br />	<br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=myanmar2015&amp;pwd=mmr2015")%>">Бирма 2015: Янгон, Баган, Мандалай, озеро Инле</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Myanmar2015/Myanmar2015.htm")%>"><img src="<%=ResolveClientUrl("img/Myanmar2015Thumb.jpg ")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Бирма 2015: Янгон, Баган, Мандалай, озеро Инле" alt="Бирма 2015: Янгон, Баган, Мандалай, озеро Инле" /></a> <br />	<br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Moravia2016/Moravia2016.htm")%>">Южная Моравия 2016</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Moravia2016/Moravia2016.htm")%>"><img src="<%=ResolveClientUrl("img/Moravia2016Thumb.jpg ")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Южная Моравия 2016" alt="Южная Моравия 2016" /></a> <br /><br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/DolomiteAlps2016/DolomiteAlps2016.htm")%>">Доломитовые Альпы 2016</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/DolomiteAlps2016/DolomiteAlps2016.htm")%>"><img src="<%=ResolveClientUrl("img/DolomiteAlps2016Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Доломитовые Альпы 2016" alt="Доломитовые Альпы 2016" /></a> <br /><br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Montblanc2017/Montblanc2017.htm")%>">Альпы 2017: трек вокруг Монблана (TMB)</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Montblanc2017/Montblanc2017.htm")%>"><img src="<%=ResolveClientUrl("img/Montblanc2017Thumb.jpg ")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Альпы 2017: трек вокруг Монблана (TMB)" alt="Альпы 2017: трек вокруг Монблана (TMB)" /></a> <br /><br />
-
-	        <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Scotland2017/Scotland2017.htm")%>">Экспедиция в Шотландию 2017</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Scotland2017/Scotland2017.htm")%>"><img src="<%=ResolveClientUrl("img/Scotland2017Thumb.jpg ")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Экспедиция в Шотландию 2017" alt="Экспедиция в Шотландию 2017" /></a> <br /><br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Cappadocia2018/Cappadocia2018.htm")%>">Каппадокия 2018</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Cappadocia2018/Cappadocia2018.htm")%>"><img src="<%=ResolveClientUrl("img/Cappadocia2018Thumb.jpg ")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Каппадокия 2018" alt="Каппадокия 2018" /></a> <br /><br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Madeira2018/Madeira2018.htm")%>">Мадейра 2018</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Madeira2018/Madeira2018.htm")%>"><img src="<%=ResolveClientUrl("img/Madeira2018Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Мадейра 2018" alt="Мадейра 2018" /></a> <br /><br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Solovki2019/Solovki2019.htm")%>">Соловецкие острова 2019, Белое море</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Solovki2019/Solovki2019.htm")%>"><img src="<%=ResolveClientUrl("img/Solovki2019Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Соловецкие острова 2019" alt="Соловецкие острова 2019" /></a> <br /><br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Laplandia2020/Laplandia2020.htm")%>">Лапландия 2020</a>&nbsp;&nbsp;
-            </div>
-            <a href="<%=ResolveClientUrl("Pub/Laplandia2020/Laplandia2020.htm")%>"><img src="<%=ResolveClientUrl("img/Laplandia2020Thumb.jpg")%>" class="ImgThumbNormal_Myanmar2015 FadeOnLoad EasingShadow" title="Лапландия 2020" alt="Лапландия 2020" /></a> <br /><br />
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Seliger2019/Seliger2019.htm")%>">Сплав по Селигеру 2019</a>&nbsp;&nbsp;
-            </div>
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/BenskiePorogi2019/BenskiePorogi2019.htm")%>">Сплав по Волге на Бенские пороги 2019</a>&nbsp;&nbsp;
-            </div>
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/PlescheevoLake2019/PlescheevoLake2019.htm")%>">Поход вокруг Плещеева озера 42км 2019</a>&nbsp;&nbsp;
-            </div>
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/PraRafting/PraRafting.htm")%>">Сплав по Пре 50км, 2019</a>&nbsp;&nbsp;
-            </div>
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Konduki2019/Konduki2019.htm")%>">Кондуки, лето 2019</a>&nbsp;&nbsp;
-            </div>
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/Konduki2019-2/Konduki2019-2.htm")%>">Кондуки, осень 2019</a>&nbsp;&nbsp;
-            </div>
-
-            <div class="pad">
-                <a href="<%=ResolveClientUrl("Pub/DivnoGorie2020/Divnogorie2020.htm ")%>">Дивногорье, лето 2020</a>&nbsp;&nbsp;
-            </div>
+            <uc:CatItem Name="Seliger2019" Description="Сплав по Селигеру 2019" runat="server" />
+            <uc:CatItem Name="BenskiePorogi2019" Description="Сплав по Волге на Бенские пороги 2019" runat="server" />
+            <uc:CatItem Name="PlescheevoLake2019" Description="Поход вокруг Плещеева озера 42км 2019" runat="server" />
+            <uc:CatItem Name="PraRafting" Description="Сплав по Пре 50км, 2019" runat="server" />
+            <uc:CatItem Name="Konduki2019" Description="Кондуки, лето 2019" runat="server" />
+            <uc:CatItem Name="Konduki2019-2" Description="Кондуки, осень 2019" runat="server" />
+            <uc:CatItem Name="Divnogorie2020" Description="Дивногорье, лето 2020" runat="server" />
+            <uc:CatItem Name="Epifan2019" Description="Епифань, лето 2020" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">

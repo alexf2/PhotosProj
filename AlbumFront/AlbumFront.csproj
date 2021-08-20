@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="CatItem.ascx" />
     <Content Include="counters.txt" />
     <Content Include="css\css-ext.css">
       <DependentUpon>css-ext.less</DependentUpon>
@@ -165,6 +166,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CatItem.ascx.cs">
+      <DependentUpon>CatItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatItem.ascx.designer.cs">
+      <DependentUpon>CatItem.ascx</DependentUpon>
+    </Compile>
     <Compile Include="TestFileHandler.ashx.cs" />
     <Compile Include="Mail.aspx.designer.cs">
       <DependentUpon>Mail.aspx</DependentUpon>
