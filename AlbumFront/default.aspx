@@ -100,6 +100,7 @@
             <uc:CatItem Name="Konduki2019-2" Description="Кондуки, осень 2019" runat="server" />
             <uc:CatItem Name="Divnogorie2020" Description="Дивногорье, лето 2020" runat="server" />
             <uc:CatItem Name="Epifan2019" Description="Епифань, лето 2020" runat="server" />
+            <uc:CatItem Name="Pronsk" Description="Пронск, лето 2020" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
