@@ -101,6 +101,8 @@
             <uc:CatItem Name="Divnogorie2020" Description="Дивногорье, лето 2020" runat="server" />
             <uc:CatItem Name="Epifan2019" Description="Епифань, лето 2020" runat="server" />
             <uc:CatItem Name="Pronsk" Description="Пронск, лето 2020" runat="server" />
+            <uc:CatItem Name="Tarusa" Description="Таруса, лето 2020" runat="server" />
+            <uc:CatItem Name="Ishutino" Description="Ишутино среди сезонов" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
