@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhReportGenerator", "PhReportGenerator.csproj", "{1E20A34E-ED22-4535-9680-CDFC753E9A6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taglib-sharp", "taglib-sharp-master\src\taglib-sharp.csproj", "{6B143A39-C7B2-4743-9917-92262C60E9A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "taglib-sharp", "..\taglib-sharp-master\src\taglib-sharp.csproj", "{6B143A39-C7B2-4743-9917-92262C60E9A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

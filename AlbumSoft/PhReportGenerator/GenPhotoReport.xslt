@@ -42,7 +42,7 @@
 </xsl:template>
 
   <xsl:template name = "BootstrapScript">
-    <xsl:text disable-output-escaping="yes"><![CDATA[<script type = "text/javascript" src = "http://code.jquery.com/jquery-3.3.1.min.js"></script>]]></xsl:text>
+    <xsl:text disable-output-escaping="yes"><![CDATA[<script type = "text/javascript" src = "//code.jquery.com/jquery-3.3.1.min.js"></script>]]></xsl:text>
     <xsl:text disable-output-escaping="yes"><![CDATA[<script type = "text/javascript" src = "../LightBox/jquery.lightbox3.min.js"></script>]]></xsl:text>
     <xsl:text disable-output-escaping="yes"><![CDATA[<script type = "text/javascript" src = "../Include/my.helpers.js"></script>]]></xsl:text>
 

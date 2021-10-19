@@ -73,8 +73,8 @@
         {
             Path = "~/Scripts/jquery-" + _jqueryVersion + ".min.js",
             DebugPath = "~/Scripts/jquery-" + _jqueryVersion + ".js",
-            CdnPath = "http://code.jquery.com/jquery-" + _jqueryVersion + ".min.js",
-            CdnDebugPath = "http://code.jquery.com/jquery-" + _jqueryVersion + ".js",
+            CdnPath = "//code.jquery.com/jquery-" + _jqueryVersion + ".min.js",
+            CdnDebugPath = "//code.jquery.com/jquery-" + _jqueryVersion + ".js",
             CdnSupportsSecureConnection = true,
             LoadSuccessExpression = "window.jQuery"
         });     
@@ -85,7 +85,7 @@
         bundles.UseCdn = true;
         BundleTable.EnableOptimizations = true;
 
-        var b = new ScriptBundle("~/bundles/jquery", string.Format("http://code.jquery.com/jquery-{0}.min.js", _jqueryVersion)).Include("~/Scripts/jquery-{version}.js");
+        var b = new ScriptBundle("~/bundles/jquery", string.Format("//code.jquery.com/jquery-{0}.min.js", _jqueryVersion)).Include("~/Scripts/jquery-{version}.js");
         b.CdnFallbackExpression = "window.jQuery";
         bundles.Add(b);
         
@@ -102,8 +102,8 @@
         {
             Path = "~/Scripts/jquery-" + _jqueryVersion + ".min.js",
             DebugPath = "~/Scripts/jquery-" + _jqueryVersion + ".js",
-            CdnPath = "http://code.jquery.com/jquery-" + _jqueryVersion + ".min.js",
-            CdnDebugPath = "http://code.jquery.com/jquery-" + _jqueryVersion + ".js",
+            CdnPath = "//code.jquery.com/jquery-" + _jqueryVersion + ".min.js",
+            CdnDebugPath = "//code.jquery.com/jquery-" + _jqueryVersion + ".js",
             CdnSupportsSecureConnection = true,
             LoadSuccessExpression = "window.jQuery"
         });
