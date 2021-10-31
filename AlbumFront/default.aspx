@@ -104,6 +104,7 @@
             <uc:CatItem Name="Tarusa" Description="Таруса, лето 2020" runat="server" />
             <uc:CatItem Name="Ishutino" Description="Ишутино среди сезонов" runat="server" />
             <uc:CatItem Name="Vorgol" Description="Воргольские скалы, лето 2019" runat="server" />
+            <uc:CatItem Name="Konstantinovo" Description="Константиново, осень 2019" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
