@@ -106,6 +106,7 @@
             <uc:CatItem Name="Vorgol" Description="Воргольские скалы, лето 2019" runat="server" />
             <uc:CatItem Name="Konstantinovo" Description="Константиново, осень 2019" runat="server" />
             <uc:CatItem Name="Dyunilovo" Description="Дунилово, осень 2020" runat="server" />
+            <uc:CatItem Name="Sunflowers" Description="Подсолнухи, лето 2020, Ефремов" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
@@ -113,14 +114,14 @@
         </div>
         <div class="SectionBody">
             <a href="<%=ResolveClientUrl("Pub/Jokes/Laps.htm")%>">Таймлапсы</a><br />
-            <a href="<%=ResolveClientUrl("Pub/Celebrity/Celerbrity.htm")%>">Знаменитости</a><br />
+            <a href="<%=ResolveClientUrl("Pub/Celebrity/Celebrity.htm")%>">Знаменитости</a><br />
         </div>
     </article>
     
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID = "idIndicatorsView" runat = "server" >    
-<div id="oneGb" style="float:left;">
+            <div id="oneGb" style="float:left;">
                 <script language="javascript" type="text/javascript">
                     cgb_js = "1.0"; cgb_r = "" + Math.random() + "&r=" +
                     escape(document.referrer) + "&pg=" +
@@ -192,4 +193,8 @@
                 </a>
                 <!-- //Rating@Mail.ru logo -->
             </div>
+
+        <div id="yandex" style="float:left; padding-left: 5pt">
+            <a href="https://webmaster.yandex.ru/siteinfo/?site=https://afedorov.info"><img width="88" height="31" alt="" border="0" src="https://yandex.ru/cycounter?https://afedorov.info&theme=light&lang=en"/></a>
+        </div>
 </asp:Content>
