@@ -108,6 +108,7 @@
             <uc:CatItem Name="Dyunilovo" Description="Дунилово, осень 2020" runat="server" />
             <uc:CatItem Name="Sunflowers" Description="Подсолнухи, лето 2020, Ефремов" runat="server" />
             <uc:CatItem Name="SmallKonduki" Description="Малые Кондуки, лето 2020" runat="server" />
+            <uc:CatItem Name="Filipovskoe" Description="Разлив Шерны в Филиповском 2021" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
