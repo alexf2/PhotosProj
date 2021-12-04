@@ -109,6 +109,7 @@
             <uc:CatItem Name="Sunflowers" Description="Подсолнухи, лето 2020, Ефремов" runat="server" />
             <uc:CatItem Name="SmallKonduki" Description="Малые Кондуки, лето 2020" runat="server" />
             <uc:CatItem Name="Filipovskoe" Description="Разлив Шерны в Филиповском 2021" runat="server" />
+            <uc:CatItem Name="Flooding2021" Description="Весенний разлив 2021: Суздаль, Покрова на Нерли, Махра, Крутово, Весь" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
