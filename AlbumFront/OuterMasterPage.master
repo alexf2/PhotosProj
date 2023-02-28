@@ -17,6 +17,8 @@
     <asp:PlaceHolder runat="server">
         <% = Styles.Render("~/bundles/extra-css") %>
     </asp:PlaceHolder>
+
+    <asp:contentplaceholder id="idYandexMetrica" runat="server" />
 </head>
 
 <body>
