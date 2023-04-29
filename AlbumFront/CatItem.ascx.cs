@@ -10,6 +10,7 @@ namespace AlbumFront
 
         public string Name { get; set; }
         public string Group { get; set; }
+        public string Path { get; set; }
         public string Description { get; set; }
 
         public string ReportageDescription {
@@ -35,7 +36,7 @@ namespace AlbumFront
 
         }
 
-        public string GetPubUrl() => ResolveClientUrl($"Pub/{Name}/{Name}.htm");
+        public string GetPubUrl() => ResolveClientUrl($"Pub/{Path ?? Name}/{Name}.htm");
 
         public string GetAlbumUrl() => ResolveClientUrl($"Albums/Login.aspx?login={Login}&pwd={Pwd}");
 
