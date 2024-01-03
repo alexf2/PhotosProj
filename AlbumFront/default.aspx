@@ -134,6 +134,7 @@
             <uc:CatItem Name="Filipovskoe" Description="Разлив Шерны в Филиповском 2021" runat="server" />
             <uc:CatItem Name="Flooding2021" Description="Весенний разлив 2021: Суздаль, Покрова на Нерли, Махра, Крутово, Весь" runat="server" />
             <uc:CatItem Path="Autumn2021/Chekalin" Name="Chekalin" Description="Бабье лето 2021 в Чекалине на Оке" runat="server" />
+            <uc:CatItem Path="Autumn2021/Tish" Name="Tish" Description="Бабье лето 2021 на озере Тишь" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
