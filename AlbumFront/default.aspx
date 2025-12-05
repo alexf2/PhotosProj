@@ -137,6 +137,7 @@
             <uc:CatItem Path="Autumn2021/Tish" Name="Tish" Description="Бабье лето 2021 на озере Тишь" runat="server" />
             <uc:CatItem Path="Autumn2021/Suvorov" Name="Suvorov" Description="Бабье лето 2021 на Суворовских карьерах" runat="server" />
             <uc:CatItem Path="Autumn2021/Ishutino" Name="Ishutino" Description="Бабье лето 2021 на Ишутинском городище" runat="server" />
+            <uc:CatItem Path="Summer2022/SchilovoForest" Name="SchilovoForest" Description="Шиловская аномалия, пьяный лес, лето 2022" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
