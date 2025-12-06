@@ -139,6 +139,7 @@
             <uc:CatItem Path="Autumn2021/Ishutino" Name="Ishutino" Description="Бабье лето 2021 на Ишутинском городище" runat="server" />
             <uc:CatItem Path="Summer2022/SchilovoForest" Name="SchilovoForest" Description="Шиловская аномалия, пьяный лес, лето 2022" runat="server" />
             <uc:CatItem Path="Spring2023/Ryazan" Name="Ryazan" Description="Разлив Оки в Шумаши 2023" runat="server" />
+            <uc:CatItem Path="Spring2023/Murmino" Name="Murmino" Description="Разлив Оки в Мурмино 2023" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
