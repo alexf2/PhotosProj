@@ -141,6 +141,7 @@
             <uc:CatItem Path="Spring2023/Ryazan" Name="Ryazan" Description="Разлив Оки в Шумаши 2023" runat="server" />
             <uc:CatItem Path="Spring2023/Murmino" Name="Murmino" Description="Разлив Оки в Мурмино 2023" runat="server" />
             <uc:CatItem Name="Istra" Description="Зимняя Истра и Новый Иерусалим" runat="server" />
+            <uc:CatItem Name="Buzarovo" Description="Бужарово на Истре" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
