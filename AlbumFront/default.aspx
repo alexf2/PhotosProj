@@ -140,6 +140,7 @@
             <uc:CatItem Path="Summer2022/SchilovoForest" Name="SchilovoForest" Description="Шиловская аномалия, пьяный лес, лето 2022" runat="server" />
             <uc:CatItem Path="Spring2023/Ryazan" Name="Ryazan" Description="Разлив Оки в Шумаши 2023" runat="server" />
             <uc:CatItem Path="Spring2023/Murmino" Name="Murmino" Description="Разлив Оки в Мурмино 2023" runat="server" />
+            <uc:CatItem Path="Spring2023/OldRyazan" Name="OldRyazan" Description="Разлив Оки в Старой Рязани 2023" runat="server" />
             <uc:CatItem Name="Istra" Description="Зимняя Истра и Новый Иерусалим" runat="server" />
             <uc:CatItem Name="Buzarovo" Description="Бужарово на Истре" runat="server" />
             <uc:CatItem Path="Ivanovo2023/Ivanovo" Name="Ivanovo" Description="Паровоз П36 в Иваново 2023" runat="server" />
