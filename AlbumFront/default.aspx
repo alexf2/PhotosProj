@@ -146,6 +146,7 @@
             <uc:CatItem Path="Ivanovo2023/Ivanovo" Name="Ivanovo" Description="Паровоз П36 в Иваново 2023" runat="server" />
             <uc:CatItem Path="Ivanovo2023/Dyunilovo" Name="Dyunilovo" Description="Дунилово зимой 2023" runat="server" />
             <uc:CatItem Path="Ivanovo2023/ShuyaSobor" Name="ShuyaSobor" Description="Шуя зимой 2023" runat="server" />
+            <uc:CatItem Name="Vysha_StaroChereevo" Description="Выша и Старочернеево летом 2021" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
