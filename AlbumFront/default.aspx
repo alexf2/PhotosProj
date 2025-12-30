@@ -141,6 +141,7 @@
             <uc:CatItem Path="Spring2023/Ryazan" Name="Ryazan" Description="Разлив Оки в Шумаши 2023" runat="server" />
             <uc:CatItem Path="Spring2023/Murmino" Name="Murmino" Description="Разлив Оки в Мурмино 2023" runat="server" />
             <uc:CatItem Path="Spring2023/OldRyazan" Name="OldRyazan" Description="Разлив Оки в Старой Рязани 2023" runat="server" />
+            <uc:CatItem Path="Spring2023/Poschupovo" Name="Poschupovo" Description="Разлив Оки в Пощупово, Иоанно-Богословский монастырь 2023" runat="server" />
             <uc:CatItem Name="Istra" Description="Зимняя Истра и Новый Иерусалим" runat="server" />
             <uc:CatItem Name="Buzarovo" Description="Бужарово на Истре" runat="server" />
             <uc:CatItem Path="Ivanovo2023/Ivanovo" Name="Ivanovo" Description="Паровоз П36 в Иваново 2023" runat="server" />
@@ -149,6 +150,7 @@
             <uc:CatItem Name="Vysha_StaroChereevo" Description="Выша и Старочернеево летом 2021" runat="server" />
             <uc:CatItem Path="Summer2022/Krivoborye" Name="Krivoborye" Description="Подкова на Дону около Кривоборья летом 2022" runat="server" />
             <uc:CatItem Path="Winter2025/Waterfall_Gorodenka" Name="Waterfall_Gorodenka" Description="Водопадик в лесу на роднике около Городенки / Шемякино, 2025" runat="server" />
+            <uc:CatItem Path="Winter2024/Frost" Name="Frost" Description="Иней в декабре, 2025" runat="server" />
         </div>
 
         <div class="SectionHeaderBg">
