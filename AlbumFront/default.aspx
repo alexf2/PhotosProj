@@ -150,6 +150,7 @@
             <uc:CatItem Path="Ivanovo2023/YurievPolskii" Name="YurievPolskii" Description="Юрьев Польский зимой 2023" runat="server" />
             <uc:CatItem Name="Vysha_StaroChereevo" Description="Выша и Старочернеево летом 2021" runat="server" />
             <uc:CatItem Path="Summer2022/Krivoborye" Name="Krivoborye" Description="Подкова на Дону около Кривоборья летом 2022" runat="server" />
+            <uc:CatItem Path="Summer2022/Pogost" Name="Pogost" Description="Село Погост Кассимовского района Рязанской области, лето 2022" runat="server" />
             <uc:CatItem Path="Winter2025/Waterfall_Gorodenka" Name="Waterfall_Gorodenka" Description="Водопадик в лесу на роднике около Городенки / Шемякино, 2025" runat="server" />
             <uc:CatItem Path="Winter2024/Frost" Name="Frost" Description="Иней в декабре, 2025" runat="server" />
         </div>
