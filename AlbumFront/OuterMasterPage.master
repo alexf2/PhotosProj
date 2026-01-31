@@ -48,7 +48,7 @@
 	        <footer class="Lnk">
                     <div class="LineBg" style="text-align:center">
                         <div class="LineLeftCap">&nbsp;</div><div class="LineRightCap">&nbsp;</div>
-                        <p class="Copyright"><a runat="server" href="<%$RouteUrl:routename=Default %>">Odyssey's Photography</a>, � Aleksey Fedorov 2006 - 2014, All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server"  class="Copyright" href="<%$RouteUrl:routename=About %>">About</a></p>
+                        <p class="Copyright"><a runat="server" href="<%$RouteUrl:routename=Default %>">Odyssey's Photography</a>, &copy; Aleksey Fedorov 2006 - 2014, All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server"  class="Copyright" href="<%$RouteUrl:routename=About %>">About</a></p>
                     </div>
             </footer>
 

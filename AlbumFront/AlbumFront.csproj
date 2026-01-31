@@ -116,6 +116,7 @@
     <Content Include="img\Iceland2011Thumb.jpg" />
     <Content Include="img\India2013Thumb.jpg" />
     <Content Include="img\Kirgiz2012Thumb.jpg" />
+    <Content Include="img\landing_img.jpg" />
     <Content Include="img\Laplandia2020Thumb.jpg" />
     <Content Include="img\line.jpg" />
     <Content Include="img\line_left_cap.jpg" />
@@ -158,6 +159,7 @@
     <None Include="Scripts\jquery-3.3.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="ThroughHorizonLanding.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

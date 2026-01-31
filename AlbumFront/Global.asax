@@ -61,6 +61,8 @@
         routes.Add("About", new Route("about", new PageRouteHandler("~/about.aspx")));
         routes.Add("Contacts", new Route("contacts", new PageRouteHandler("~/Mail.aspx")));
         routes.Add("Albums", new Route("albums", new PageRouteHandler("~/Albums/PageGen.aspx")));
+        routes.Add("FrVersion", new Route("frversion", new PageRouteHandler("~/FrVersion.aspx")));
+        routes.Add("HorizonLanding", new Route("horizon", new PageRouteHandler("~/ThroughHorizonLanding.aspx")));
     }
 
     //про bundles
