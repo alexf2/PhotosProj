@@ -97,6 +97,8 @@
             "~/css/css-ext.css",
             "~/css/fonts.css"
        ));
+
+        bundles.Add(new StyleBundle("~/bundles/horizon-css").Include("~/css/horizon.css"));
         
 
         //для Mail.aspx, которая не использует masterpage

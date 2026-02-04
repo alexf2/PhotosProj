@@ -23,6 +23,7 @@
 
     <asp:PlaceHolder runat="server">
         <% = Styles.Render("~/bundles/extra-css") %>        
+        <% = Styles.Render("~/bundles/horizon") %>        
     </asp:PlaceHolder>
 </head>
 
@@ -77,7 +78,12 @@
                 Всё, что нужно для прохождения: GPS-треки, фото, описания, инструкции и метрики.
             </p>
             <div>
-                <img class="FadeOnLoad" src="<%=ResolveClientUrl("img/landing_img.jpg")%>" border="0" title="Сообщество Сквозь горизонт" />
+                <div>
+                    <img class="FadeOnLoad" src="<%=ResolveClientUrl("img/landing_img.jpg")%>" border="0" title="Сообщество Сквозь горизонт" />
+                </div>
+                <div>
+                   xxx
+                </div>
             </div>
         </div>        
 

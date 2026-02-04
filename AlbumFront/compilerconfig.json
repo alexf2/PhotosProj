@@ -6,5 +6,9 @@
   {
     "outputFile": "css/fonts.css",
     "inputFile": "css/fonts.less"
+  },
+  {
+    "outputFile": "css/horizon.css",
+    "inputFile": "css/horizon.less"
   }
 ]

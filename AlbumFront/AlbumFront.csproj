@@ -106,9 +106,18 @@
     <Content Include="css\normalize.min.css">
       <DependentUpon>normalize.css</DependentUpon>
     </Content>
+    <Content Include="css\horizon.css">
+      <DependentUpon>horizon.less</DependentUpon>
+    </Content>
+    <Content Include="css\horizon.min.css">
+      <DependentUpon>horizon.css</DependentUpon>
+    </Content>
     <Content Include="default.aspx" />
     <Content Include="FrVersion.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="img\25-jonas__68768.jpg" />
+    <Content Include="img\35-jonas-rafael__68769.jpg" />
+    <Content Include="img\45-jonas-rafael-alejandro__68770.jpg" />
     <Content Include="img\Adygeya2009Thumb.jpg" />
     <Content Include="img\Cappadocia2018Thumb.jpg" />
     <Content Include="img\DolomiteAlps2016Thumb.jpg" />
@@ -121,6 +130,7 @@
     <Content Include="img\line.jpg" />
     <Content Include="img\line_left_cap.jpg" />
     <Content Include="img\line_right_cap.jpg" />
+    <Content Include="img\logo_23696.png" />
     <Content Include="img\Madeira2018Thumb.jpg" />
     <Content Include="img\map.gif" />
     <Content Include="img\Montblanc2017Thumb.jpg" />
@@ -150,10 +160,11 @@
     <Content Include="css\fonts.less" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
-    <Content Include="compilerconfig.json.defaults">
+    <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
-    </Content>
+    </None>
     <Content Include="img\manifest.json" />
+    <Content Include="css\horizon.less" />
     <None Include="Properties\PublishProfiles\AlbumFront.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1-vsdoc.js" />
