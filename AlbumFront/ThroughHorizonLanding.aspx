@@ -176,10 +176,10 @@
         <script language="javascript1.1" type="text/javascript">
             $('.FadeOnLoad').each(function () {
                 if (!this.complete)
-                    $(this).on('load', function () { $(this).css('opacity', '1'); })
+                    $(this).one('load', function () { $(this).css('opacity', '1'); })
                 else
                     $(this).css('opacity', '1');
-            });
+            });            
         </script>
     </asp:PlaceHolder>
 </body>

@@ -133,18 +133,27 @@
   margin: 0 auto;
 }
 .MainHeader {
-  margin-bottom: 1.5em;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12pt;
   display: table;
   width: 100%;
   background-color: #dde3f2;
   padding: 0.7em 1em 0.7em 1em;
   /*top right bottom left*/
   color: #666699;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 12pt;
+  margin-bottom: 1.5em;
+}
+.sticky_header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: box-shadow 0.2s ease;
+}
+.is_stuck {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 .HeaderCont {
   display: table-cell;

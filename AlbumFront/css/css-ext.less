@@ -138,13 +138,23 @@ body {
 }
 
 .MainHeader {
-    margin-bottom: 1.5em;
-    display: table;
+    .menu-font-mixin();
+    display: table;    
     width: 100%;
     background-color: @header-bg-color;
     padding: 0.7em 1em 0.7em 1em; /*top right bottom left*/
-    color: @selection-color;    
-    .menu-font-mixin();    
+    color: @selection-color;
+    margin-bottom: 1.5em;    
+}
+
+.sticky_header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: box-shadow 0.2s ease;    
+}
+.is_stuck {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .HeaderCont {
