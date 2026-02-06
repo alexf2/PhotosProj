@@ -1,9 +1,10 @@
-﻿body.horizon {
+﻿@import "mixins.less";
+
+body.horizon {
     background-color: #f0f7fc;    
 }
 
-.PageContainer {
-    border: 1px solid gray;
+.PageContainer {    
     margin: 0 auto;
     /* маржены и центрирование блока страницы: верх/низ, левый и правй */
     padding: 0 0 32px 0;
@@ -14,6 +15,7 @@
 
     .LinkBtn {
         position: relative;
+        .menu-font-mixin(12pt, 500);
         left: -50px;
         top: -25px;
         padding: 10px 20px;
@@ -22,7 +24,7 @@
         text-decoration: none;
         border-radius: 5px;
         display: inline-block;
-
+        will-change: transform;
         transition: background-color 0.5s ease, color 0.5s ease, transform 0.25s ease;
 
         &:hover, &:focus-visible {
@@ -43,38 +45,33 @@
     justify-content: space-between; /* лево и право в одной линии */
     gap: 1em;
     background-color: #dde3f2;
-    padding: 0.7em 1em 0.7em 1em;
     /*top right bottom left*/
+    padding: 0.7em 1em 0.7em 1em;
     color: #666699;
-    font-size: 0.84em;
 
     .MenuHeaderContent {
         display: flex;
         align-items: center;
-        font-family: PF Din Text Comp Pro;
-        font-size: 12pt;
-        font-weight: 600;
-        gap: 0.5em;        
+        .menu-font-mixin(12pt, 600);
+        gap: 0.5em;
     }
 
     .LogoName {
-        font-size: 14pt;
-        line-height: 105%;
-        font-family: PF Din Text Comp Pro;
-        font-weight: 600;        
+        .headers-font-mixin(18pt);
+        line-height: 110%;
+        color: #E35F00;
     }
 }
 .LnkCont a {
     display: inline-flex;
     align-items: center;
-    gap: 0.2em;
+    gap: 0.2em;    
     transition: color 0.5s ease;
     text-decoration: none;
     color: #666699;
 
     &:hover, &:focus-visible {
         color: #6666ff;
-        font-weight: bold;
     }
 
     > svg {
@@ -85,15 +82,15 @@
 
 
 .MainContainer {
-    position: relative;
-    border: 1px solid red;
+    position: relative;    
     color: #666699;
-    padding: 0 0 12px 0; /*top right bottom left*/
+    padding: 0 0 2em 0; /*top right bottom left*/
 
     margin-top: 16px;
     display: flex;
     flex-direction: column;
     align-items: center; /* центровка контента по горизонтали */
+    gap: 1em;
 
 
     .LogoImg {
@@ -102,24 +99,23 @@
         top: 0;
         left: 0;
         transform: translate(-20%, -25%);
-    } 
+    }
 
     .HeaderContainer {
         position: relative;
-        border: 1px solid blue;
-        font-family: Informa Pro;
+        .text-font-mixin(14pt);
+        font-style: italic;        
         line-height: 1.5;
         min-width: 0;
         max-width: 1100px;
-        align-self: flex-end;
-        font-size: 14pt;
+        align-self: flex-end;        
         word-break: break-word;
-        margin-bottom: 4px;        
+        margin-bottom: 4px;
+        text-align: right;
     }
 
     .InnerContainer {
-        position: relative;
-        border: 1px solid green;
+        position: relative;        
         display: flex;
         gap: 1em;
         align-items: stretch;
@@ -133,8 +129,7 @@
         justify-content: center;
     }
 
-    .Subscriptions {
-        border: 1px solid yellow;
+    .Subscriptions {        
         display: flex;
         flex-direction: column; /* вертикально */
         justify-content: space-between;
@@ -144,3 +139,32 @@
         }
     }
 }
+
+.PlainText {
+    .text-font-mixin();
+    color: @selection-color;
+
+    > p:first-of-type {
+        margin-block-start: 0.2em;
+    }
+
+    > p:last-of-type {
+        margin-block-end: 1.5em;
+    }
+}
+
+.StepsList {
+    > li {
+        margin-bottom: 0.5em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.ImgCentered {
+    display: block;
+    margin: 0 auto;
+}
+

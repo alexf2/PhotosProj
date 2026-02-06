@@ -17,7 +17,8 @@
   background-image: url(../img/section_header_bg_cap.jpg);
   background-repeat: no-repeat;
 }
-.SectionHeader {
+.SectionHeader,
+.SectionHeader2 {
   width: 162px;
   background-image: url(../img/section_header.jpg);
   background-repeat: no-repeat;
@@ -29,6 +30,13 @@
   padding-top: 0.4em;
   padding-bottom: 0.4em;
   text-align: left;
+}
+.SectionHeader2 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 11pt;
 }
 .SectionBody {
   padding: 0em 1.85em 2.5em 1.85em;
@@ -81,8 +89,11 @@
   clear: both;
 }
 .Container {
-  font-size: 0.9em;
-  font-family: Arial;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12pt;
   color: #666699;
   clear: both;
   margin: 0 auto;
@@ -109,6 +120,8 @@
   text-align: justify;
 }
 .Right {
+  font-size: 0.9em;
+  font-family: Arial;
   float: right;
   width: 500px;
 }
@@ -127,9 +140,11 @@
   padding: 0.7em 1em 0.7em 1em;
   /*top right bottom left*/
   color: #666699;
-  font-size: 0.9em;
-  font-family: Arial;
-  font-size: 0.84em;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12pt;
 }
 .HeaderCont {
   display: table-cell;
@@ -164,9 +179,12 @@ a.LinkCurr:focus-visible {
 }
 .LogoName {
   display: inline;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16pt;
   float: right;
   text-align: right;
-  font-size: 14px;
   line-height: 105%;
 }
 .CtlButtons {

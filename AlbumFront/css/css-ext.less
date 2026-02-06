@@ -1,35 +1,4 @@
-﻿@selection-color: #666699;
-@sect-header-height: 34px;
-@header-bg-width: 74px;
-@header-font-family: "Helvetica", Arial, sans-serif;
-@header-bg-color: #dde3f2;
-
-.std-font() {
-    font-size: 0.9em;
-    font-family: Arial;
-}
-.transition-mixin(@trans; @duration; @effect) {
-    will-change: transition, @trans;
-    -webkit-transition: @arguments;
-    -moz-transition: @arguments;
-    -ms-transition: @arguments;
-    -o-transition: @arguments;
-    transition: @arguments;
-}
-.transition-mixin2(@duration; @effect) {
-    will-change: transition;
-    -webkit-transition: @arguments;
-    -moz-transition: @arguments;
-    -ms-transition: @arguments;
-    -o-transition: @arguments;
-    transition: @arguments;
-}
-.shadow-mixin(@x-shift; @y-shift; @radius; @color) {
-    -moz-box-shadow: @arguments;
-    -webkit-box-shadow: @arguments;
-    box-shadow: @arguments;
-}
-
+﻿@import "mixins.less";
 
 body {
     background-color: #f2f7fe;
@@ -64,6 +33,11 @@ body {
     padding-top: 0.4em;
     padding-bottom: 0.4em;
     text-align: left;
+}
+
+.SectionHeader2 {
+    &:extend(.SectionHeader);
+    .menu-font-mixin(11pt, 600);
 }
 
 .SectionBody {
@@ -123,8 +97,8 @@ body {
     clear: both;
 }
 
-.Container {
-    .std-font();
+.Container {    
+    .text-font-mixin();
 
     color: @selection-color;
     clear: both;
@@ -149,6 +123,7 @@ body {
 }
 
 .Right {
+    .std-font();
     float: right;
     width: 500px;
 }
@@ -168,10 +143,8 @@ body {
     width: 100%;
     background-color: @header-bg-color;
     padding: 0.7em 1em 0.7em 1em; /*top right bottom left*/
-    color: @selection-color;
-
-    .std-font();
-    font-size: 0.84em;
+    color: @selection-color;    
+    .menu-font-mixin();    
 }
 
 .HeaderCont {
@@ -213,9 +186,9 @@ a.LinkCurr {
 
 .LogoName {
     display: inline;
+    .headers-font-mixin();
     float: right;
-    text-align: right;
-    font-size: 14px;
+    text-align: right;    
     line-height: 105%;
 }
 

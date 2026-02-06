@@ -1,30 +1,41 @@
 ﻿@font-face {
-  font-family: 'PF Din Text Comp Pro';
-  font-weight: 200;
+  font-family: 'Pacifico';
   font-style: normal;
-  src: local('PF Din Text Comp Pro'), local('PF Din Text Comp Pro'), url('../fonts/pfdintextcomppro-regular-webfont.woff') format('woff');
-}
-@font-face {
-  font-family: 'PF Din Text Comp Pro';
   font-weight: 400;
-  font-style: normal;
-  src: local('PF Din Text Comp Pro'), local('PF Din Text Comp Pro'), url('../fonts/pfdintextcomppro-medium-webfont.woff') format('woff');
+  font-display: swap;
+  src: local('Pacifico'), local('Pacifico Regular'), url('../fonts/Pacifico-Regular.ttf') format('truetype');
 }
+/* Montserrat Variable – normal */
 @font-face {
-  font-family: 'PF Din Text Comp Pro';
-  font-weight: 600;
+  font-family: 'Montserrat';
   font-style: normal;
-  src: local('PF Din Text Comp Pro'), local('PF Din Text Comp Pro'), url('../fonts/pfdintextcomppro-bold-webfont.woff') format('woff');
+  font-weight: 100 900;
+  /* диапазон для variable font */
+  font-display: swap;
+  src: local('Montserrat'), local('Montserrat Regular'), url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
+/* Montserrat Variable – italic */
 @font-face {
-  font-family: 'Informa Pro';
-  font-weight: 400;
-  font-style: normal;
-  src: local('Informa Pro'), url('../fonts/InformaPro.woff') format('woff'), url('../fonts/InformaPro.ttf') format('truetype');
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: local('Montserrat Italic'), local('Montserrat-Italic'), url('../fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
 }
+/* Inter Variable – normal */
 @font-face {
-  font-family: 'Informa Pro';
-  font-weight: 600;
+  font-family: 'Inter';
   font-style: normal;
-  src: local('Informa Pro Bold'), url('../fonts/InformaPro-Bold.woff') format('woff'), url('../fonts/InformaPro-Bold.ttf') format('truetype');
+  font-weight: 100 900;
+  /* весь диапазон веса */
+  font-display: swap;
+  src: local('Inter'), local('Inter Regular'), url('../fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+}
+/* Inter Variable – italic */
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: local('Inter Italic'), local('Inter-Italic'), url('../fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
 }

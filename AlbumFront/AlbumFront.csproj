@@ -119,6 +119,7 @@
     <Content Include="img\35-jonas-rafael__68769.jpg" />
     <Content Include="img\45-jonas-rafael-alejandro__68770.jpg" />
     <Content Include="img\Adygeya2009Thumb.jpg" />
+    <Content Include="img\boosty_qr_rustore.jpg" />
     <Content Include="img\Cappadocia2018Thumb.jpg" />
     <Content Include="img\DolomiteAlps2016Thumb.jpg" />
     <Content Include="img\Ehypet2012Thumb.jpg" />
@@ -149,13 +150,6 @@
     <Content Include="img\Usa2017Thumb.jpg" />
     <Content Include="Mail.aspx" />
     <Content Include="nuget.config" />
-    <Content Include="fonts\InformaPro-Bold.ttf" />
-    <Content Include="fonts\InformaPro-Bold.woff" />
-    <Content Include="fonts\InformaPro.ttf" />
-    <Content Include="fonts\InformaPro.woff" />
-    <Content Include="fonts\pfdintextcomppro-bold-webfont.woff" />
-    <Content Include="fonts\pfdintextcomppro-medium-webfont.woff" />
-    <Content Include="fonts\pfdintextcomppro-regular-webfont.woff" />
     <Content Include="css\css-ext.less" />
     <Content Include="css\fonts.less" />
     <Content Include="ThroughHorizonLanding.aspx" />
@@ -166,6 +160,12 @@
     </None>
     <Content Include="img\manifest.json" />
     <Content Include="css\horizon.less" />
+    <Content Include="fonts\Pacifico-Regular.ttf" />
+    <Content Include="fonts\Montserrat-Italic-VariableFont_wght.ttf" />
+    <Content Include="fonts\Montserrat-VariableFont_wght.ttf" />
+    <Content Include="fonts\Inter-Italic-VariableFont_opsz,wght.ttf" />
+    <Content Include="fonts\Inter-VariableFont_opsz,wght.ttf" />
+    <Content Include="css\mixins.less" />
     <None Include="Properties\PublishProfiles\AlbumFront.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1-vsdoc.js" />

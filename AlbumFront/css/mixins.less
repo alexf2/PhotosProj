@@ -1,0 +1,57 @@
+﻿@selection-color: #666699;
+@sect-header-height: 34px;
+@header-bg-width: 74px;
+@header-font-family: "Helvetica", Arial, sans-serif;
+@header-bg-color: #dde3f2;
+
+.headers-font-mixin(@size: 16pt) {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: @size;
+}
+
+.menu-font-mixin(@size: 12pt; @weight: 400) {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: @weight;
+    font-style: normal;
+    font-size: @size;
+}
+
+.text-font-mixin(@size: 12pt; @weight: 400) {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: @weight;
+    font-style: normal;
+    font-size: @size;
+}
+
+.std-font() {
+    font-size: 0.9em;
+    font-family: Arial;
+}
+
+.transition-mixin(@trans; @duration; @effect) {
+    will-change: transition, @trans;
+    -webkit-transition: @arguments;
+    -moz-transition: @arguments;
+    -ms-transition: @arguments;
+    -o-transition: @arguments;
+    transition: @arguments;
+}
+
+.transition-mixin2(@duration; @effect) {
+    will-change: transition;
+    -webkit-transition: @arguments;
+    -moz-transition: @arguments;
+    -ms-transition: @arguments;
+    -o-transition: @arguments;
+    transition: @arguments;
+}
+
+.shadow-mixin(@x-shift; @y-shift; @radius; @color) {
+    -moz-box-shadow: @arguments;
+    -webkit-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
