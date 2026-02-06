@@ -7,7 +7,7 @@
 
 <%@ Register TagPrefix="uc" 
              TagName="CatItem" 
-             Src="./CatItem.ascx" %>
+             Src="CatItem.ascx" %>
 
 
 <asp:Content ContentPlaceHolderID = "idYandexMetrica" runat = "server" >
@@ -191,14 +191,14 @@
                 <script language="javascript"
                         type="text/javascript">
                     cgb_r += "&js=" + cgb_js;
-                    document.write("<a href='http://www.1gb.ru?cnt=66030'>" +
+                    document.write("<a href='//www.1gb.ru?cnt=66030'>" +
                     "<img src='http://counter.1gb.ru/cnt.aspx?" +
                     "u=66030&" + cgb_r +
                     "&' border=0 width=88 height=31 " +
                     "alt='1Gb.ru counter'><\/a>")</script>
                 <noscript>
-                    <a href='http://www.1gb.ru?cnt=66030'>
-                        <img src="http://counter.1gb.ru/cnt.aspx?u=66030"
+                    <a href='//www.1gb.ru?cnt=66030'>
+                        <img src="//counter.1gb.ru/cnt.aspx?u=66030"
                              border=0 width="88" height="31" alt="1Gb.ru counter" />
                     </a>
                 </noscript>
@@ -206,7 +206,7 @@
 
             <div id="eXTReMe" style="float:left; padding-left: 5pt">
                                 
-                    <a href="http://extremetracking.com/open?login=osyssey"><img src="http://t1.extreme-dm.com/i.gif" style="border: 0;"
+                    <a href="//extremetracking.com/open?login=osyssey"><img src="//t1.extreme-dm.com/i.gif" style="border: 0;"
                          height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
                 
                 <script type="text/javascript">
@@ -222,22 +222,22 @@
         navigator.javaEnabled()==1?EXjv="y":EXjv="n";
         EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
         EXref?EXref=EXref:EXref=EXd.referrer;
-        EXd.write("<img "+EXsrc+"=http://e0.extreme-dm.com",
+        EXd.write("<img "+EXsrc+"=//e0.extreme-dm.com",
         "/"+EXvsrv+".g?login="+EXlogin+"&amp;",
         "jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
         "l="+escape(EXref)+" height=1 width=1>");//-->
                 </script><noscript>
                     <div id="neXTReMe">
                         <img height="1" width="1" alt=""
-                             src="http://e0.extreme-dm.com/s9.g?login=osyssey&amp;j=n&amp;jv=n" />
+                             src="//e0.extreme-dm.com/s9.g?login=osyssey&amp;j=n&amp;jv=n" />
                     </div>
                 </noscript>
             </div>
 
             <div id="mailRu" style="float:left; padding-left: 2pt">
                 <!-- Rating@Mail.ru logo -->
-                <a href="http://top.mail.ru/jump?from=2448879">
-                    <img src="http://top-fwz1.mail.ru/counter?id=2448879;t=479;l=1"
+                <a href="//top.mail.ru/jump?from=2448879">
+                    <img src="//top-fwz1.mail.ru/counter?id=2448879;t=479;l=1"
                          style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" />
                 </a>
                 <!-- //Rating@Mail.ru logo -->

@@ -50,7 +50,7 @@
         <article class = "LoginContainer" role="main">
             <div class = "LoginCtlWrapper" >
             <asp:Login ID="Login1" runat="server"  BorderPadding="4"                
-                Height="163px" meta:resourcekey="Login1Resource1" Width="332px" 
+                Height="163px" meta:resourcekey="Login1Resource1" Width="342px" 
                 OnLoggedIn = "Login1_OnLoggedIn" CssClass="LoginCtlClass" ClientIDMode="Predictable"
             >
 
@@ -85,13 +85,13 @@
 		            cgb_js="1.3"</script>
 		            <script language="javascript" 
 		            type="text/javascript">cgb_r+="&js="+cgb_js; 
-		            document.write("<a href='http://www.1gb.ru?cnt=66030'>"+
+		            document.write("<a href='//www.1gb.ru?cnt=66030'>"+
 		            "<img src='http://counter.1gb.ru/cnt.aspx?"+
 		            "u=66030&"+cgb_r+
 		            "&' border=0 width=88 height=31 "+
 		            "alt='1Gb.ru counter'><\/a>")</script>
-		            <noscript><a href='http://www.1gb.ru?cnt=66030'>
-		            <img src="http://counter.1gb.ru/cnt.aspx?u=66030" 
+		            <noscript><a href='//www.1gb.ru?cnt=66030'>
+		            <img src="//counter.1gb.ru/cnt.aspx?u=66030" 
 		            border=0 width="88" height="31" alt="1Gb.ru counter"></a>
 	            </noscript>
               </div>

@@ -82,7 +82,7 @@ body {
     text-decoration: none;
     line-height: 130%;
 
-    &:hover {
+    &:hover, &:focus-visible {
         color: #6666ff;
         font-weight: bold;
         text-decoration: underline;
@@ -193,7 +193,7 @@ a.LinkCurr {
     font-weight: bold;
     text-decoration: none;
 
-    &:hover {
+    &:hover, &:focus-visible {
         text-decoration: none !important;
         color: @selection-color !important;
     }
@@ -204,10 +204,11 @@ a.LinkCurr {
         color: @selection-color;
         text-decoration: none;
     }
-    a:hover {
-        color: #6666ff;
-        text-decoration: underline;
-    }
+
+        a:hover, a:focus-visible {
+            color: #6666ff;
+            text-decoration: underline;
+        }
 }
 
 .LogoName {
@@ -292,6 +293,12 @@ input[type = submit][disabled=true], *.Grayed {
     clear: both;
     padding: 8px;
     background-color: @header-bg-color;
+
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
 }
 
 .FloatRight {
@@ -334,11 +341,12 @@ input[type = submit][disabled=true], *.Grayed {
     overflow-y: auto;
 }
 
-div:after, form:after, ul:after, ol:after, dl:after, dt:after, dd:after, h1:after, h2:after, h3:after, h4:after, p:after {
+/* Чтобы контейнер набирал высоту при использовании float-элементов */
+/*div:after, form:after, ul:after, ol:after, dl:after, dt:after, dd:after, h1:after, h2:after, h3:after, h4:after, p:after {
     content: "";
     display: block;
     clear: both;
-}
+}*/
 
 .ImgThumbNormal {
     border-width: 0;

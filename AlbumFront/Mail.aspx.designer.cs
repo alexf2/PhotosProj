@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlbumFront {
-    
-    
-    public partial class Mail {
-        
+namespace AlbumFront
+{
+
+
+    public partial class Mail
+    {
+
         /// <summary>
         /// ScriptManagerMain control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManagerMain;
-        
+
         /// <summary>
         /// SendingStatus control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel SendingStatus;
-        
+
         /// <summary>
         /// StatusMsg control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal StatusMsg;
-        
+
         /// <summary>
         /// validationSummary control.
         /// </summary>
@@ -47,7 +49,16 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary validationSummary;
-        
+
+        /// <summary>
+        /// lblFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFirstName;
+
         /// <summary>
         /// FirstName control.
         /// </summary>
@@ -56,7 +67,7 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText FirstName;
-        
+
         /// <summary>
         /// RequiredFieldValidator1 control.
         /// </summary>
@@ -65,7 +76,16 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
+
+        /// <summary>
+        /// lblLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLastName;
+
         /// <summary>
         /// LastName control.
         /// </summary>
@@ -74,7 +94,16 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText LastName;
-        
+
+        /// <summary>
+        /// lblReplyAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblReplyAddress;
+
         /// <summary>
         /// ReplyAddress control.
         /// </summary>
@@ -83,7 +112,7 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl ReplyAddress;
-        
+
         /// <summary>
         /// RequiredFieldValidator2 control.
         /// </summary>
@@ -92,7 +121,16 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
-        
+
+        /// <summary>
+        /// lblSubject control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSubject;
+
         /// <summary>
         /// Subject control.
         /// </summary>
@@ -101,7 +139,7 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Subject;
-        
+
         /// <summary>
         /// MailBody control.
         /// </summary>
@@ -110,7 +148,7 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea MailBody;
-        
+
         /// <summary>
         /// RegisterCaptcha control.
         /// </summary>
@@ -119,7 +157,16 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::BotDetect.Web.UI.Captcha RegisterCaptcha;
-        
+
+        /// <summary>
+        /// lblControlCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblControlCode;
+
         /// <summary>
         /// ControlCode control.
         /// </summary>
@@ -128,7 +175,7 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText ControlCode;
-        
+
         /// <summary>
         /// RequiredFieldValidator3 control.
         /// </summary>
@@ -137,7 +184,7 @@ namespace AlbumFront {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
+
         /// <summary>
         /// CaptchaValidator control.
         /// </summary>

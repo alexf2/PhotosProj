@@ -16,7 +16,7 @@
             if (ctl != null)
             {
                 ctl.Enabled = false;
-                ctl.CssClass = "LinkCurr";
+                ctl.CssClass = "LinkCurr";      
             }        
         } 
     }
@@ -54,7 +54,7 @@
 
                 
                 <div class="FormItem">
-                    <label for="FirstName" class="LabelFix1" >Given Name:*</label>
+                    <asp:Label ID="lblFirstName" AssociatedControlID="FirstName" CssClass="LabelFix1" runat="server">Given Name:*</asp:Label>
                     <input type="text" id="FirstName" name="FirstName" size="35" runat="server" />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="None" ControlToValidate="FirstName"
                                 ErrorMessage="Please enter your Name" Text="*" InitialValue = "" EnableClientScript = "true" />
@@ -62,13 +62,13 @@
                     </div>
 
                 <div class="FormItem">
-                    <label for="LastName" class="LabelFix1">Last Name:</label>
+                    <asp:Label ID="lblLastName" AssociatedControlID="LastName" CssClass="LabelFix1" runat="server">Last Name:</asp:Label>
                     <input type="text" id="LastName" name="LastName" size="35" runat="server" />                    
                     <br />
                 </div>
 
                 <div class="FormItem">
-                    <label for="ReplyAddress" class="LabelFix1">Your EMail:*</label>
+                    <asp:Label ID="lblReplyAddress" AssociatedControlID="ReplyAddress" CssClass="LabelFix1" runat="server">Your EMail:*</asp:Label>
                     <input type="email" id="ReplyAddress" name="ReplyAddress" size="35" runat="server"  />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" Display="None" ControlToValidate="ReplyAddress"
                                 ErrorMessage="Please enter your EMail" Text="*" InitialValue = "" EnableClientScript = "true" />
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="FormItem" style="padding-right:4px">
-                    <label for="Subject" class="LabelFix1" style="margin-bottom:4px" >Subject:*</label>
+                    <asp:Label ID="lblSubject" AssociatedControlID="Subject" CssClass="LabelFix1" Style="margin-bottom:4px" runat="server">Subject:*</asp:Label>
                     <input type="text" id="Subject" name="Subject" style="width:100%"  runat="server" />
                     <br />
                 </div>
@@ -89,7 +89,7 @@
                 <div class="FormItem" style="text-align:right">
                     <div class="Captcha"><BotDetect:Captcha ID="RegisterCaptcha" runat="server"  /></div>
                     <div class="InnerFormItem">
-                        <label for="ControlCode">Code:*</label>
+                        <asp:Label ID="lblControlCode" AssociatedControlID="ControlCode" runat="server">Code:*</asp:Label>
                         <input type="text" id="ControlCode" name="ControlCode" size="15" runat="server" />
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" Display="None" ControlToValidate="ControlCode"
                                 ErrorMessage="Please enter the validation code, shown on the Captcha" Text="*" InitialValue = "" EnableClientScript = "true" />

@@ -1,10 +1,14 @@
-﻿<%@ Page
-    Language="C#"
-    MetaKeywords=""
-    MetaDescription=""
+﻿<%@ Page 
+    Language="C#" 
+    AutoEventWireup="true" 
+    CodeBehind="ThroughHorizonLanding.aspx.cs" 
+    Inherits="AlbumFront.ThroughHorizonLanding" 
+    MetaKeywords="хайкинг, легкоходный туризм, туризм налегке, фото-поездки, треккинг, ПВД, однодневки, походы на два три дня, походы из Москвы, GPS, GPX треки"
+    MetaDescription="Сквозь горизонт: хайкинг, легкоходный туризм и фото-поездки налегке. Полезные гайды, маршруты и советы для трейлов с минимальным весом. База походов с метриками сложности и GPS-Треками. Присоединяйтесь к сообществу на Boosty!"
     Culture="auto"
     UICulture="auto"
-    Title="Сквозь горизонт: хайкинг, легкоходный туризм и фото-поездки налегке" %>
+    Title="Сквозь горизонт: хайкинг, легкоходный туризм и фото-поездки налегке"
+%>
 
 <!DOCTYPE html>
 
@@ -23,11 +27,11 @@
 
     <asp:PlaceHolder runat="server">
         <% = Styles.Render("~/bundles/extra-css") %>        
-        <% = Styles.Render("~/bundles/horizon") %>        
+        <% = Styles.Render("~/bundles/horizon-css") %>        
     </asp:PlaceHolder>
 </head>
 
-<body>
+<body class="horizon">
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden">
         <symbol id="icon-boosty" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -51,45 +55,62 @@
         </symbol>
     </svg>
 
-    <asp:Panel ID="MainDiv" CssClass="Centering" role="main" runat="server">
+    <asp:Panel CssClass="PageContainer" role="main" runat="server">
 
-        <header class="MainHeader Lnk">
-            <div class="HeaderCont">
-                <nav class="Nav" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <asp:HyperLink ID="aboutBoosty" NavigateUrl="https://boosty.to/through_horizon/posts/487bbf07-5b7a-4c56-9b24-621788b601c7?share=post_link" Target="_blank" runat="server">О сообществе</asp:HyperLink>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <svg style="width: 24px; height: 24px">
-                        <use xlink:href="#icon-boosty"></use></svg><asp:HyperLink ID="boosty" NavigateUrl="https://boosty.to/through_horizon" Target="_blank" runat="server">Сообщество</asp:HyperLink>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <svg style="width: 24px; height: 24px">
-                        <use xlink:href="#icon-telegram"></use></svg><asp:HyperLink ID="telegram" NavigateUrl="https://t.me/+GH9OFfv-lRgxMDMy" Target="_blank" runat="server">Канал</asp:HyperLink>&nbsp;&nbsp;|&nbsp;&nbsp;
-                    <svg style="width: 24px; height: 24px">
-                        <use xlink:href="#icon-note"></use></svg><asp:HyperLink ID="instruction" NavigateUrl="#instron" runat="server">Инструкции</asp:HyperLink>
-                </nav>
-            </div>
-            <div class="HeaderCont">
-                <div class="LogoName">
-                    &nbsp;<b>Сквозь горизонт 🥾</b>
-                </div>
-            </div>
+        <header class="MenuHeader  LnkCont">
+            <nav class="MenuHeaderContent" xmlns:xlink="http://www.w3.org/1999/xlink">                                
+                <a href="<% = URL_HORIZON %>" target="_blank" rel="noopener">
+                    <svg role="img" aria-label="О сообществе"><use xlink:href="#icon-boosty"></use></svg>Сообщество
+                </a>|
+                <a href="<% = URL_ABOUT_HORIZON %>" target="_blank" rel="noopener">О сообществе</a>|
+                <a href="<% = URL_TG %>" target="_blank" rel="noopener">
+                    <svg  role="img" aria-label="Канал"><use xlink:href="#icon-telegram"></use></svg>Канал
+                </a>|
+                <a href="#instron">
+                    <svg role="img" aria-label="Инструкции"><use xlink:href="#icon-note"></use></svg>Инструкции
+                </a>                
+            </nav> 
+            <div class="MenuHeaderContent LogoName"><b>Сквозь горизонт 🥾</b></div>
         </header>
 
-        <div class="Container">
-            <p>
-                База маршрутов для легкоходного туризма, походов выходного дня и однодневок налегке.
-                Всё, что нужно для прохождения: GPS-треки, фото, описания, инструкции и метрики.
-            </p>
-            <div>
-                <div>
-                    <img class="FadeOnLoad" src="<%=ResolveClientUrl("img/landing_img.jpg")%>" border="0" title="Сообщество Сквозь горизонт" />
+        <main class="MainContainer">
+            <div class="HeaderContainer">                
+                    База маршрутов для легкоходного туризма, походов выходного дня и однодневок налегке.
+                    Всё, что нужно для прохождения: GPS-треки, фото, описания, инструкции и метрики.                
+            </div>
+            <div class="InnerContainer">
+                <img class="FadeOnLoad LogoImg" width="240" height="239" src="<%=ResolveClientUrl("img/logo_23696-2.png")%>" border="0" title="Сообщество Сквозь горизонт" alt="Сообщество Сквозь горизонт" />
+                <div class="LandingImage">
+                    <img class="FadeOnLoad" width="1000" height="667" src="<%=ResolveClientUrl("img/landing_img.jpg")%>" border="0" title="Сообщество Сквозь горизонт" alt="Сообщество Сквозь горизонт" />
                 </div>
-                <div>
-                   xxx
+                <div class="Subscriptions">
+                    <div>
+                        <a href="<% = URL_ONE_DAY %>" target="_blank" rel="noopener">
+                            <img class="FadeOnLoad" width="240" height="164" src="<%=ResolveClientUrl("img/25-jonas__68768.jpg")%>" border="0" title="Подписка на однодневки" alt="Подписка на однодневки"/>
+                        </a>
+                        <a class="LinkBtn"  href="<% = URL_ONE_DAY %>" target="_blank" rel="noopener">Подписаться</a>
+                    </div>
+
+                    <div>
+                        <a href="<% = URL_PVD  %>" target="_blank" rel="noopener">
+                            <img class="FadeOnLoad" width="240" height="164" src="<%=ResolveClientUrl("img/35-jonas-rafael__68769.jpg")%>" border="0" title="Подписка на ПВД" alt="Подписка на ПВД" />
+                        </a>
+                        <a class="LinkBtn" href="<% = URL_PVD %>" target="_blank" rel="noopener">Подписаться</a>
+                    </div>
+
+                    <div>
+                        <a href="<% = URL_FULL %>" target="_blank" rel="noopener">
+                            <img class="FadeOnLoad" width="240" height="164" src="<%=ResolveClientUrl("img/45-jonas-rafael-alejandro__68770.jpg")%>" border="0" title="Полная подписка" alt="Полная подписка" />
+                        </a>
+                        <a class="LinkBtn" href="<% = URL_FULL%>" target="_blank" rel="noopener">Подписаться</a>
+                    </div>
                 </div>
             </div>
-        </div>        
+        </main>        
 
         <div class="FooterSep">&nbsp;</div>
 
-        <footer class="Lnk">
+        <footer class="LnkCont">
             <div class="LineBg" style="text-align: center">
                 <div class="LineLeftCap">&nbsp;</div>
                 <div class="LineRightCap">&nbsp;</div>

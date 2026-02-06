@@ -1,3 +1,146 @@
-﻿.test {
-    background-color: red;
+﻿body.horizon {
+    background-color: #f0f7fc;    
+}
+
+.PageContainer {
+    border: 1px solid gray;
+    margin: 0 auto;
+    /* маржены и центрирование блока страницы: верх/низ, левый и правй */
+    padding: 0 0 32px 0;
+    box-sizing: border-box;
+    min-width: min-content;
+    max-width: 100%;
+    width: 0;
+
+    .LinkBtn {
+        position: relative;
+        left: -50px;
+        top: -25px;
+        padding: 10px 20px;
+        background-color: #dde3f2;
+        color: #666699;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+
+        transition: background-color 0.5s ease, color 0.5s ease, transform 0.25s ease;
+
+        &:hover, &:focus-visible {
+            background-color: #E35F00;
+            color: #FFFFFF;
+            transform: translateY(-1px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+.MenuHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* лево и право в одной линии */
+    gap: 1em;
+    background-color: #dde3f2;
+    padding: 0.7em 1em 0.7em 1em;
+    /*top right bottom left*/
+    color: #666699;
+    font-size: 0.84em;
+
+    .MenuHeaderContent {
+        display: flex;
+        align-items: center;
+        font-family: PF Din Text Comp Pro;
+        font-size: 12pt;
+        font-weight: 600;
+        gap: 0.5em;        
+    }
+
+    .LogoName {
+        font-size: 14pt;
+        line-height: 105%;
+        font-family: PF Din Text Comp Pro;
+        font-weight: 600;        
+    }
+}
+.LnkCont a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2em;
+    transition: color 0.5s ease;
+    text-decoration: none;
+    color: #666699;
+
+    &:hover, &:focus-visible {
+        color: #6666ff;
+        font-weight: bold;
+    }
+
+    > svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+.MainContainer {
+    position: relative;
+    border: 1px solid red;
+    color: #666699;
+    padding: 0 0 12px 0; /*top right bottom left*/
+
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* центровка контента по горизонтали */
+
+
+    .LogoImg {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        transform: translate(-20%, -25%);
+    } 
+
+    .HeaderContainer {
+        position: relative;
+        border: 1px solid blue;
+        font-family: Informa Pro;
+        line-height: 1.5;
+        min-width: 0;
+        max-width: 1100px;
+        align-self: flex-end;
+        font-size: 14pt;
+        word-break: break-word;
+        margin-bottom: 4px;        
+    }
+
+    .InnerContainer {
+        position: relative;
+        border: 1px solid green;
+        display: flex;
+        gap: 1em;
+        align-items: stretch;
+        justify-content: space-between;
+        padding: 0 1em 0 1em;
+    }
+
+    .LandingImage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Subscriptions {
+        border: 1px solid yellow;
+        display: flex;
+        flex-direction: column; /* вертикально */
+        justify-content: space-between;
+
+        > div {
+            position: relative;
+        }
+    }
 }

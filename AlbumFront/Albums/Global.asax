@@ -108,8 +108,8 @@
         {
             Path = "~/Scripts/jquery-" + _jqueryVersion + ".min.js",
             DebugPath = "~/Scripts/jquery-" + _jqueryVersion + ".js",
-            CdnPath = "http://code.jquery.com/jquery-" + _jqueryVersion + ".min.js",
-            CdnDebugPath = "http://code.jquery.com/jquery-" + _jqueryVersion + ".js",
+            CdnPath = "//code.jquery.com/jquery-" + _jqueryVersion + ".min.js",
+            CdnDebugPath = "//code.jquery.com/jquery-" + _jqueryVersion + ".js",
             CdnSupportsSecureConnection = true,
             LoadSuccessExpression = "window.jQuery"
         });
@@ -153,7 +153,7 @@
         mapping.AddDefinition("MsAjaxBundle", new ScriptResourceDefinition
         {
             Path = "~/bundles/MsAjaxJs",
-            CdnPath = "http://ajax.aspnetcdn.com/ajax/4.5/6/MsAjaxBundle.js",
+            CdnPath = "//ajax.aspnetcdn.com/ajax/4.5/6/MsAjaxBundle.js",
             LoadSuccessExpression = "window.Sys",
             CdnSupportsSecureConnection = true
         });
@@ -175,7 +175,7 @@
         mapping.AddDefinition(name, new ScriptResourceDefinition
         {
             Path = "~/Scripts/WebForms/MsAjax/" + name,
-            CdnPath = "http://ajax.aspnetcdn.com/ajax/4.5/6/" + name,
+            CdnPath = "//ajax.aspnetcdn.com/ajax/4.5/6/" + name,
             LoadSuccessExpression = loadSuccessExpression,
             CdnSupportsSecureConnection = true
         });
@@ -185,7 +185,7 @@
         mapping.AddDefinition("WebFormsBundle", new ScriptResourceDefinition
         {
             Path = "~/bundles/WebFormsJs",
-            CdnPath = "http://ajax.aspnetcdn.com/ajax/4.5/6/WebFormsBundle.js",
+            CdnPath = "//ajax.aspnetcdn.com/ajax/4.5/6/WebFormsBundle.js",
             LoadSuccessExpression = "window.WebForm_PostBackOptions",
             CdnSupportsSecureConnection = true
         });
@@ -195,7 +195,7 @@
     {        
         bundles.UseCdn = true;
 
-        var b = new ScriptBundle("~/bundles/jquery", string.Format("http://code.jquery.com/jquery-{0}.min.js", _jqueryVersion)).Include("~/Scripts/jquery-{version}.js");
+        var b = new ScriptBundle("~/bundles/jquery", string.Format("//code.jquery.com/jquery-{0}.min.js", _jqueryVersion)).Include("~/Scripts/jquery-{version}.js");
         b.CdnFallbackExpression = "window.jQuery";
         bundles.Add(b);
 
