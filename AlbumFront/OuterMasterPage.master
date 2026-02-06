@@ -30,10 +30,11 @@
             <header class="MainHeader Lnk sticky_header">
                 <div class="HeaderCont">
                     <nav class="Nav">
-                        <asp:HyperLink ID="defLnk" NavigateUrl="<%$RouteUrl:routename=Default %>" runat="server">Photos</asp:HyperLink>&nbsp;&nbsp;
-                        <asp:HyperLink ID="aboutLnk" NavigateUrl="<%$RouteUrl:routename=About %>" runat="server">About</asp:HyperLink>&nbsp;&nbsp;
-                        <asp:HyperLink ID="albumLnk" NavigateUrl="<%$RouteUrl:routename=Albums %>" runat="server">Albums</asp:HyperLink>&nbsp;&nbsp;
-                        <asp:HyperLink ID="mailLnk" NavigateUrl="<%$RouteUrl:routename=Contacts %>" runat="server">Contacts</asp:HyperLink>
+                        <asp:HyperLink ID="defLnk" NavigateUrl="<%$RouteUrl:routename=Default %>" runat="server">Photos</asp:HyperLink> | 
+                        <asp:HyperLink ID="aboutLnk" NavigateUrl="<%$RouteUrl:routename=About %>" runat="server">About</asp:HyperLink> | 
+                        <asp:HyperLink ID="albumLnk" NavigateUrl="<%$RouteUrl:routename=Albums %>" rel="nofollow" runat="server">Albums</asp:HyperLink> | 
+                        <asp:HyperLink ID="mailLnk" NavigateUrl="<%$RouteUrl:routename=Contacts %>" rel="nofollow" runat="server">Contacts</asp:HyperLink>  | 
+                        <asp:HyperLink ID="horizonLnk" NavigateUrl="<%$RouteUrl:routename=HorizonLanding %>" Target="_blank" rel="noopener" runat="server">ThroughHorizon</asp:HyperLink>
                     </nav>
                 </div>
                 <div class="HeaderCont">

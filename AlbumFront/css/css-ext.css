@@ -164,9 +164,18 @@ a.Fnormal {
   font-weight: normal;
 }
 .Nav {
-  display: inline;
-  float: left;
   font-weight: normal;
+}
+.Nav > a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+.Nav > a:first-child {
+  margin-left: 0;
+}
+.Nav > a:last-child {
+  margin-right: 0;
 }
 a.LinkCurr {
   font-weight: bold;

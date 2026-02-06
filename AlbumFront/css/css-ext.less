@@ -167,9 +167,21 @@ body {
 }
 
 .Nav {
-    display: inline;
-    float: left;
     font-weight: normal;
+
+    > a {
+        display: inline-block;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    > a:first-child {
+        margin-left: 0;
+    }
+
+    > a:last-child {
+        margin-right: 0;
+    }
 }
 
 a.LinkCurr {

@@ -152,6 +152,8 @@
     <Content Include="nuget.config" />
     <Content Include="css\css-ext.less" />
     <Content Include="css\fonts.less" />
+    <Content Include="robots.txt" />
+    <Content Include="sitemap.xml" />
     <Content Include="ThroughHorizonLanding.aspx" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />

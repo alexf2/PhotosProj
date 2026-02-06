@@ -85,13 +85,13 @@
         </div>
         <div class="SectionBody">
             <a href="<%=ResolveClientUrl("Albums/PageGen.aspx")%>">Все альбомы</a> <br /><br />
-            <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=crimea&amp;pwd=crim8976")%>">Крым 2006</a> <br />
-            <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=crimea&amp;pwd=crim8976")%>">Крым 2007</a> <br />
-            <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=seliger&amp;pwd=lake875")%>">Селигер</a> <br />
-            <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=aws&amp;pwd=aws8778566")%>">AWS</a> <br />
-            <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=moscow-reg&amp;pwd=msc0987")%>">Подмосковье</a> <br />
-            <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=Greece&amp;pwd=gr19655")%>">Греция 2008</a> <br />
-            <a href="<%=ResolveClientUrl("Albums/Login.aspx?login=Italy&amp;pwd=gr19655")%>">Италия 2009</a>&nbsp;&nbsp;<a href="<%=ResolveClientUrl("Pub/Maps/italy2009.htm")%>"><img style="vertical-align: middle" src="<%=ResolveClientUrl("img/map.gif")%>" alt="Карта маршрута" border="0" title="Карта маршрута" /></a> <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=crimea&amp;pwd=crim8976")%>">Крым 2006</a> <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=crimea&amp;pwd=crim8976")%>">Крым 2007</a> <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=seliger&amp;pwd=lake875")%>">Селигер</a> <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=aws&amp;pwd=aws8778566")%>">AWS</a> <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=moscow-reg&amp;pwd=msc0987")%>">Подмосковье</a> <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=Greece&amp;pwd=gr19655")%>">Греция 2008</a> <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=Italy&amp;pwd=gr19655")%>">Италия 2009</a>&nbsp;&nbsp;<a href="<%=ResolveClientUrl("Pub/Maps/italy2009.htm")%>"><img style="vertical-align: middle" src="<%=ResolveClientUrl("img/map.gif")%>" alt="Карта маршрута" border="0" title="Карта маршрута" /></a> <br />
 
             <uc:CatItem Name="Adygeya2009" Login="Adygeya" Pwd="ad1278" ImgCss="ImgThumbNormal" Description="Горная Адыгея 2009" runat="server" />
             <uc:CatItem Name="Norway2010" Login="Norway" Pwd="nrw952" ImgCss="ImgThumbSmall" Description="Автопробег по Норвегии 2010" runat="server" />
