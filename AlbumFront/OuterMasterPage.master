@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="yandex-verification" content="d6ff7bab1f833376" />
     
+    <link rel="canonical" href="<%= "https://afedorov.info" + HttpContext.Current.Request.Url.AbsolutePath %>" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/photo_album_blue.png">
     <link rel="icon" type="image/png" sizes="128x128" href="img/photo_album.png">
     <link rel="apple-touch-icon" sizes="128x128" href="img/photo_album.png">
@@ -49,7 +50,7 @@
 	        <footer class="Lnk">
                     <div class="LineBg" style="text-align:center">
                         <div class="LineLeftCap">&nbsp;</div><div class="LineRightCap">&nbsp;</div>
-                        <p class="Copyright"><a runat="server" href="<%$RouteUrl:routename=Default %>">Odyssey's Photography</a>, &copy; Aleksey Fedorov 2006 - 2014, All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server"  class="Copyright" href="<%$RouteUrl:routename=About %>">About</a></p>
+                        <p class="Copyright"><a runat="server" href="<%$RouteUrl:routename=Default %>">Odyssey's Photography</a>, &copy; Aleksey Fedorov 2006 - 2026, All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server"  class="Copyright" href="<%$RouteUrl:routename=About %>">About</a></p>
                     </div>
             </footer>
 

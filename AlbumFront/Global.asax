@@ -24,7 +24,13 @@
    
     void Application_BeginRequest( Object sender, EventArgs e )
     {
+        var request = HttpContext.Current.Request;
         //AWS.Utils.WebUtils.SetLocale( Request );
+        if (!request.IsSecureConnection && !request.IsLocal)
+        {
+            HttpContext.Current.Response.Redirect("https://" + request.Url.Host + request.RawUrl, true);
+                
+        }
     }
         
 
