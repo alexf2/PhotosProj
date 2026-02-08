@@ -1,38 +1,16 @@
-﻿<%@ Page Language="C#"    
+﻿<%@ Page Language="C#"
     EnableEventValidation="True"
-    MasterPageFile = "~/OuterMasterPage.master"
-    MetaKeywords = "Алексей Федоров, фотографии, альбомы, Одиссей, Крым, Адыгея, Греция, Италия, Норвегия, Исландия, Испания, Франция, Индия, Киргизия, Египет, Раджастан, Марокко, Сахара, США, Аризона, Юта, Невада, Мьянма, Бирма, Чехия, Словакия, Южная Моравия"
-    MetaDescription="Фотоальбомы Одиссея, экспедиции и автопробеги, отчеты"
-    Culture="auto"  UICulture="auto" Title = "Ὀδύσσεια ---== Odyssey's Photos ==--- Ὀδύσσεια" %>
+    MasterPageFile="~/OuterMasterPage.master"
+    MetaKeywords="Алексей Федоров, фотографии, альбомы, Одиссей, Крым, Адыгея, Греция, Италия, Норвегия, Исландия, Испания, Франция, Индия, Киргизия, Египет, Раджастан, Марокко, Сахара, США, Аризона, Юта, Невада, Мьянма, Бирма, Чехия, Словакия, Южная Моравия"
+    MetaDescription="Фотогалереи и фотоотчёты Одиссея: путешествия, автопробеги и походы по Крыму, Абхазии, Норвегии, Исландии, Альпам, США, Кавказу, Лапландии и историческим местам России с отчётами и альбомами."
+    Culture="auto" UICulture="auto" Title="Ὀδύσσεια ---== Odyssey's Photos ==--- Ὀδύσσεια" %>
 
-<%@ Register TagPrefix="uc" 
-             TagName="CatItem" 
-             Src="CatItem.ascx" %>
-
-
-<asp:Content ContentPlaceHolderID = "idYandexMetrica" runat = "server" >
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-            m[i].l = 1 * new Date();
-            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(92634144, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true
-        });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/92634144" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-</asp:Content>
+<%@ Register TagPrefix="uc"
+    TagName="CatItem"
+    Src="CatItem.ascx" %>
 
 <script language="c#" runat="server">
-    public void Page_Load (object sender, EventArgs e)
+    public void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
@@ -43,62 +21,57 @@
                 ctl.CssClass = "LinkCurr";
             }
         }
- 
+
     }
 </script>
 
-<asp:Content ContentPlaceHolderID = "idIndicatorsInit" runat = "server" >
-<!-- Rating@Mail.ru counter -->
-        <script language="javascript1.1" type="text/javascript">
-//<![CDATA[
-            var _tmr = _tmr || [];
-            _tmr.push({ id: "2448879", type: "pageView", start: (new Date()).getTime() });
-            (function (d, w) {
-                var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
-                ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-                var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
-                if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-            })(document, window);
-            //]]></script><noscript>
-            <div style="position:absolute;left:-10000px;">
-                <img src="//top-fwz1.mail.ru/counter?id=2448879;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
-            </div>
-        </noscript>
-        <!-- //Rating@Mail.ru counter -->
-</asp:Content>
+<asp:Content ID="idAboutContent" ContentPlaceHolderID="idMainPls" runat="server">
 
-<asp:Content ID = "idAboutContent" ContentPlaceHolderID = "idMainPls" runat = "server" >    
-    
     <article class="Centering ContentLnk">
 
-        <div class="SectionHeaderBg">
-            <div class="SectionHeader" style="float:left">Отчёты Одиссея</div><div class="SectionHeaderBgCap" style="float:right"></div>
-        </div>
-        <div class="SectionBody">
+        <header class="SectionHeaderBg">
+            <div class="SectionHeader" style="float: left">Отчёты Одиссея</div>
+            <div class="SectionHeaderBgCap" style="float: right"></div>
+        </header>
+        <section class="SectionBody">
             <a href="<%=ResolveClientUrl("TravelReports/CrimeaReport2006/Crimea2006Report_cenz.htm")%>">Транскрымский автопробег 2006</a><br />
             <a href="<%=ResolveClientUrl("TravelReports/CrimeaReport2007/SevenPagesAboutCrimea.htm")%>">Семь страниц о Крыме (Крым 2007)</a><br />
             <a href="<%=ResolveClientUrl("TravelReports/Abhaziya2007/Abhaziya2007.htm")%>">Абхазия 2007</a>
-        </div>
+        </section>
 
-        <div class="SectionHeaderBg">
-            <div class="SectionHeader" style="float:left">Альбомы и репортажи Одиссея</div><div class="SectionHeaderBgCap" style="float:right"></div>
-        </div>
-        <div class="SectionBody">
-            <a href="<%=ResolveClientUrl("Albums/PageGen.aspx")%>">Все альбомы</a> <br /><br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=crimea&amp;pwd=crim8976")%>">Крым 2006</a> <br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=crimea&amp;pwd=crim8976")%>">Крым 2007</a> <br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=seliger&amp;pwd=lake875")%>">Селигер</a> <br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=aws&amp;pwd=aws8778566")%>">AWS</a> <br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=moscow-reg&amp;pwd=msc0987")%>">Подмосковье</a> <br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=Greece&amp;pwd=gr19655")%>">Греция 2008</a> <br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=Italy&amp;pwd=gr19655")%>">Италия 2009</a>&nbsp;&nbsp;<a href="<%=ResolveClientUrl("Pub/Maps/italy2009.htm")%>"><img style="vertical-align: middle" src="<%=ResolveClientUrl("img/map.gif")%>" alt="Карта маршрута" border="0" title="Карта маршрута" /></a> <br />
+        <header class="SectionHeaderBg">
+            <div class="SectionHeader" style="float: left">Альбомы и репортажи Одиссея</div>
+            <div class="SectionHeaderBgCap" style="float: right"></div>
+        </header>
+        <section class="SectionBody">
+            <a href="<%=ResolveClientUrl("Albums/PageGen.aspx")%>">Все альбомы</a>
+            <br />
+            <br />
+
+            <uc:CatItem  Login="crimea" Pwd="crim8976"  Description="Крым 2006" runat="server" />
+
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=crimea&amp;pwd=crim8976")%>">Крым 2007</a>
+            <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=seliger&amp;pwd=lake875")%>">Селигер</a>
+            <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=aws&amp;pwd=aws8778566")%>">AWS</a>
+            <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=moscow-reg&amp;pwd=msc0987")%>">Подмосковье</a>
+            <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=Greece&amp;pwd=gr19655")%>">Греция 2008</a>
+            <br />
+            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=Italy&amp;pwd=gr19655")%>">Италия 2009</a>&nbsp;&nbsp;
+            <a href="<%=ResolveClientUrl("Pub/Maps/italy2009.htm")%>">
+                <img style="vertical-align: middle" src="<%=ResolveClientUrl("img/map.gif")%>" alt="Карта маршрута" border="0" title="Карта маршрута" />
+            </a>
+            <br />
 
             <uc:CatItem Name="Adygeya2009" Login="Adygeya" Pwd="ad1278" ImgCss="ImgThumbNormal" Description="Горная Адыгея 2009" runat="server" />
             <uc:CatItem Name="Norway2010" Login="Norway" Pwd="nrw952" ImgCss="ImgThumbSmall" Description="Автопробег по Норвегии 2010" runat="server" />
-            <uc:CatItem Name="Iceland2011" Login="Iceland" Pwd="ice952" ImgCss="ImgThumbNormal_Ice" Description="Экспедиция Исландия 2011" runat="server" />
-            <uc:CatItem Name="SpainFrance2011" Login="SpainFrance" Pwd="spf127" ImgCss="ImgThumbNormal" Description="Испания - Андорра - Франция/катарские замки 2011" runat="server" />
-            <uc:CatItem Name="Ehypet2012" Group="EhypetGroup" Login="ehypet" Pwd="ehypet08260" ImgCss="ImgThumbNormal" Description="Северная Африка 2012" runat="server" />
-            <uc:CatItem Name="Kirgiz2012" ImgCss="ImgThumbNormal_Kgz" Description="Киргизия 2012" runat="server" />
+            <uc:CatItem Name="Iceland2011" Login="Iceland" Pwd="ice952" MapName="iceland2010" ImgCss="ImgThumbNormal_Ice" Description="Экспедиция Исландия 2011" runat="server" />
+            <uc:CatItem Name="SpainFrance2011" Login="SpainFrance" Pwd="spf127" ImgCss="ImgThumbNormal" MapName="spainfrance2011" Description="Испания - Андорра - Франция/катарские замки 2011" runat="server" />
+            <uc:CatItem Name="Ehypet2012" Group="EhypetGroup" Login="ehypet" Pwd="ehypet08260" MapName="ehypet2012" ImgCss="ImgThumbNormal" Description="Северная Африка 2012" runat="server" />
+            <uc:CatItem Name="Kirgiz2012" ImgCss="ImgThumbNormal_Kgz" Description="Киргизия 2012" MapName="Kirgiz2012" runat="server" />
             <uc:CatItem Name="India2013" ImgCss="ImgThumbNormal_Ind" Description="Индия 2013 Раджастан" runat="server" />
             <uc:CatItem Name="Morocco2013" Group="Morocco2013Group" Login="morocco" Pwd="mrk1947845" ImgCss="ImgThumbNormal" Description="Марокко 2013, Север, Юг, Сахара и Атлас" runat="server" />
             <uc:CatItem Name="Norway2016" Login="norway2016" Pwd="nrw952" ImgCss="ImgThumbNormal_Norw2016" Description="Норвегия 2016, Тюнсет, Оппдал, Науста" runat="server" />
@@ -156,94 +129,15 @@
             <uc:CatItem Path="Summer2022/Solotchya" Name="Solotchya" Description="Окская часть тропы Паустовского, лето 2022" runat="server" />
             <uc:CatItem Path="Winter2025/Waterfall_Gorodenka" Name="Waterfall_Gorodenka" Description="Водопадик в лесу на роднике около Городенки / Шемякино, 2025" runat="server" />
             <uc:CatItem Path="Winter2024/Frost" Name="Frost" Description="Иней в декабре, 2025" runat="server" />
-        </div>
+        </section>
 
-        <div class="SectionHeaderBg">
-            <div class="SectionHeader" style="float:left">Прочее</div><div class="SectionHeaderBgCap" style="float:right"></div>
-        </div>
-        <div class="SectionBody">
+        <header class="SectionHeaderBg">
+            <div class="SectionHeader" style="float: left">Прочее</div>
+            <div class="SectionHeaderBgCap" style="float: right"></div>
+        </header>
+        <section class="SectionBody">
             <a href="<%=ResolveClientUrl("Pub/Jokes/Laps.htm")%>">Таймлапсы</a><br />
             <a href="<%=ResolveClientUrl("Pub/Celebrity/Celebrity.htm")%>">Знаменитости</a><br />
-        </div>
+        </section>
     </article>
-    
-</asp:Content>
-
-<asp:Content ContentPlaceHolderID = "idIndicatorsView" runat = "server" >    
-            <div id="oneGb" style="float:left;">
-                <script language="javascript" type="text/javascript">
-                    cgb_js = "1.0"; cgb_r = "" + Math.random() + "&r=" +
-                    escape(document.referrer) + "&pg=" +
-                    escape(window.location.href);
-                    document.cookie = "rqbct=1; path=/"; cgb_r += "&c=" +
-                    (document.cookie ? "Y" : "N");
-                </script>
-                <script language="javascript1.1" type="text/javascript">
-                    cgb_js = "1.1"; cgb_r += "&j=" +
-                    (navigator.javaEnabled() ? "Y" : "N")</script>
-                <script language="javascript1.2" type="text/javascript">
-                    cgb_js = "1.2"; cgb_r += "&wh=" + screen.width +
-                    'x' + screen.height + "&px=" +
-                    (((navigator.appName.substring(0, 3) == "Mic")) ?
-                    screen.colorDepth : screen.pixelDepth)</script>
-                <script language="javascript1.3" type="text/javascript">
-                    cgb_js = "1.3"</script>
-                <script language="javascript"
-                        type="text/javascript">
-                    cgb_r += "&js=" + cgb_js;
-                    document.write("<a href='//www.1gb.ru?cnt=66030'>" +
-                    "<img src='http://counter.1gb.ru/cnt.aspx?" +
-                    "u=66030&" + cgb_r +
-                    "&' border=0 width=88 height=31 " +
-                    "alt='1Gb.ru counter'><\/a>")</script>
-                <noscript>
-                    <a href='//www.1gb.ru?cnt=66030'>
-                        <img src="//counter.1gb.ru/cnt.aspx?u=66030"
-                             border=0 width="88" height="31" alt="1Gb.ru counter" />
-                    </a>
-                </noscript>
-            </div>
-
-            <div id="eXTReMe" style="float:left; padding-left: 5pt">
-                                
-                    <a href="//extremetracking.com/open?login=osyssey"><img src="//t1.extreme-dm.com/i.gif" style="border: 0;"
-                         height="38" width="41" id="EXim" alt="eXTReMe Tracker" /></a>
-                
-                <script type="text/javascript">
-<!--
-        EXref="";top.document.referrer?EXref=top.document.referrer:EXref=document.referrer;//-->
-                </script>
-                <script type="text/javascript">
-<!--
-        var EXlogin='osyssey' // Login
-        var EXvsrv='s9' // VServer
-        EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
-        EXb=EXs.colorDepth:EXb=EXs.pixelDepth;EXsrc="src";
-        navigator.javaEnabled()==1?EXjv="y":EXjv="n";
-        EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
-        EXref?EXref=EXref:EXref=EXd.referrer;
-        EXd.write("<img "+EXsrc+"=//e0.extreme-dm.com",
-        "/"+EXvsrv+".g?login="+EXlogin+"&amp;",
-        "jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
-        "l="+escape(EXref)+" height=1 width=1>");//-->
-                </script><noscript>
-                    <div id="neXTReMe">
-                        <img height="1" width="1" alt=""
-                             src="//e0.extreme-dm.com/s9.g?login=osyssey&amp;j=n&amp;jv=n" />
-                    </div>
-                </noscript>
-            </div>
-
-            <div id="mailRu" style="float:left; padding-left: 2pt">
-                <!-- Rating@Mail.ru logo -->
-                <a href="//top.mail.ru/jump?from=2448879">
-                    <img src="//top-fwz1.mail.ru/counter?id=2448879;t=479;l=1"
-                         style="border:0;" height="31" width="88" alt="Рейтинг@Mail.ru" />
-                </a>
-                <!-- //Rating@Mail.ru logo -->
-            </div>
-
-        <div id="yandex" style="float:left; padding-left: 5pt">
-            <a href="https://webmaster.yandex.ru/siteinfo/?site=https://afedorov.info"><img width="88" height="31" alt="" border="0" src="https://yandex.ru/cycounter?https://afedorov.info&theme=light&lang=en"/></a>
-        </div>
 </asp:Content>

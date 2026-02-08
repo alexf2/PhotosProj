@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Hosting;
@@ -12,7 +9,7 @@ using System.Web.UI;
 
 namespace AlbumFront
 {
-    public class Global: HttpApplication
+    public class Global : HttpApplication
     {
         const string TestJsFileName = "~/Scripts/jquery*.js";
         string _jqueryVersion;
@@ -21,9 +18,8 @@ namespace AlbumFront
         {
             _jqueryVersion = GetJqueryVer(TestJsFileName);
 
-            registerRoutes(RouteTable.Routes);
-            //registerScriptMappins(ScriptManager.ScriptResourceMapping);
-            registerBundles(BundleTable.Bundles);
+            RegisterRoutes(RouteTable.Routes);
+            RegisterBundles(BundleTable.Bundles);
         }
 
         void Application_End(object sender, EventArgs e)
@@ -85,7 +81,7 @@ namespace AlbumFront
 
         }
 
-        void registerRoutes(RouteCollection routes)
+        void RegisterRoutes(RouteCollection routes)
         {
             // This is for WebResource.axd to work
             routes.Add(new Route("{resource}.axd/{*pathInfo}", new StopRoutingHandler()));
@@ -101,24 +97,7 @@ namespace AlbumFront
             routes.Add("HorizonLanding", new Route("horizon", new PageRouteHandler("~/ThroughHorizonLanding.aspx")));
         }
 
-        //про bundles
-        //http://blogs.msdn.com/b/pranav_rastogi/archive/2012/09/21/asp-net-4-5-scriptmanager-improvements-in-webforms.aspx
-        //http://blogs.msdn.com/b/rickandy/archive/2012/08/15/adding-web-optimization-to-a-web-pages-site.aspx
-        //http://blogs.msdn.com/b/rickandy/archive/2012/08/14/adding-bundling-and-minification-to-web-forms.aspx
-        void registerScriptMappins(ScriptResourceMapping mapping)
-        {
-            mapping.AddDefinition("jquery", new ScriptResourceDefinition
-            {
-                Path = "~/Scripts/jquery-" + _jqueryVersion + ".min.js",
-                DebugPath = "~/Scripts/jquery-" + _jqueryVersion + ".js",
-                CdnPath = "//code.jquery.com/jquery-" + _jqueryVersion + ".min.js",
-                CdnDebugPath = "//code.jquery.com/jquery-" + _jqueryVersion + ".js",
-                CdnSupportsSecureConnection = true,
-                LoadSuccessExpression = "window.jQuery"
-            });
-        }
-
-        void registerBundles(BundleCollection bundles)
+        void RegisterBundles(BundleCollection bundles)
         {
             bundles.UseCdn = true;
             BundleTable.EnableOptimizations = true;

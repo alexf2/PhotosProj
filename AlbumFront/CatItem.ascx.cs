@@ -12,8 +12,10 @@ namespace AlbumFront
         public string Group { get; set; }
         public string Path { get; set; }
         public string Description { get; set; }
+        public string MapName { get; set; }
 
-        public string ReportageDescription {
+        public string ReportageDescription
+        {
             get
             {
                 return string.IsNullOrEmpty(reportageDescription) ?
@@ -44,19 +46,13 @@ namespace AlbumFront
 
         public string GetGroupUrl() => ResolveClientUrl($"Pub/{Group}/{Group}.htm");
 
+        public string GetMapUrl() => ResolveClientUrl($"Pub/Maps/{MapName}.htm");
+
         public string GetImgClass() => $"{ImgCss} {ImgCssBase}";
 
-        public bool HasALbum {
-            get {
-                return !string.IsNullOrEmpty(Login);
-            }
-        }
-        public bool HasGroup
-        {
-            get
-            {
-                return !string.IsNullOrEmpty(Group);
-            }
-        }
+        public bool HasALbum => !string.IsNullOrEmpty(Login);
+
+        public bool HasGroup => !string.IsNullOrEmpty(Group);
+        public bool HasMap => !string.IsNullOrEmpty(MapName);
     }
 }
