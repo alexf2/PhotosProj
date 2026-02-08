@@ -195,6 +195,9 @@
     <Compile Include="CatItem.ascx.designer.cs">
       <DependentUpon>CatItem.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="TestFileHandler.ashx.cs" />
     <Compile Include="Mail.aspx.designer.cs">
       <DependentUpon>Mail.aspx</DependentUpon>
