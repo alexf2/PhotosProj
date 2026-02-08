@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="yandex-verification" content="d6ff7bab1f833376" />
 
-    <link rel="canonical" href="https://afedorov.info/horizon" />
+    <link rel="canonical" href="<%= "https://" + ConfigurationManager.AppSettings["CanonicalDomain"] + HttpContext.Current.Request.Url.AbsolutePath %>" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/photo_album_blue.png">
     <link rel="icon" type="image/png" sizes="128x128" href="img/photo_album.png">
     <link rel="apple-touch-icon" sizes="128x128" href="img/photo_album.png">
