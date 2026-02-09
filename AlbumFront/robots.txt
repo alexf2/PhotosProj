@@ -13,6 +13,6 @@ Disallow: /NotFound.html
 Disallow: /signalr/
 Disallow: /elmah.axd
 
-Sitemap: https://www.afedorov.info/sitemap.xml
+Sitemap: https://afedorov.info/sitemap.xml
 Host: afedorov.info
 Crawl-delay: 1

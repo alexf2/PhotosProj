@@ -1,6 +1,6 @@
 <%@ Master Language="C#" 
     AutoEventWireup="true" 
-    CodeFile="OuterMasterPage.master.cs"
+    CodeBehind="OuterMasterPage.master.cs"
     Inherits="AlbumFront.OuterMasterPage"
 %>
 
