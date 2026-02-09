@@ -397,3 +397,9 @@ input[type=submit][disabled=true],
   -o-transition: 0.8s ease;
   transition: 0.8s ease;
 }
+.SeoInformers {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  align-items: center;
+}

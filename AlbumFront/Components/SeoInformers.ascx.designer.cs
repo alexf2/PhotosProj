@@ -7,38 +7,56 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlbumFront
+namespace AlbumFront.Components
 {
 
 
-    public partial class ThroughHorizonLanding
+    public partial class SeoInformers
     {
 
         /// <summary>
-        /// YandexCounter control.
+        /// RootElement control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl YandexCounter;
+        protected global::System.Web.UI.WebControls.Panel RootElement;
 
         /// <summary>
-        /// MailRuCounter control.
+        /// OneGb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl MailRuCounter;
+        protected global::System.Web.UI.WebControls.PlaceHolder OneGb;
 
         /// <summary>
-        /// Informers control.
+        /// Extreme control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AlbumFront.Components.SeoInformers Informers;
+        protected global::System.Web.UI.WebControls.PlaceHolder Extreme;
+
+        /// <summary>
+        /// MailRu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder MailRu;
+
+        /// <summary>
+        /// Yandex control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder Yandex;
     }
 }

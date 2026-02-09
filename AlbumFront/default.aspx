@@ -3,11 +3,21 @@
     MasterPageFile="~/OuterMasterPage.master"
     MetaKeywords="Алексей Федоров, фотографии, альбомы, Одиссей, Крым, Адыгея, Греция, Италия, Норвегия, Исландия, Испания, Франция, Индия, Киргизия, Египет, Раджастан, Марокко, Сахара, США, Аризона, Юта, Невада, Мьянма, Бирма, Чехия, Словакия, Южная Моравия"
     MetaDescription="Фотогалереи и фотоотчёты Одиссея: путешествия, автопробеги и походы по Крыму, Абхазии, Норвегии, Исландии, Альпам, США, Кавказу, Лапландии и историческим местам России с отчётами и альбомами."
-    Culture="auto" UICulture="auto" Title="Ὀδύσσεια ---== Odyssey's Photos ==--- Ὀδύσσεια" %>
+    Culture="auto" UICulture="auto" 
+    Title="Ὀδύσσεια ---== Odyssey's Photos ==--- Ὀδύσσεια" %>
 
 <%@ Register TagPrefix="uc"
     TagName="CatItem"
     Src="~/Components/CatItem.ascx" %>
+
+<asp:Content ContentPlaceHolderID="HeadMeta" runat="server">
+    <meta property="og:title" content="Ὀδύσσεια ---== Odyssey's Photos ==--- Ὀδύσσεια" />
+    <meta property="og:description" content="Фотогалереи и фотоотчёты Одиссея: путешествия, автопробеги и походы по Крыму, Абхазии, Норвегии, Исландии, Альпам, США, Кавказу, Лапландии и историческим местам России с отчётами и альбомами." />
+    <meta property="og:url" content="<%= "https://" + ConfigurationManager.AppSettings["CanonicalDomain"] + HttpContext.Current.Request.Url.AbsolutePath %>" />
+    <meta property="og:image" content="https://img/logo_23696-2.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+</asp:Content>
 
 <script language="c#" runat="server">
     public void Page_Load(object sender, EventArgs e)
@@ -48,12 +58,12 @@
             <br />
             <br />
 
-            <uc:CatItem Login="crimea" Pwd="crim8976"  Description="Крым 2006" runat="server" />            
-            <uc:CatItem Login="crimea" Pwd="crim8976"  Description="Крым 2007" runat="server" />                        
-            <uc:CatItem Login="seliger" Pwd="lake875"  Description="Селигер" runat="server" />                        
-            <uc:CatItem Login="aws" Pwd="aws8778566"  Description="AWS" runat="server" />                        
-            <uc:CatItem Login="moscow-reg" Pwd="msc0987"  Description="Подмосковье" runat="server" />            
-            <uc:CatItem Login="Greece" Pwd="gr19655"  Description="Греция 2008" runat="server" />            
+            <uc:CatItem Login="crimea" Pwd="crim8976" Description="Крым 2006" runat="server" />
+            <uc:CatItem Login="crimea" Pwd="crim8976" Description="Крым 2007" runat="server" />
+            <uc:CatItem Login="seliger" Pwd="lake875" Description="Селигер" runat="server" />
+            <uc:CatItem Login="aws" Pwd="aws8778566" Description="AWS" runat="server" />
+            <uc:CatItem Login="moscow-reg" Pwd="msc0987" Description="Подмосковье" runat="server" />
+            <uc:CatItem Login="Greece" Pwd="gr19655" Description="Греция 2008" runat="server" />
             <uc:CatItem Login="Italy" Pwd="gr19655" MapName="italy2009" Description="Италия 2009" runat="server" />
             <uc:CatItem Name="Adygeya2009" Login="Adygeya" Pwd="ad1278" ImgCss="ImgThumbNormal" Description="Горная Адыгея 2009" runat="server" />
             <uc:CatItem Name="Norway2010" Login="Norway" Pwd="nrw952" ImgCss="ImgThumbSmall" Description="Автопробег по Норвегии 2010" runat="server" />

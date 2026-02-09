@@ -89,6 +89,9 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="Components\CatItem.ascx" />
+    <Content Include="Components\MailRuCounter.ascx" />
+    <Content Include="Components\SeoInformers.ascx" />
+    <Content Include="Components\YandexCounter.ascx" />
     <Content Include="counters.txt" />
     <Content Include="css\css-ext.css">
       <DependentUpon>css-ext.less</DependentUpon>
@@ -198,6 +201,13 @@
     <Compile Include="Components\CatItem.ascx.designer.cs">
       <DependentUpon>CatItem.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Components\SeoInformers.ascx.cs">
+      <DependentUpon>SeoInformers.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\SeoInformers.ascx.designer.cs">
+      <DependentUpon>SeoInformers.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,6 +224,10 @@
     </Compile>
     <Compile Include="NotFound.aspx.designer.cs">
       <DependentUpon>NotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OuterMasterPage.master.cs">
+      <DependentUpon>OuterMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TestFileHandler.ashx.cs" />
     <Compile Include="Mail.aspx.designer.cs">

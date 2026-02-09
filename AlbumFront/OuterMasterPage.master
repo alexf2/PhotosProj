@@ -1,15 +1,33 @@
-<%@ Master Language="C#" AutoEventWireup="true" %>
+<%@ Master Language="C#" 
+    AutoEventWireup="true" 
+    CodeFile="OuterMasterPage.master.cs"
+    Inherits="AlbumFront.OuterMasterPage"
+%>
+
+<%@ Register TagPrefix="uc"
+    TagName="YandexCounter"
+    Src="~/Components/YandexCounter.ascx" %>
+
+<%@ Register TagPrefix="uc"
+    TagName="MailRuCounter"
+    Src="~/Components/MailRuCounter.ascx" %>
+
+<%@ Register TagPrefix="uc"
+    TagName="SeoInformers"
+    Src="~/Components/SeoInformers.ascx" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
 
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="yandex-verification" content="d6ff7bab1f833376" />
+    <meta name="yandex-verification" content="d6ff7bab1f833376" />   
+    
+    <asp:ContentPlaceHolder ID="HeadMeta" runat="server" />
 
-    <link rel="canonical" href="<%= "https://" + ConfigurationManager.AppSettings["CanonicalDomain"] + HttpContext.Current.Request.Url.AbsolutePath %>" />
+    <link rel="canonical" href="<%= "" + this.GetCanonicalUrl()%>" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/photo_album_blue.png">
     <link rel="icon" type="image/png" sizes="128x128" href="img/photo_album.png">
     <link rel="apple-touch-icon" sizes="128x128" href="img/photo_album.png">
@@ -20,44 +38,11 @@
         <% = Styles.Render("~/bundles/extra-css") %>
     </asp:PlaceHolder>
 
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-            m[i].l = 1 * new Date();
-            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })(window, document, 'script', '//mc.yandex.ru/metrika/tag.js?id=106723925', 'ym');
-
-        ym(106723925, 'init', { ssr: true, webvisor: true, clickmap: true, referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
-    </script>
-    <noscript>
-        <div>
-            <img src="//mc.yandex.ru/watch/106723925" style="position: absolute; left: -9999px;" alt="" />
-        </div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
+    <uc:YandexCounter ID="YandexCounter" runat="server" />
 </head>
 
 <body>
-    <!-- Rating@Mail.ru counter -->
-    <script language="javascript1.1" type="text/javascript">
-        //<![CDATA[
-        var _tmr = _tmr || [];
-        _tmr.push({ id: "2448879", type: "pageView", start: (new Date()).getTime() });
-        (function (d, w) {
-            var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
-            ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
-            var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
-            if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-        })(document, window);
-        //]]></script>
-    <noscript>
-        <div style="position: absolute; left: -10000px;">
-            <img src="//top-fwz1.mail.ru/counter?id=2448879;js=na" style="border: 0;" height="1" width="1" alt="Рейтинг@Mail.ru" />
-        </div>
-    </noscript>
-    <!-- //Rating@Mail.ru counter -->
+    <uc:MailRuCounter ID="MailRuCounter" runat="server" />
 
     <form id="form1" runat="server">
 
@@ -127,76 +112,7 @@
                 </script>
             </asp:PlaceHolder>
 
-            <div id="Counter" style="display: flex; gap: 0.5rem; margin-top: 1rem">
-                <div id="oneGb">
-                    <script language="javascript" type="text/javascript">
-                        cgb_js = "1.0"; cgb_r = "" + Math.random() + "&r=" +
-                            escape(document.referrer) + "&pg=" +
-                            escape(window.location.href);
-                        document.cookie = "rqbct=1; path=/"; cgb_r += "&c=" +
-                            (document.cookie ? "Y" : "N");
-                    </script>
-                    <script language="javascript1.1" type="text/javascript">
-                        cgb_js = "1.1"; cgb_r += "&j=" +
-                            (navigator.javaEnabled() ? "Y" : "N")</script>
-                    <script language="javascript1.2" type="text/javascript">
-                        cgb_js = "1.2"; cgb_r += "&wh=" + screen.width +
-                            'x' + screen.height + "&px=" +
-                            (((navigator.appName.substring(0, 3) == "Mic")) ?
-                                screen.colorDepth : screen.pixelDepth)</script>
-                    <script language="javascript1.3" type="text/javascript">
-                        cgb_js = "1.3"</script>
-                    <script language="javascript"
-                        type="text/javascript">
-                        cgb_r += "&js=" + cgb_js;
-                        document.write("<a href='https://www.1gb.ru?cnt=66030'>" +
-                            "<img src='//counter.1gb.ru/cnt.aspx?" +
-                            "u=66030&" + cgb_r +
-                            "&' border=0 width=88 height=31 " +
-                            "alt='1Gb.ru counter'><\/a>")</script>
-                    <noscript>
-                        <a href='https://www.1gb.ru?cnt=66030'>
-                            <img src="//counter.1gb.ru/cnt.aspx?u=66030"
-                                border="0" width="88" height="31" alt="1Gb.ru counter" />
-                        </a>
-                    </noscript>
-                </div>
-
-                <div id="eXTReMe">
-                    <script src="https://efreecode.com/js.js" id="eXF-osyssey-0" async defer></script>
-                </div>
-
-                <div id="mailRu">
-                    <!-- Rating@Mail.ru logo -->
-                    <a href="https://top.mail.ru/jump?from=2448879">
-                        <img src="//top-fwz1.mail.ru/counter?id=2448879;t=479;l=1"
-                            style="border: 0;" height="31" width="88" alt="Рейтинг@Mail.ru" />
-                    </a>
-                    <!-- //Rating@Mail.ru logo -->
-                </div>
-
-                <div id="yandex_inf">
-                    <!-- Yandex.Metrika informer -->
-                    <a href="https://metrica.yandex.com/stat/?id=106723925&amp;from=informer" target="_blank" rel="nofollow">
-                        <img src="//informer.yandex.ru/informer/106723925/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
-                            style="width: 88px; height: 31px; border: 0;"
-                            alt="Yandex Metrica"
-                            title="Yandex Metrica: data for today (pageviews, visits and unique users)"
-                            class="ym-advanced-informer" data-cid="106723925" data-lang="en" />
-                    </a>
-                    <!-- /Yandex.Metrika informer -->
-                </div>
-
-
-                <div id="yandex">
-                    <!-- Yandex.Webmaster index X -->
-                    <a href="https://webmaster.yandex.ru/siteinfo/?site=https://afedorov.info">
-                        <img width="88" height="31" alt="" border="0" border-radius="8" src="//yandex.ru/cycounter?https://afedorov.info&theme=light&lang=en" />
-                    </a>
-                    <!-- Yandex.Webmaster index X -->
-                </div>
-
-            </div>
+            <uc:SeoInformers ID="Informers" CssClass="SeoInformers" runat="server" />            
         </asp:Panel>
     </form>
 </body>
