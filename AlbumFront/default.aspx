@@ -7,7 +7,7 @@
 
 <%@ Register TagPrefix="uc"
     TagName="CatItem"
-    Src="CatItem.ascx" %>
+    Src="~/Components/CatItem.ascx" %>
 
 <script language="c#" runat="server">
     public void Page_Load(object sender, EventArgs e)

@@ -38,15 +38,15 @@ namespace AlbumFront
 
         }
 
-        public string GetPubUrl() => ResolveClientUrl($"Pub/{Path ?? Name}/{Name}.htm");
+        public string GetPubUrl() => ResolveClientUrl($"~/Pub/{Path ?? Name}/{Name}.htm");
 
-        public string GetAlbumUrl() => ResolveClientUrl($"Albums/Login.aspx?login={Login}&pwd={Pwd}");
+        public string GetAlbumUrl() => ResolveClientUrl($"~/Albums/Login.aspx?login={Login}&pwd={Pwd}");
 
-        public string GetImgUrl() => ResolveClientUrl($"img/{Name}Thumb.jpg");
+        public string GetImgUrl() => ResolveClientUrl($"~/img/{Name}Thumb.jpg");
 
-        public string GetGroupUrl() => ResolveClientUrl($"Pub/{Group}/{Group}.htm");
+        public string GetGroupUrl() => ResolveClientUrl($"~/Pub/{Group}/{Group}.htm");
 
-        public string GetMapUrl() => ResolveClientUrl($"Pub/Maps/{MapName}.htm");
+        public string GetMapUrl() => ResolveClientUrl($"~/Pub/Maps/{MapName}.htm");
 
         public string GetImgClass() => $"{ImgCss} {ImgCssBase}";
 

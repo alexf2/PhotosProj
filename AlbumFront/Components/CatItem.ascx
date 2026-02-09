@@ -7,7 +7,7 @@
     <%} %>
     <% if (this.HasMap) { %>
         <a href="<%= this.GetMapUrl() %>">
-            <img style="vertical-align: middle" src="<%=ResolveClientUrl("img/map.gif")%>" alt="Карта маршрута" border="0" title="Карта маршрута" />
+            <img style="vertical-align: middle" src="<%=ResolveClientUrl("~/img/map.gif")%>" alt="Карта маршрута" border="0" title="Карта маршрута" />
         </a>
     <%} %>
 </div>
