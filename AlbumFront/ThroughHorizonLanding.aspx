@@ -37,13 +37,13 @@
             m[i].l = 1 * new Date();
             for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
             k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })(window, document, 'script', '//mc.yandex.ru/metrika/tag.js', 'ym');
+        })(window, document, 'script', '//mc.yandex.ru/metrika/tag.js?id=106723925', 'ym');
 
-        ym(92634144, 'init', { webvisor: true, clickmap: true, referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+        ym(106723925, 'init', { ssr: true, webvisor: true, clickmap: true, referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
     </script>
     <noscript>
         <div>
-            <img src="//mc.yandex.ru/watch/92634144" style="position: absolute; left: -9999px;" alt="" />
+            <img src="//mc.yandex.ru/watch/106723925" style="position: absolute; left: -9999px;" alt="" />
         </div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
@@ -270,12 +270,12 @@
 
             <div id="yandex_inf">
                 <!-- Yandex.Metrika informer -->
-                <a href="https://metrica.yandex.com/stat/?id=92634144&amp;from=informer" target="_blank" rel="nofollow">
-                    <img src="//informer.yandex.ru/informer/92634144/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                <a href="https://metrica.yandex.com/stat/?id=106723925&amp;from=informer" target="_blank" rel="nofollow">
+                    <img src="//informer.yandex.ru/informer/106723925/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
                         style="width: 88px; height: 31px; border: 0;"
                         alt="Yandex Metrica"
                         title="Yandex Metrica: data for today (pageviews, visits and unique users)"
-                        class="ym-advanced-informer" data-cid="92634144" data-lang="en" />
+                        class="ym-advanced-informer" data-cid="106723925" data-lang="en" />
                 </a>
                 <!-- /Yandex.Metrika informer -->
             </div>

@@ -48,24 +48,13 @@
             <br />
             <br />
 
-            <uc:CatItem  Login="crimea" Pwd="crim8976"  Description="Крым 2006" runat="server" />
-
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=crimea&amp;pwd=crim8976")%>">Крым 2007</a>
-            <br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=seliger&amp;pwd=lake875")%>">Селигер</a>
-            <br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=aws&amp;pwd=aws8778566")%>">AWS</a>
-            <br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=moscow-reg&amp;pwd=msc0987")%>">Подмосковье</a>
-            <br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=Greece&amp;pwd=gr19655")%>">Греция 2008</a>
-            <br />
-            <a rel="nofollow" href="<%=ResolveClientUrl("Albums/Login.aspx?login=Italy&amp;pwd=gr19655")%>">Италия 2009</a>&nbsp;&nbsp;
-            <a href="<%=ResolveClientUrl("Pub/Maps/italy2009.htm")%>">
-                <img style="vertical-align: middle" src="<%=ResolveClientUrl("img/map.gif")%>" alt="Карта маршрута" border="0" title="Карта маршрута" />
-            </a>
-            <br />
-
+            <uc:CatItem Login="crimea" Pwd="crim8976"  Description="Крым 2006" runat="server" />            
+            <uc:CatItem Login="crimea" Pwd="crim8976"  Description="Крым 2007" runat="server" />                        
+            <uc:CatItem Login="seliger" Pwd="lake875"  Description="Селигер" runat="server" />                        
+            <uc:CatItem Login="aws" Pwd="aws8778566"  Description="AWS" runat="server" />                        
+            <uc:CatItem Login="moscow-reg" Pwd="msc0987"  Description="Подмосковье" runat="server" />            
+            <uc:CatItem Login="Greece" Pwd="gr19655"  Description="Греция 2008" runat="server" />            
+            <uc:CatItem Login="Italy" Pwd="gr19655" MapName="italy2009" Description="Италия 2009" runat="server" />
             <uc:CatItem Name="Adygeya2009" Login="Adygeya" Pwd="ad1278" ImgCss="ImgThumbNormal" Description="Горная Адыгея 2009" runat="server" />
             <uc:CatItem Name="Norway2010" Login="Norway" Pwd="nrw952" ImgCss="ImgThumbSmall" Description="Автопробег по Норвегии 2010" runat="server" />
             <uc:CatItem Name="Iceland2011" Login="Iceland" Pwd="ice952" MapName="iceland2010" ImgCss="ImgThumbNormal_Ice" Description="Экспедиция Исландия 2011" runat="server" />

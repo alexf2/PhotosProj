@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="yandex-verification" content="d6ff7bab1f833376" />
 
-    <link rel="canonical" href="<%= "https://" + ConfigurationManager.AppSettings["CanonicalDomain"] + HttpContext.Current.Request.Url.AbsolutePath %>"/>
+    <link rel="canonical" href="<%= "https://" + ConfigurationManager.AppSettings["CanonicalDomain"] + HttpContext.Current.Request.Url.AbsolutePath %>" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/photo_album_blue.png">
     <link rel="icon" type="image/png" sizes="128x128" href="img/photo_album.png">
     <link rel="apple-touch-icon" sizes="128x128" href="img/photo_album.png">
@@ -27,13 +27,13 @@
             m[i].l = 1 * new Date();
             for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
             k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })(window, document, 'script', '//mc.yandex.ru/metrika/tag.js', 'ym');
+        })(window, document, 'script', '//mc.yandex.ru/metrika/tag.js?id=106723925', 'ym');
 
-        ym(92634144, 'init', { webvisor: true, clickmap: true, referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+        ym(106723925, 'init', { ssr: true, webvisor: true, clickmap: true, referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
     </script>
     <noscript>
         <div>
-            <img src="//mc.yandex.ru/watch/92634144" style="position: absolute; left: -9999px;" alt="" />
+            <img src="//mc.yandex.ru/watch/106723925" style="position: absolute; left: -9999px;" alt="" />
         </div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
@@ -91,7 +91,8 @@
                     <div class="LineRightCap">&nbsp;</div>
                     <p class="Copyright"><a runat="server" href="<%$RouteUrl:routename=Default %>">Odyssey's Photography</a>, &copy; Aleksey Fedorov 2006 - 2026, All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server" class="Copyright" href="<%$RouteUrl:routename=About %>">About</a></p>
                 </div>
-            </footer><br />
+            </footer>
+            <br />
 
             <asp:PlaceHolder runat="server">
                 <% = Scripts.Render("~/bundles/jquery") %>
@@ -124,7 +125,7 @@
                         });
                     }, 100), { passive: true });
                 </script>
-            </asp:PlaceHolder>            
+            </asp:PlaceHolder>
 
             <div id="Counter" style="display: flex; gap: 0.5rem; margin-top: 1rem">
                 <div id="oneGb">
@@ -165,7 +166,7 @@
                     <script src="https://efreecode.com/js.js" id="eXF-osyssey-0" async defer></script>
                 </div>
 
-                <div id="mailRu" >
+                <div id="mailRu">
                     <!-- Rating@Mail.ru logo -->
                     <a href="https://top.mail.ru/jump?from=2448879">
                         <img src="//top-fwz1.mail.ru/counter?id=2448879;t=479;l=1"
@@ -176,12 +177,12 @@
 
                 <div id="yandex_inf">
                     <!-- Yandex.Metrika informer -->
-                    <a href="https://metrica.yandex.com/stat/?id=92634144&amp;from=informer" target="_blank" rel="nofollow">
-                        <img src="//informer.yandex.ru/informer/92634144/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                    <a href="https://metrica.yandex.com/stat/?id=106723925&amp;from=informer" target="_blank" rel="nofollow">
+                        <img src="//informer.yandex.ru/informer/106723925/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
                             style="width: 88px; height: 31px; border: 0;"
                             alt="Yandex Metrica"
                             title="Yandex Metrica: data for today (pageviews, visits and unique users)"
-                            class="ym-advanced-informer" data-cid="92634144" data-lang="en" />
+                            class="ym-advanced-informer" data-cid="106723925" data-lang="en" />
                     </a>
                     <!-- /Yandex.Metrika informer -->
                 </div>
