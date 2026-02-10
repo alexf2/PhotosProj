@@ -70,8 +70,11 @@
 
     void Application_Error(object sender, EventArgs e) 
     { 
-        // Code that runs when an unhandled error occurs
-
+        Exception ex = Server.GetLastError();
+        if (ex != null)
+        {
+            Elmah.ErrorSignal.FromCurrentContext().Raise(ex);
+        }
     }
 
     void Session_Start(object sender, EventArgs e) 

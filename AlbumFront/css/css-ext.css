@@ -59,8 +59,10 @@
   font-weight: bold;
   text-decoration: underline;
 }
-.pad {
+.SectionHdr {
   padding-bottom: 0.2em;
+  display: flex;
+  align-items: center;
 }
 .LineBg {
   height: 7px;
@@ -400,6 +402,6 @@ input[type=submit][disabled=true],
 .SeoInformers {
   display: flex;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin: 0.5rem 0 0 2rem;
   align-items: center;
 }

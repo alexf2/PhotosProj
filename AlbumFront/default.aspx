@@ -9,6 +9,9 @@
 <%@ Register TagPrefix="uc"
     TagName="CatItem"
     Src="~/Components/CatItem.ascx" %>
+<%@ Register TagPrefix="uc"
+    TagName="SectionHeader"
+    Src="~/Components/SectionHeader.ascx" %>
 
 <asp:Content ContentPlaceHolderID="HeadMeta" runat="server">
     <meta property="og:title" content="Ὀδύσσεια ---== Odyssey's Photos ==--- Ὀδύσσεια" />
@@ -39,20 +42,14 @@
 
     <article class="Centering ContentLnk">
 
-        <header class="SectionHeaderBg">
-            <div class="SectionHeader" style="float: left">Отчёты Одиссея</div>
-            <div class="SectionHeaderBgCap" style="float: right"></div>
-        </header>
+        <uc:SectionHeader Name="Отчёты Одиссея" runat="server" />
         <section class="SectionBody">
             <a href="<%=ResolveClientUrl("TravelReports/CrimeaReport2006/Crimea2006Report_cenz.htm")%>">Транскрымский автопробег 2006</a><br />
             <a href="<%=ResolveClientUrl("TravelReports/CrimeaReport2007/SevenPagesAboutCrimea.htm")%>">Семь страниц о Крыме (Крым 2007)</a><br />
             <a href="<%=ResolveClientUrl("TravelReports/Abhaziya2007/Abhaziya2007.htm")%>">Абхазия 2007</a>
         </section>
-
-        <header class="SectionHeaderBg">
-            <div class="SectionHeader" style="float: left">Альбомы и репортажи Одиссея</div>
-            <div class="SectionHeaderBgCap" style="float: right"></div>
-        </header>
+        
+        <uc:SectionHeader Name="Альбомы и репортажи Одиссея" runat="server" />
         <section class="SectionBody">
             <a href="<%=ResolveClientUrl("Albums/PageGen.aspx")%>">Все альбомы</a>
             <br />
@@ -130,10 +127,7 @@
             <uc:CatItem Path="Winter2024/Frost" Name="Frost" Description="Иней в декабре, 2025" runat="server" />
         </section>
 
-        <header class="SectionHeaderBg">
-            <div class="SectionHeader" style="float: left">Прочее</div>
-            <div class="SectionHeaderBgCap" style="float: right"></div>
-        </header>
+        <uc:SectionHeader Name="Прочее" runat="server" />
         <section class="SectionBody">
             <a href="<%=ResolveClientUrl("Pub/Jokes/Laps.htm")%>">Таймлапсы</a><br />
             <a href="<%=ResolveClientUrl("Pub/Celebrity/Celebrity.htm")%>">Знаменитости</a><br />

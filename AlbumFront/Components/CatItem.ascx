@@ -1,13 +1,13 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="CatItem.ascx.cs" Inherits="AlbumFront.CatItem" %>
 
-<div class="pad">
-    <a href="<%=HasALbum ? this.GetAlbumUrl() : this.GetPubUrl()%>" rel='<%= HasALbum ? "nofollow" : ""  %>' ><%=this.Description%></a>&nbsp;&nbsp;
+<div class="SectionHdr">
+    <a href="<%=HasALbum ? this.GetAlbumUrl() : this.GetPubUrl()%>" rel='<%= HasALbum ? "nofollow" : ""  %>' ><%=this.Description%></a>&nbsp;
     <% if (this.HasGroup) { %>
-        <a href="<%= this.GetGroupUrl() %>">/ Группа</a>&nbsp;&nbsp;
+        <a href="<%= this.GetGroupUrl() %>">/ Группа</a>&nbsp;
     <%} %>
     <% if (this.HasMap) { %>
         <a href="<%= this.GetMapUrl() %>">
-            <img style="vertical-align: middle" src="<%=ResolveClientUrl("~/img/map.gif")%>" alt="Карта маршрута" border="0" title="Карта маршрута" />
+            <img width="18" src="<%=ResolveClientUrl("~/img/map-locator_7500893.png")%>" alt="Карта маршрута" border="0" title="Карта маршрута" />
         </a>
     <%} %>
 </div>

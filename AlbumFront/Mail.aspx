@@ -87,7 +87,9 @@
                 </div>
 
                 <div class="FormItem" style="text-align:right">
-                    <div class="Captcha"><BotDetect:Captcha ID="RegisterCaptcha" runat="server"  /></div>
+                    <div class="Captcha">
+                        <BotDetect:WebFormsCaptcha ID="RegisterCaptcha" ImageWidth="250" ImageHeight="40" runat="server"  />
+                    </div>
                     <div class="InnerFormItem">
                         <asp:Label ID="lblControlCode" AssociatedControlID="ControlCode" runat="server">Code:*</asp:Label>
                         <input type="text" id="ControlCode" name="ControlCode" size="15" runat="server" />

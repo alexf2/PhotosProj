@@ -156,7 +156,7 @@ namespace AlbumFront
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::BotDetect.Web.UI.Captcha RegisterCaptcha;
+        protected global::BotDetect.Web.UI.WebFormsCaptcha RegisterCaptcha;
 
         /// <summary>
         /// lblControlCode control.

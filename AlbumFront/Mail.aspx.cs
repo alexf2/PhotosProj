@@ -1,7 +1,6 @@
 ﻿using System;
-
-using System.Net.Mail;
 using System.Configuration;
+using System.Net.Mail;
 
 
 
@@ -85,7 +84,8 @@ namespace AlbumFront
         {
             // validate the Captcha to check we're not dealing with a bot
             args.IsValid = RegisterCaptcha.Validate(args.Value.Trim().ToUpper());
+            // Debug.WriteLine($"txt = {args.Value.Trim().ToUpper()} {args.IsValid}");
             ControlCode.Value = null; // clear previous user input
-        }        
+        }
     }
 }
