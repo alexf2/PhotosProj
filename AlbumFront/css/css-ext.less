@@ -4,6 +4,7 @@ body {
     background-color: #f2f7fe;
     margin: 0;
     padding: 0.7em; /*top right bottom left*/
+    max-width: 100%;
 }
 
 .SectionHeaderBg {
@@ -75,7 +76,8 @@ body {
     background-image: url(../img/line.jpg);
     white-space: nowrap;
     clear: both;
-    width: 100%;    
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .LineRightCap {
@@ -100,36 +102,44 @@ body {
     clear: both;
 }
 
-.Container {    
+.ContainerAbout {
     .text-font-mixin();
-
     color: @selection-color;
     clear: both;
     margin: 0 auto;
     width: auto;
+    max-width: 1100px;
     padding: 0.3em 1.85em 2.5em 1.85em; /*top right bottom left*/
+
+    .Left {
+        float: left;
+        width: 520px;
+        white-space: -moz-pre-wrap; /* Firefox */
+        white-space: -pre-wrap; /* Opera <7 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: normal; /* CSS3 */
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 20px;
+        text-align: justify;
+    }
+
+    .Right {
+        .std-font();
+        float: right;
+        width: 500px;
+
+        > img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
 }
 
-.Left {
-    float: left;
-    width: 520px;
-    white-space: -moz-pre-wrap; /* Firefox */
-    white-space: -pre-wrap; /* Opera <7 */
-    white-space: -o-pre-wrap; /* Opera 7 */
-    white-space: normal; /* CSS3 */
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 20px;
-    text-align: justify;
-}
 
-.Right {
-    .std-font();
-    float: right;
-    width: 500px;
-}
 
 .FooterSep {
     clear: both;
@@ -138,16 +148,18 @@ body {
 .Centering {
     display: table;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 .MainHeader {
     .menu-font-mixin();
-    display: table;    
+    display: table;
     width: 100%;
     background-color: @header-bg-color;
     padding: 0.7em 1em 0.7em 1em; /*top right bottom left*/
     color: @selection-color;
-    margin-bottom: 1.5em;    
+    margin-bottom: 1.5em;
+    box-sizing: border-box;
 }
 
 .sticky_header {
@@ -436,4 +448,77 @@ input[type = submit][disabled=true], *.Grayed {
     position: absolute;
     right: 4.6rem;
     top: -1.5rem;
+}
+
+/* Планшеты и мобильные */
+@media (max-width: 1024px) {
+
+    body {
+        padding: 0.5em;
+    }
+
+    .ContainerAbout {
+        padding: 0.3em 1em 2em 1em;
+        max-width: 100%;
+
+        .Left,
+        .Right {
+            float: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .Left {
+            margin-bottom: 1rem;
+        }
+
+        .Right {
+            text-align: center;
+
+            > img {
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            figcaption {
+                margin-top: 0.3rem;
+                font-size: 0.85em;
+                text-align: center;
+            }
+        }
+        /* Колонки складываем одну под другой */
+    }
+
+    .SectionBody {
+        padding: 0.3em 1em 2em 1em;
+    }
+}
+
+/* Узкие телефоны */
+@media (max-width: 600px) {
+
+    body {
+        padding: 0.5em 0.3em;
+    }
+
+    .ContainerAbout {
+        padding: 0.3em 0.5em 2em 0.5em;
+    }
+
+    .SectionHeaderBg {
+        white-space: normal; // чтобы заголовок переносился
+        height: auto;
+    }
+
+    .SectionHeader {
+        width: auto;
+        background-size: cover;
+    }
+
+    .SectionHeader2 {
+        width: auto;
+        padding-right: 0.5em;
+    }
 }

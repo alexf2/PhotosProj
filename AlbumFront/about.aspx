@@ -28,7 +28,7 @@
                 <div class="SectionHeader" style="float:left">Об авторе</div><div class="SectionHeaderBgCap" style="float:right"></div>
             </div>
             
-            <div class="Container">
+            <div class="ContainerAbout">
                 <div class="Left">
                     <h3 style="margin-top:0">Алексей Федоров</h3>
                     <p>
