@@ -1,14 +1,14 @@
 ﻿body.horizon {
   background-color: #f0f7fc;
+  min-width: 320px;
 }
 .PageContainer {
   margin: 0 auto;
   /* маржены и центрирование блока страницы: верх/низ, левый и правй */
   padding: 0 0 32px 0;
   box-sizing: border-box;
-  min-width: min-content;
-  max-width: 100%;
-  width: 0;
+  max-width: 1200px;
+  width: 100%;
 }
 .PageContainer .LinkBtn {
   position: relative;
@@ -139,6 +139,11 @@
   align-items: center;
   justify-content: center;
 }
+.MainContainer .LandingImage img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .MainContainer .Subscriptions {
   display: flex;
   flex-direction: column;
@@ -171,4 +176,124 @@
 .ImgCentered {
   display: block;
   margin: 0 auto;
+}
+/* Mobile */
+/* Планшеты и ниже */
+@media (max-width: 1024px) {
+  .MainContainer .HeaderContainer {
+    text-align: left;
+    margin-bottom: 0.5em;
+  }
+  .MainContainer .InnerContainer {
+    padding: 0 0.5em 0 0.5em;
+  }
+  .MenuHeader {
+    flex-wrap: wrap;
+    gap: 0.4em;
+  }
+  .MenuHeader .LogoName {
+    text-align: right;
+  }
+}
+/* Мобильные (основное поведение) */
+@media (max-width: 768px) {
+  .PageContainer {
+    width: 100%;
+    padding: 0 0 24px 0;
+  }
+  .MenuHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .MenuHeader .MenuHeaderContent {
+    flex-wrap: wrap;
+  }
+  .MenuHeader .LogoName {
+    align-self: flex-end;
+    font-size: 16pt;
+  }
+  .MainContainer {
+    margin-top: 8px;
+    align-items: stretch;
+    /* растянуть на ширину */
+  }
+  .MainContainer .HeaderContainer {
+    font-size: 12pt;
+    text-align: left;
+    margin: 0 0.5em 0.5em 0.5em;
+  }
+  .MainContainer .InnerContainer {
+    flex-direction: column;
+    /* вертикально: логотип, картинка, подписки */
+    align-items: center;
+    gap: 0.75em;
+    padding: 0 0.5em;
+  }
+  .MainContainer .LogoImg {
+    position: static;
+    transform: none;
+    margin: 0 auto 0.5em auto;
+    width: 160px;
+    height: auto;
+  }
+  .MainContainer .LandingImage img {
+    max-width: 100%;
+    height: auto;
+  }
+  .MainContainer .Subscriptions {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.75em;
+  }
+  .MainContainer .Subscriptions > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .MainContainer .Subscriptions img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+  }
+  .MainContainer .Subscriptions .LinkBtn {
+    left: 0;
+    top: -15px;
+  }
+  .PlainText {
+    padding: 0 0.75em;
+  }
+  .PlainText .StepsList {
+    padding-left: 1.2em;
+  }
+  .FooterContainer {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .FooterContainer .ShareLinkPosHorizon {
+    margin-right: 0;
+    margin-top: 0.5em;
+  }
+  .LnkCont a {
+    gap: 0.3em;
+  }
+  .LnkCont a > svg {
+    width: 20px;
+    height: 20px;
+  }
+  .ImgCentered {
+    max-width: 100%;
+    height: auto;
+  }
+}
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+  .MenuHeader {
+    padding: 0.5em 0.5em;
+  }
+  .MainContainer .HeaderContainer {
+    font-size: 11pt;
+  }
+  .PageContainer .LinkBtn {
+    padding: 8px 16px;
+  }
 }

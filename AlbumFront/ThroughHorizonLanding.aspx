@@ -28,7 +28,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#" lang="ru">
 
 <head runat="server">
     <meta charset="utf-8" />
@@ -42,11 +42,11 @@
     <meta property="og:locale" content="ru_RU" />
     
     <link rel="canonical" href="<%# GetCanonicalUrl() %>" />
-    <link rel="icon" type="image/png" sizes="16x16" href="img/photo_album_blue.png">
-    <link rel="icon" type="image/png" sizes="128x128" href="img/photo_album.png">
-    <link rel="apple-touch-icon" sizes="128x128" href="img/photo_album.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="manifest" href="img/manifest.json">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/photo_album_blue.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="img/photo_album.png" />
+    <link rel="apple-touch-icon" sizes="128x128" href="img/photo_album.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="img/manifest.json" />
 
     <asp:PlaceHolder runat="server">
         <% = Styles.Render("~/bundles/extra-css") %>
@@ -216,3 +216,4 @@
          </div>
     </main>
 </body>
+</html>
