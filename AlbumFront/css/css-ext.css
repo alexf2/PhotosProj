@@ -39,6 +39,7 @@
   font-size: 11pt;
 }
 .SectionBody {
+  position: relative;
   padding: 0em 1.85em 2.5em 1.85em;
   /*top right bottom left*/
   width: 100%;
@@ -404,4 +405,9 @@ input[type=submit][disabled=true],
   gap: 0.5rem;
   margin: 0.5rem 0 0 2rem;
   align-items: center;
+}
+.ShareLinkPos {
+  position: absolute;
+  right: 4.6rem;
+  top: -1.5rem;
 }

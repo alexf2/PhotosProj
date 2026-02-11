@@ -1,6 +1,4 @@
-﻿<%@ Control Language="C#" 
-    AutoEventWireup="true" 
-%>
+﻿<%@ Control Language="C#" AutoEventWireup="true" %>
 
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">

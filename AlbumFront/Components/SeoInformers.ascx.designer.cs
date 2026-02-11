@@ -13,50 +13,10 @@ namespace AlbumFront.Components
 
     public partial class SeoInformers
     {
-
-        /// <summary>
-        /// RootElement control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.Panel RootElement;
-
-        /// <summary>
-        /// OneGb control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder OneGb;
-
-        /// <summary>
-        /// Extreme control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder Extreme;
-
-        /// <summary>
-        /// MailRu control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder MailRu;
-
-        /// <summary>
-        /// Yandex control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder Yandex;
     }
 }

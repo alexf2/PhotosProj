@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Web.UI;
 
 namespace AlbumFront.Components
 {
-    public partial class SeoInformers : System.Web.UI.UserControl
+    public partial class SeoInformers : UserControl
     {
         public string CssClass
         {

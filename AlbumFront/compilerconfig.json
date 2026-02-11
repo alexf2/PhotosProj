@@ -10,5 +10,9 @@
   {
     "outputFile": "css/horizon.css",
     "inputFile": "css/horizon.less"
+  },
+  {
+    "outputFile": "css/shared-link-icons.css",
+    "inputFile": "css/shared-link-icons.less"
   }
 ]

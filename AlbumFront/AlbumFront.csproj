@@ -100,6 +100,7 @@
     <Content Include="Components\MailRuCounter.ascx" />
     <Content Include="Components\SectionHeader.ascx" />
     <Content Include="Components\SeoInformers.ascx" />
+    <Content Include="Components\ShareLinkIcons.ascx" />
     <Content Include="Components\YandexCounter.ascx" />
     <Content Include="counters.txt" />
     <Content Include="css\css-ext.css">
@@ -123,6 +124,12 @@
     </Content>
     <Content Include="css\horizon.min.css">
       <DependentUpon>horizon.css</DependentUpon>
+    </Content>
+    <Content Include="css\shared-link-icons.css">
+      <DependentUpon>shared-link-icons.less</DependentUpon>
+    </Content>
+    <Content Include="css\shared-link-icons.min.css">
+      <DependentUpon>shared-link-icons.css</DependentUpon>
     </Content>
     <Content Include="default.aspx" />
     <Content Include="Error.aspx" />
@@ -183,6 +190,7 @@
     <Content Include="fonts\Inter-Italic-VariableFont_opsz,wght.ttf" />
     <Content Include="fonts\Inter-VariableFont_opsz,wght.ttf" />
     <Content Include="css\mixins.less" />
+    <Content Include="css\shared-link-icons.less" />
     <None Include="Properties\PublishProfiles\AlbumFront.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1-vsdoc.js" />
@@ -223,6 +231,10 @@
     </Compile>
     <Compile Include="Components\SeoInformers.ascx.designer.cs">
       <DependentUpon>SeoInformers.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ShareLinkIcons.ascx.cs">
+      <DependentUpon>ShareLinkIcons.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>

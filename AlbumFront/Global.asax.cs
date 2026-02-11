@@ -9,7 +9,7 @@ using System.Web.UI;
 
 namespace AlbumFront
 {
-    public class Global : HttpApplication
+    public partial class Global : HttpApplication
     {
         const string TestJsFileName = "~/Scripts/jquery*.js";
         string _jqueryVersion;

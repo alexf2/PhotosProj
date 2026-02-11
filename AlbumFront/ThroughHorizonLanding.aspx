@@ -21,6 +21,10 @@
     TagName="SeoInformers"
     Src="~/Components/SeoInformers.ascx" %>
 
+<%@ Register TagPrefix="uc"
+    TagName="ShareLinkIcons"
+    Src="~/Components/ShareLinkIcons.ascx" %>
+
 
 <!DOCTYPE html>
 
@@ -32,12 +36,12 @@
 
     <meta property="og:title" content="Сквозь горизонт: хайкинг, легкоходный туризм и фото-поездки налегке" />
     <meta property="og:description" content="Сквозь горизонт: хайкинг, легкоходный туризм и фото-поездки налегке. Полезные гайды, маршруты и советы для трейлов с минимальным весом. База походов с метриками сложности и GPS-Треками. Присоединяйтесь к сообществу на Boosty!" />
-    <meta property="og:url" content="<%= "https://" + ConfigurationManager.AppSettings["CanonicalDomain"] + HttpContext.Current.Request.Url.AbsolutePath %>" />
-    <meta property="og:image" content="https://img/logo_23696-2.png" />
+    <meta property="og:url" content="<%# "https://" + ConfigurationManager.AppSettings["CanonicalDomain"] + HttpContext.Current.Request.Url.AbsolutePath %>" />
+    <meta property="og:image" content="<%# Request.Url.Scheme + Uri.SchemeDelimiter + Request.Url.Authority + "/" + ResolveClientUrl("~/img/logo_23696-2.png")%>" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
-
-    <link rel="canonical" href="<%= "https://" + ConfigurationManager.AppSettings["CanonicalDomain"] + HttpContext.Current.Request.Url.AbsolutePath %>" />
+    
+    <link rel="canonical" href="<%# GetCanonicalUrl() %>" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/photo_album_blue.png">
     <link rel="icon" type="image/png" sizes="128x128" href="img/photo_album.png">
     <link rel="apple-touch-icon" sizes="128x128" href="img/photo_album.png">
@@ -206,6 +210,9 @@
             </script>
         </asp:PlaceHolder>
 
-        <uc:SeoInformers ID="Informers" CssClass="SeoInformers" runat="server" />            
+        <div class="FooterContainer">
+            <uc:SeoInformers ID="Informers" CssClass="SeoInformers" runat="server" /> 
+            <uc:ShareLinkIcons CssClass="ShareLinkPosHorizon" runat="server" />
+         </div>
     </main>
 </body>

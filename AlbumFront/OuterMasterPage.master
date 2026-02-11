@@ -27,7 +27,7 @@
     
     <asp:ContentPlaceHolder ID="HeadMeta" runat="server" />
 
-    <link rel="canonical" href="<%= "" + this.GetCanonicalUrl()%>" />
+    <link rel="canonical" href="<%# GetCanonicalUrl() %>" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/photo_album_blue.png">
     <link rel="icon" type="image/png" sizes="128x128" href="img/photo_album.png">
     <link rel="apple-touch-icon" sizes="128x128" href="img/photo_album.png">

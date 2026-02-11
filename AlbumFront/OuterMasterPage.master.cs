@@ -18,5 +18,11 @@ namespace AlbumFront
 
             return "https://" + domain + path;
         }
+
+        protected override void OnPreRender(EventArgs e)
+        {
+            base.OnPreRender(e);
+            DataBind();
+        }
     }
 }

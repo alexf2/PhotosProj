@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Configuration;
+using System.Web;
 
 namespace AlbumFront
 {
@@ -11,9 +13,18 @@ namespace AlbumFront
         protected string URL_PVD => "//boosty.to/through_horizon/purchase/3622368?ssource=DIRECT&share=subscription_link";
         protected string URL_FULL => "//boosty.to/through_horizon/purchase/3622371?ssource=DIRECT&share=subscription_link";
 
-        protected void Page_Load(object sender, EventArgs e)
+        protected string GetCanonicalUrl()
         {
+            var domain = ConfigurationManager.AppSettings["CanonicalDomain"];
+            var path = HttpContext.Current.Request.Url.AbsolutePath;
 
+            return "https://" + domain + path;
+        }
+
+        protected override void OnPreRender(EventArgs e)
+        {
+            base.OnPreRender(e);
+            DataBind();
         }
     }
 }

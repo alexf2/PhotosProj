@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="Right">
-                    <img class="FadeOnLoad" width="500" height="774" src="<%=ResolveClientUrl("img/SelfPort.jpg")%>" border="0" title="Автопртрет" />
+                    <img class="FadeOnLoad" width="500" height="774" src="<%=ResolveClientUrl("~/img/SelfPort.jpg")%>" border="0" title="Автопртрет" />
                     <figcaption>2011, France, Auberge de Monstegur</figcaption>
                 </div>
 
