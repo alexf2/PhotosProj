@@ -1,0 +1,20 @@
+﻿.LineBg {
+  height: 7px;
+  background-image: url(../img/line.jpg);
+  white-space: nowrap;
+  clear: both;
+  width: 100%;
+  box-sizing: border-box;
+}
+.LineRightCap,
+.LineLeftCap {
+  height: 7px;
+  width: 74px;
+  background-image: url(../img/line_right_cap.jpg);
+  background-repeat: no-repeat;
+  float: right;
+}
+.LineLeftCap {
+  background-image: url(../img/line_left_cap.jpg);
+  float: left;
+}

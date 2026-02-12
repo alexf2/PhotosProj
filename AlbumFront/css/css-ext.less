@@ -1,7 +1,7 @@
 ﻿@import "mixins.less";
 
 body {
-    background-color: #f2f7fe;
+    background-color: @background-color;
     margin: 0;
     padding: 0.7em; /*top right bottom left*/
     max-width: 100%;
@@ -36,11 +36,6 @@ body {
     text-align: left;
 }
 
-.SectionHeader2 {
-    &:extend(.SectionHeader);
-    .menu-font-mixin(11pt, 600);
-}
-
 .SectionBody {
     position: relative;
     padding: 0.0em 1.85em 2.5em 1.85em; /*top right bottom left*/
@@ -69,29 +64,6 @@ body {
     padding-bottom: 0.2em;
     display: flex;
     align-items: center;
-}
-
-.LineBg {
-    height: 7px;
-    background-image: url(../img/line.jpg);
-    white-space: nowrap;
-    clear: both;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.LineRightCap {
-    height: 7px;
-    width: @header-bg-width;
-    background-image: url(../img/line_right_cap.jpg);
-    background-repeat: no-repeat;
-    float: right;
-}
-
-.LineLeftCap {
-    &:extend(.LineRightCap);
-    background-image: url(../img/line_left_cap.jpg);
-    float: left;
 }
 
 .Copyright {

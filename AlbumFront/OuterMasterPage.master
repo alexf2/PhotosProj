@@ -16,6 +16,10 @@
     TagName="SeoInformers"
     Src="~/Components/SeoInformers.ascx" %>
 
+<%@ Register TagPrefix="uc"
+    TagName="PageFooter"
+    Src="~/Components/PageFooter.ascx" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#" lang="ru-RU">
@@ -68,15 +72,14 @@
                 </div>
             </header>
 
-            <asp:ContentPlaceHolder ID="idMainPls" runat="server" />
-
-            <footer class="Lnk">
-                <div class="LineBg" style="text-align: center">
-                    <div class="LineLeftCap">&nbsp;</div>
-                    <div class="LineRightCap">&nbsp;</div>
+            <asp:ContentPlaceHolder ID="idMainContent" runat="server" />
+            
+            <uc:PageFooter CssClass="Lnk" runat="server">
+                <FooterTemplate>
                     <p class="Copyright"><a runat="server" href="<%$RouteUrl:routename=Default %>">Odyssey's Photography</a>, &copy; Aleksey Fedorov 2006 - 2026, All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server" class="Copyright" href="<%$RouteUrl:routename=About %>">About</a></p>
-                </div>
-            </footer>
+                </FooterTemplate>
+            </uc:PageFooter>
+
             <br />
 
             <asp:PlaceHolder runat="server">

@@ -23,7 +23,7 @@
 </script>
 
 
-<asp:Content ContentPlaceHolderID = "idMainPls" runat = "server" >    
+<asp:Content ContentPlaceHolderID = "idMainContent" runat = "server" >    
     
     <script language="javascript1.1" type="text/javascript">
      function mySubmit (el) {

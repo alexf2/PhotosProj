@@ -11,7 +11,7 @@ namespace AlbumFront.Components
 {
 
 
-    public partial class SectionHeader
+    public partial class PageFooter
     {
 
         /// <summary>
@@ -24,12 +24,12 @@ namespace AlbumFront.Components
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl RootElement;
 
         /// <summary>
-        /// HeaderElement control.
+        /// FooterPlaceholder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl HeaderElement;
+        protected global::System.Web.UI.WebControls.PlaceHolder FooterPlaceholder;
     }
 }

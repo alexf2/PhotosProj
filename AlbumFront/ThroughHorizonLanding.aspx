@@ -18,12 +18,20 @@
     Src="~/Components/MailRuCounter.ascx" %>
 
 <%@ Register TagPrefix="uc"
+    TagName="SectionHeader"
+    Src="~/Components/SectionHeader.ascx" %>
+
+<%@ Register TagPrefix="uc"
     TagName="SeoInformers"
     Src="~/Components/SeoInformers.ascx" %>
 
 <%@ Register TagPrefix="uc"
     TagName="ShareLinkIcons"
     Src="~/Components/ShareLinkIcons.ascx" %>
+
+<%@ Register TagPrefix="uc"
+    TagName="PageFooter"
+    Src="~/Components/PageFooter.ascx" %>
 
 
 <!DOCTYPE html>
@@ -138,11 +146,8 @@
         </section>
 
         <section id="instructions" class="PlainText">
-            <header class="SectionHeaderBg">
-                <div class="SectionHeader2" style="float: left">Как присоединиться к сообществу &quot;Сквозь Горизонт&quot;</div>
-                <div class="SectionHeaderBgCap" style="float: right"></div>
-            </header>
-
+            <uc:SectionHeader CssClassHeader="SectionHeaderHorizon" Name="Как присоединиться к сообществу &quot;Сквозь Горизонт&quot;" runat="server" />
+            
             <p>
                 База походных маршрутов ведётся в форме канала на платформе Boosty, куда и предпочтительно подписываться, так
                 как имеется Web и мобильное приложение с функционалом, сопоставимым Телеграму. Кроме того, Boosty удобнее
@@ -189,12 +194,7 @@
             </p>
         </section>
 
-        <footer class="LnkCont">
-            <div class="LineBg" style="text-align: center">
-                <div class="LineLeftCap">&nbsp;</div>
-                <div class="LineRightCap">&nbsp;</div>
-            </div>
-        </footer>
+        <uc:PageFooter CssClass="LnkCont" runat="server" />
 
         <asp:PlaceHolder runat="server">
             <% = Scripts.Render("~/bundles/jquery") %>

@@ -18,5 +18,17 @@
   {
     "outputFile": "css/gallery.css",
     "inputFile": "css/gallery.less"
+  },
+  {
+    "outputFile": "css/page-footer-css.css",
+    "inputFile": "css/page-footer-css.less"
+  },
+  {
+    "outputFile": "css/page-footer.css",
+    "inputFile": "css/page-footer.less"
+  },
+  {
+    "outputFile": "css/toggle.css",
+    "inputFile": "css/toggle.less"
   }
 ]

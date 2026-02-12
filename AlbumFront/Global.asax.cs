@@ -13,6 +13,7 @@ namespace AlbumFront
     {
         const string TestJsFileName = "~/Scripts/jquery*.js";
         string _jqueryVersion;
+        const string _lightboxVersion = "3";
 
         void Application_Start(object sender, EventArgs e)
         {
@@ -102,8 +103,21 @@ namespace AlbumFront
             routes.Ignore("{*botdetect}", new { botdetect = @"(.*)BotDetectCaptcha\.ashx" });
 
             // Пример запроса страницы галереи: https://afedorov.info/Pub/Laplandia2020/Laplandia2020.aspx
-            routes.Add("Gallery", new Route("Pub/{*path}",
-                new GalleryPageRouteHandler("~/GalleryGen.aspx")));
+            // routes.Add("Gallery", new Route("Pub/{*path}",
+            //      new GalleryPageRouteHandler("~/GalleryGen.aspx")));
+
+            routes.Add("Gallery",
+                new Route(
+                    "Pub/{*path}",
+                    defaults: null,
+                    constraints: new RouteValueDictionary
+                    {
+                        { "path", @"^(?:.+/)?(?<folder>[^/]+)/(?<file>\k<folder>\.aspx)$" }
+                    },
+                    dataTokens: null,
+                    routeHandler: new GalleryPageRouteHandler("~/GalleryGen.aspx")
+                )
+            );
 
             routes.Add("Default", new Route(string.Empty, new PageRouteHandler("~/default.aspx")));
             routes.Add("About", new Route("about", new PageRouteHandler("~/about.aspx")));
@@ -122,6 +136,9 @@ namespace AlbumFront
             b.CdnFallbackExpression = "window.jQuery";
             bundles.Add(b);
 
+            b = new ScriptBundle("~/bundles/lightbox")
+                .Include("~/Scripts/LightBox/jquery.lightbox-{version}.js");  // без .min!
+            bundles.Add(b);
 
             bundles.Add(new StyleBundle("~/bundles/extra-css").Include(
                 "~/css/normalize.css",
@@ -131,8 +148,9 @@ namespace AlbumFront
 
             bundles.Add(new StyleBundle("~/bundles/horizon-css").Include("~/css/horizon.css"));
             bundles.Add(new StyleBundle("~/bundles/shared-link-icons-css").Include("~/css/shared-link-icons.css"));
+            bundles.Add(new StyleBundle("~/bundles/page-footer-css").Include("~/css/page-footer.css"));
             bundles.Add(new StyleBundle("~/bundles/gallery-css").Include("~/css/normalize.css", "~/css/gallery.css"));
-
+            bundles.Add(new StyleBundle("~/bundles/toggle-css").Include("~/css/toggle.css"));
 
             //для Mail.aspx, которая не использует masterpage
             ScriptManager.ScriptResourceMapping.AddDefinition("jquery", new ScriptResourceDefinition

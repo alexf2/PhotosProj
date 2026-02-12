@@ -75,6 +75,13 @@
   line-height: 110%;
   color: #E35F00;
 }
+.SectionHeaderHorizon {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 11pt;
+}
 .LnkCont a {
   display: inline-flex;
   align-items: center;

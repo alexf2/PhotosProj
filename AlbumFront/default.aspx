@@ -43,7 +43,7 @@
     }
 </script>
 
-<asp:Content ID="idAboutContent" ContentPlaceHolderID="idMainPls" runat="server">
+<asp:Content ID="idAboutContent" ContentPlaceHolderID="idMainContent" runat="server">
 
     <article class="Centering ContentLnk">
         <uc:SectionHeader Name="Альбомы и репортажи Одиссея" runat="server" />

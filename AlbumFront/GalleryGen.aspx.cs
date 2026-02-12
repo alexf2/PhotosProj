@@ -16,10 +16,13 @@ namespace AlbumFront
         protected void Page_Load(object sender, EventArgs e)
         {
             string galleryPath = Context.Items["OriginalGalleryPath"]?.ToString();
-            // galleryPath = "Laplandia2020/Laplandia2020.aspx"
+            var virtualPath = "~/Pub/" + galleryPath.Replace(".aspx", "");
 
-            string physicalPath = Server.MapPath("~/Pub/" + galleryPath.Replace(".aspx", ""));
-            // Загружаете данные из ~/Pub/Laplandia2020/
+            if (!IsPostBack)
+            {
+                var gallery = LoadControl(virtualPath + ".ascx");
+                GalleryContent.Controls.Add(gallery);
+            }
         }
 
         protected override void OnPreRender(EventArgs e)

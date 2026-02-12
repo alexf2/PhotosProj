@@ -18,8 +18,7 @@
   background-image: url(../img/section_header_bg_cap.jpg);
   background-repeat: no-repeat;
 }
-.SectionHeader,
-.SectionHeader2 {
+.SectionHeader {
   width: 162px;
   background-image: url(../img/section_header.jpg);
   background-repeat: no-repeat;
@@ -31,13 +30,6 @@
   padding-top: 0.4em;
   padding-bottom: 0.4em;
   text-align: left;
-}
-.SectionHeader2 {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 11pt;
 }
 .SectionBody {
   position: relative;
@@ -65,26 +57,6 @@
   padding-bottom: 0.2em;
   display: flex;
   align-items: center;
-}
-.LineBg {
-  height: 7px;
-  background-image: url(../img/line.jpg);
-  white-space: nowrap;
-  clear: both;
-  width: 100%;
-  box-sizing: border-box;
-}
-.LineRightCap,
-.LineLeftCap {
-  height: 7px;
-  width: 74px;
-  background-image: url(../img/line_right_cap.jpg);
-  background-repeat: no-repeat;
-  float: right;
-}
-.LineLeftCap {
-  background-image: url(../img/line_left_cap.jpg);
-  float: left;
 }
 .Copyright {
   font-weight: normal;
@@ -470,8 +442,7 @@ input[type=submit][disabled=true],
     white-space: normal;
     height: auto;
   }
-  .SectionHeader,
-  .SectionHeader2 {
+  .SectionHeader {
     width: auto;
     background-size: cover;
   }

@@ -21,7 +21,7 @@
     }
 </script>
 
-<asp:Content ContentPlaceHolderID = "idMainPls" runat = "server" >    
+<asp:Content ContentPlaceHolderID = "idMainContent" runat = "server" >    
 
         <article>
             <div class="SectionHeaderBg">

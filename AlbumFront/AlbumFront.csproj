@@ -96,10 +96,13 @@
     <Content Include="about.aspx" />
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Components\CatItem.ascx" />
+    <Content Include="Components\GalleryItem.ascx" />
     <Content Include="Components\MailRuCounter.ascx" />
+    <Content Include="Components\PageFooter.ascx" />
     <Content Include="Components\SectionHeader.ascx" />
     <Content Include="Components\SeoInformers.ascx" />
     <Content Include="Components\ShareLinkIcons.ascx" />
+    <Content Include="Components\Toggle.ascx" />
     <Content Include="Components\YandexCounter.ascx" />
     <Content Include="counters.txt" />
     <Content Include="css\css-ext.css">
@@ -130,11 +133,23 @@
     <Content Include="css\horizon.min.css">
       <DependentUpon>horizon.css</DependentUpon>
     </Content>
+    <Content Include="css\page-footer.css">
+      <DependentUpon>page-footer.less</DependentUpon>
+    </Content>
+    <Content Include="css\page-footer.min.css">
+      <DependentUpon>page-footer.css</DependentUpon>
+    </Content>
     <Content Include="css\shared-link-icons.css">
       <DependentUpon>shared-link-icons.less</DependentUpon>
     </Content>
     <Content Include="css\shared-link-icons.min.css">
       <DependentUpon>shared-link-icons.css</DependentUpon>
+    </Content>
+    <Content Include="css\toggle.css">
+      <DependentUpon>toggle.less</DependentUpon>
+    </Content>
+    <Content Include="css\toggle.min.css">
+      <DependentUpon>toggle.css</DependentUpon>
     </Content>
     <Content Include="default.aspx" />
     <Content Include="Error.aspx" />
@@ -181,6 +196,22 @@
     <Content Include="css\css-ext.less" />
     <Content Include="css\fonts.less" />
     <Content Include="robots.txt" />
+    <Content Include="Scripts\LightBox\jquery.lightbox-3.0.0.js" />
+    <Content Include="Scripts\LightBox\jquery.lightbox-3.0.0.min.js" />
+    <Content Include="Scripts\LightBox\themes\classic-dark\images\jquery-lightbox-theme.gif" />
+    <Content Include="Scripts\LightBox\themes\classic-dark\images\loading.gif" />
+    <Content Include="Scripts\LightBox\themes\classic-dark\jquery.lightbox.css" />
+    <Content Include="Scripts\LightBox\themes\classic-dark\jquery.lightbox.ie6.css" />
+    <Content Include="Scripts\LightBox\themes\classic\images\jquery-lightbox-theme.gif" />
+    <Content Include="Scripts\LightBox\themes\classic\images\loading.gif" />
+    <Content Include="Scripts\LightBox\themes\classic\jquery.lightbox.css" />
+    <Content Include="Scripts\LightBox\themes\classic\jquery.lightbox.ie6.css" />
+    <Content Include="Scripts\LightBox\themes\default\images\jquery-lightbox-theme-mobile.png" />
+    <Content Include="Scripts\LightBox\themes\default\images\jquery-lightbox-theme.gif" />
+    <Content Include="Scripts\LightBox\themes\default\images\jquery-lightbox-theme.png" />
+    <Content Include="Scripts\LightBox\themes\default\images\loading.gif" />
+    <Content Include="Scripts\LightBox\themes\default\jquery.lightbox.css" />
+    <Content Include="Scripts\LightBox\themes\default\jquery.lightbox.ie6.css" />
     <Content Include="sitemap.xml" />
     <Content Include="ThroughHorizonLanding.aspx" />
     <None Include="bundleconfig.json" />
@@ -198,6 +229,8 @@
     <Content Include="css\mixins.less" />
     <Content Include="css\shared-link-icons.less" />
     <Content Include="css\gallery.less" />
+    <Content Include="css\page-footer.less" />
+    <Content Include="css\toggle.less" />
     <None Include="Properties\PublishProfiles\AlbumFront.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1-vsdoc.js" />
@@ -226,6 +259,20 @@
     <Compile Include="Components\CatItem.ascx.designer.cs">
       <DependentUpon>CatItem.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Components\GalleryItem.ascx.cs">
+      <DependentUpon>GalleryItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\GalleryItem.ascx.designer.cs">
+      <DependentUpon>GalleryItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\PageFooter.ascx.cs">
+      <DependentUpon>PageFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\PageFooter.ascx.designer.cs">
+      <DependentUpon>PageFooter.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Components\SectionHeader.ascx.cs">
       <DependentUpon>SectionHeader.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -243,6 +290,13 @@
     <Compile Include="Components\ShareLinkIcons.ascx.cs">
       <DependentUpon>ShareLinkIcons.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Toggle.ascx.cs">
+      <DependentUpon>Toggle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\Toggle.ascx.designer.cs">
+      <DependentUpon>Toggle.ascx</DependentUpon>
     </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>

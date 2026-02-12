@@ -1,0 +1,54 @@
+﻿@import "mixins.less";
+
+.toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+    /* Скрываем системный чекбокс */
+    .toggle input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+/* Дорожка переключателя */
+.toggle-track {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border-radius: 999px;
+    background-color: @control-color;
+    transition: background-color 0.25s ease;
+}
+
+/* Бегунок */
+.toggle-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    transition: transform 0.25s ease;
+}
+
+/* Состояние включено */
+.toggle input[type="checkbox"]:checked + .toggle-track {
+    background-color: @control-hover-color;
+}
+
+    .toggle input[type="checkbox"]:checked + .toggle-track .toggle-thumb {
+        transform: translateX(20px);
+    }
+
+/* Фокус по табу */
+.toggle input[type="checkbox"]:focus-visible + .toggle-track {
+    outline: 2px solid #6666ff;
+    outline-offset: 2px;
+}
