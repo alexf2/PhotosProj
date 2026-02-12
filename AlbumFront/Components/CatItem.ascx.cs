@@ -33,18 +33,20 @@ namespace AlbumFront.Components
 
         public string ImgCss { get; set; }
 
+        public bool NewGal { get; set; } = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        public string GetPubUrl() => Page.ResolveUrl($"~/Pub/{Path ?? Name}/{Name}.htm");
+        public string GetPubUrl() => Page.ResolveUrl($"~/Pub/{Path ?? Name}/{Name}.{(NewGal ? "aspx" : "htm")}");
 
         public string GetAlbumUrl() => Page.ResolveUrl($"~/Albums/Login.aspx?login={Login}&pwd={Pwd}");
 
         public string GetImgUrl() => Page.ResolveUrl($"~/img/{Name}Thumb.jpg");
 
-        public string GetGroupUrl() => Page.ResolveUrl($"~/Pub/{Group}/{Group}.htm");
+        public string GetGroupUrl() => Page.ResolveUrl($"~/Pub/{Group}/{Group}.{(NewGal ? "aspx" : "htm")}");
 
         public string GetMapUrl() => Page.ResolveUrl($"~/Pub/Maps/{MapName}.htm");
 
