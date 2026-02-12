@@ -28,11 +28,11 @@
     <asp:ContentPlaceHolder ID="HeadMeta" runat="server" />
 
     <link rel="canonical" href="<%# GetCanonicalUrl() %>" />
-    <link rel="icon" type="image/png" sizes="16x16" href="img/photo_album_blue.png" />
-    <link rel="icon" type="image/png" sizes="128x128" href="img/photo_album.png" />
-    <link rel="apple-touch-icon" sizes="128x128" href="img/photo_album.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="<%# Page.ResolveUrl("img/photo_album_blue.png") %>"/>
+    <link rel="icon" type="image/png" sizes="128x128" href="<%# Page.ResolveUrl("img/photo_album.png") %>" />
+    <link rel="apple-touch-icon" sizes="128x128" href="<%# Page.ResolveUrl("img/photo_album.png") %>" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="manifest" href="img/manifest.json" />
+    <link rel="manifest" href="<%# Page.ResolveUrl("img/manifest.json") %>" />
 
     <asp:PlaceHolder runat="server">
         <% = Styles.Render("~/bundles/extra-css") %>

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AlbumFront
+namespace AlbumFront.Components
 {
 
 

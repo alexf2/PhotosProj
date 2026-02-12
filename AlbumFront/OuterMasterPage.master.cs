@@ -6,7 +6,7 @@ namespace AlbumFront
 {
     public partial class OuterMasterPage : System.Web.UI.MasterPage
     {
-        protected string GetCanonicalUrl()
+        public string GetCanonicalUrl()
         {
             var domain = ConfigurationManager.AppSettings["CanonicalDomain"];
             var path = HttpContext.Current.Request.Url.AbsolutePath;

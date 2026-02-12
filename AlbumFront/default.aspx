@@ -21,8 +21,8 @@
 <asp:Content ContentPlaceHolderID="HeadMeta" runat="server">
     <meta property="og:title" content="Ὀδύσσεια ---== Odyssey's Photos ==--- Ὀδύσσεια" />
     <meta property="og:description" content="Фотогалереи и фотоотчёты Одиссея: путешествия, автопробеги и походы по Крыму, Абхазии, Норвегии, Исландии, Альпам, США, Кавказу, Лапландии и историческим местам России с отчётами и альбомами." />
-    <meta property="og:url" content="<%= "https://" + ConfigurationManager.AppSettings["CanonicalDomain"] + HttpContext.Current.Request.Url.AbsolutePath %>" />
-    <meta property="og:image" content="<%= Request.Url.Scheme + Uri.SchemeDelimiter + Request.Url.Authority + "/" + ResolveClientUrl("~/img/logo_23696-2.png")%>" />
+    <meta property="og:url" content="<%= (Page.Master as AlbumFront.OuterMasterPage).GetCanonicalUrl() %>" />
+    <meta property="og:image" content="<%= Request.Url.GetLeftPart(UriPartial.Authority) + Page.ResolveUrl("~/img/logo_23696-2.png") %>" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
 </asp:Content>
@@ -48,7 +48,7 @@
     <article class="Centering ContentLnk">
         <uc:SectionHeader Name="Альбомы и репортажи Одиссея" runat="server" />
         <section class="SectionBody">
-            <a href="<%=ResolveClientUrl("Albums/PageGen.aspx")%>">Все альбомы</a>
+            <a href="<%=Page.ResolveUrl("Albums/PageGen.aspx")%>">Все альбомы</a>
             <uc:ShareLinkIcons CssClass="ShareLinkPos" runat="server" />
             <br />
             <br />
@@ -85,9 +85,9 @@
 
         <uc:SectionHeader Name="Отчёты Одиссея" runat="server" />
         <section class="SectionBody">
-            <a href="<%=ResolveClientUrl("TravelReports/CrimeaReport2006/Crimea2006Report_cenz.htm")%>">Транскрымский автопробег 2006</a><br />
-            <a href="<%=ResolveClientUrl("TravelReports/CrimeaReport2007/SevenPagesAboutCrimea.htm")%>">Семь страниц о Крыме (Крым 2007)</a><br />
-            <a href="<%=ResolveClientUrl("TravelReports/Abhaziya2007/Abhaziya2007.htm")%>">Абхазия 2007</a>
+            <a href="<%=Page.ResolveUrl("TravelReports/CrimeaReport2006/Crimea2006Report_cenz.htm")%>">Транскрымский автопробег 2006</a><br />
+            <a href="<%=Page.ResolveUrl("TravelReports/CrimeaReport2007/SevenPagesAboutCrimea.htm")%>">Семь страниц о Крыме (Крым 2007)</a><br />
+            <a href="<%=Page.ResolveUrl("TravelReports/Abhaziya2007/Abhaziya2007.htm")%>">Абхазия 2007</a>
         </section>
 
         <uc:SectionHeader Name="Мини альбомы Одиссея" runat="server" />
@@ -137,8 +137,8 @@
 
         <uc:SectionHeader Name="Прочее" runat="server" />
         <section class="SectionBody">
-            <a href="<%=ResolveClientUrl("Pub/Jokes/Laps.htm")%>">Таймлапсы</a><br />
-            <a href="<%=ResolveClientUrl("Pub/Celebrity/Celebrity.htm")%>">Знаменитости</a><br />
+            <a href="<%=Page.ResolveUrl("Pub/Jokes/Laps.htm")%>">Таймлапсы</a><br />
+            <a href="<%=Page.ResolveUrl("Pub/Celebrity/Celebrity.htm")%>">Знаменитости</a><br />
         </section>
     </article>
 </asp:Content>

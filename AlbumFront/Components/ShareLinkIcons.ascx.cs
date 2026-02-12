@@ -7,7 +7,7 @@ namespace AlbumFront.Components
 {
     public partial class ShareLinkIcons : UserControl
     {
-        const string CSS_NAME = "shared-link-icons";
+        const string CSS_NAME = "shared-link-icons-css";
 
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl RootElement;
 
@@ -25,7 +25,7 @@ namespace AlbumFront.Components
             {
                 var link = new HtmlLink
                 {
-                    Href = ResolveClientUrl($"~/css/{CSS_NAME}.css")
+                    Href = Page.ResolveUrl($"~/bundles/{CSS_NAME}")
                 };
                 link.Attributes.Add("rel", "stylesheet");
                 link.Attributes.Add("type", "text/css");

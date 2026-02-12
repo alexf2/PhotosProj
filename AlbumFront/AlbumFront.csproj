@@ -90,7 +90,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +114,12 @@
     <Content Include="css\fonts.min.css">
       <DependentUpon>fonts.css</DependentUpon>
     </Content>
+    <Content Include="css\gallery.css">
+      <DependentUpon>gallery.less</DependentUpon>
+    </Content>
+    <Content Include="css\gallery.min.css">
+      <DependentUpon>gallery.css</DependentUpon>
+    </Content>
     <Content Include="css\normalize.css" />
     <Content Include="css\normalize.min.css">
       <DependentUpon>normalize.css</DependentUpon>
@@ -134,6 +139,7 @@
     <Content Include="default.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="FrVersion.aspx" />
+    <Content Include="GalleryGen.aspx" />
     <Content Include="Global.asax" />
     <Content Include="img\25-jonas__68768.jpg" />
     <Content Include="img\35-jonas-rafael__68769.jpg" />
@@ -191,6 +197,7 @@
     <Content Include="fonts\Inter-VariableFont_opsz,wght.ttf" />
     <Content Include="css\mixins.less" />
     <Content Include="css\shared-link-icons.less" />
+    <Content Include="css\gallery.less" />
     <None Include="Properties\PublishProfiles\AlbumFront.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1-vsdoc.js" />
@@ -211,6 +218,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\GalleryPageRouteHandler.cs" />
     <Compile Include="Components\CatItem.ascx.cs">
       <DependentUpon>CatItem.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -242,6 +250,13 @@
     </Compile>
     <Compile Include="Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GalleryGen.aspx.cs">
+      <DependentUpon>GalleryGen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GalleryGen.aspx.designer.cs">
+      <DependentUpon>GalleryGen.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

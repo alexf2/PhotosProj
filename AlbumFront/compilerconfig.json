@@ -14,5 +14,9 @@
   {
     "outputFile": "css/shared-link-icons.css",
     "inputFile": "css/shared-link-icons.less"
+  },
+  {
+    "outputFile": "css/gallery.css",
+    "inputFile": "css/gallery.less"
   }
 ]

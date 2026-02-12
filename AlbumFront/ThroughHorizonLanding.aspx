@@ -36,21 +36,20 @@
 
     <meta property="og:title" content="Сквозь горизонт: хайкинг, легкоходный туризм и фото-поездки налегке" />
     <meta property="og:description" content="Сквозь горизонт: хайкинг, легкоходный туризм и фото-поездки налегке. Полезные гайды, маршруты и советы для трейлов с минимальным весом. База походов с метриками сложности и GPS-Треками. Присоединяйтесь к сообществу на Boosty!" />
-    <meta property="og:url" content="<%# "https://" + ConfigurationManager.AppSettings["CanonicalDomain"] + HttpContext.Current.Request.Url.AbsolutePath %>" />
-    <meta property="og:image" content="<%# Request.Url.Scheme + Uri.SchemeDelimiter + Request.Url.Authority + "/" + ResolveClientUrl("~/img/logo_23696-2.png")%>" />
+    <meta property="og:url" content="<%# GetCanonicalUrl() %>" />
+    <meta property="og:image" content="<%# Request.Url.GetLeftPart(UriPartial.Authority) + Page.ResolveUrl("~/img/logo_23696-2.png") %>" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
     
     <link rel="canonical" href="<%# GetCanonicalUrl() %>" />
-    <link rel="icon" type="image/png" sizes="16x16" href="img/photo_album_blue.png" />
-    <link rel="icon" type="image/png" sizes="128x128" href="img/photo_album.png" />
-    <link rel="apple-touch-icon" sizes="128x128" href="img/photo_album.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="<%# Page.ResolveUrl("img/photo_album_blue.png") %>" />
+    <link rel="icon" type="image/png" sizes="128x128" href="<%# Page.ResolveUrl("img/photo_album.png") %>" />
+    <link rel="apple-touch-icon" sizes="128x128" href="<%# Page.ResolveUrl("img/photo_album.png") %>" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="manifest" href="img/manifest.json" />
+    <link rel="manifest" href="<%# Page.ResolveUrl("img/manifest.json") %>" />
 
     <asp:PlaceHolder runat="server">
-        <% = Styles.Render("~/bundles/extra-css") %>
-        <% = Styles.Render("~/bundles/horizon-css") %>        
+        <% = Styles.Render("~/bundles/extra-css", "~/bundles/horizon-css") %>        
     </asp:PlaceHolder>
 
     <uc:YandexCounter ID="YandexCounter" runat="server" />
@@ -109,28 +108,28 @@
                     Всё, что нужно для прохождения: GPS-треки, фото, описания, инструкции и метрики.                
             </header>
             <div class="InnerContainer">
-                <img class="FadeOnLoad LogoImg" width="240" height="239" src="<%=ResolveClientUrl("img/logo_23696-2.png")%>" border="0" title="Сообщество Сквозь горизонт" alt="Сообщество Сквозь горизонт" />
+                <img class="FadeOnLoad LogoImg" width="240" height="239" src="<%=Page.ResolveUrl("img/logo_23696-2.png")%>" border="0" title="Сообщество Сквозь горизонт" alt="Сообщество Сквозь горизонт" />
                 <div class="LandingImage">
-                    <img class="FadeOnLoad" width="1000" height="667" src="<%=ResolveClientUrl("img/landing_img.jpg")%>" border="0" title="Сообщество Сквозь горизонт" alt="Сообщество Сквозь горизонт" />
+                    <img class="FadeOnLoad" width="1000" height="667" src="<%=Page.ResolveUrl("img/landing_img.jpg")%>" border="0" title="Сообщество Сквозь горизонт" alt="Сообщество Сквозь горизонт" />
                 </div>
                 <div class="Subscriptions">
                     <div>
                         <a href="<% = URL_ONE_DAY %>" target="_blank" rel="noopener">
-                            <img class="FadeOnLoad" width="240" height="164" src="<%=ResolveClientUrl("img/25-jonas__68768.jpg")%>" border="0" title="Подписка на однодневки" alt="Подписка на однодневки" />
+                            <img class="FadeOnLoad" width="240" height="164" src="<%=Page.ResolveUrl("img/25-jonas__68768.jpg")%>" border="0" title="Подписка на однодневки" alt="Подписка на однодневки" />
                         </a>
                         <a class="LinkBtn" role="button" href="<% = URL_ONE_DAY %>" target="_blank" rel="noopener">Подписаться</a>
                     </div>
 
                     <div>
                         <a href="<% = URL_PVD  %>" target="_blank" rel="noopener">
-                            <img class="FadeOnLoad" width="240" height="164" src="<%=ResolveClientUrl("img/35-jonas-rafael__68769.jpg")%>" border="0" title="Подписка на ПВД" alt="Подписка на ПВД" />
+                            <img class="FadeOnLoad" width="240" height="164" src="<%=Page.ResolveUrl("img/35-jonas-rafael__68769.jpg")%>" border="0" title="Подписка на ПВД" alt="Подписка на ПВД" />
                         </a>
                         <a class="LinkBtn" role="button" href="<% = URL_PVD %>" target="_blank" rel="noopener">Подписаться</a>
                     </div>
 
                     <div>
                         <a href="<% = URL_FULL %>" target="_blank" rel="noopener">
-                            <img class="FadeOnLoad" width="240" height="164" src="<%=ResolveClientUrl("img/45-jonas-rafael-alejandro__68770.jpg")%>" border="0" title="Полная подписка" alt="Полная подписка" />
+                            <img class="FadeOnLoad" width="240" height="164" src="<%=Page.ResolveUrl("img/45-jonas-rafael-alejandro__68770.jpg")%>" border="0" title="Полная подписка" alt="Полная подписка" />
                         </a>
                         <a class="LinkBtn" role="button" href="<% = URL_FULL%>" target="_blank" rel="noopener">Подписаться</a>
                     </div>
@@ -180,7 +179,7 @@
                     🔗<a href="https://www.rustore.ru/catalog/app/to.boosty.mobile" target="_blank" rel="noopener">Мобильное приложение Boosty в RuStore.</a>
                 </li>
             </ol>
-            <img class="FadeOnLoad ImgCentered" width="389" height="422" src="<%=ResolveClientUrl("img/boosty_qr_rustore.jpg")%>" border="0" title="QR-код для установки Boosty" alt="QR-код для установки Boosty" />
+            <img class="FadeOnLoad ImgCentered" width="389" height="422" src="<%=Page.ResolveUrl("img/boosty_qr_rustore.jpg")%>" border="0" title="QR-код для установки Boosty" alt="QR-код для установки Boosty" />
             <p>
                 После этого, вам уже не понадобится костыль в виде Телеграм, так как вы напрямую будете 
                 получать уведомления в мобильном Boosty и читать  мой канал напрямую, без помощи 

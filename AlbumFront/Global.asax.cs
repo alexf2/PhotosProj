@@ -28,6 +28,15 @@ namespace AlbumFront
 
         }
 
+        protected void Application_PostResolveRequestCache(object sender, EventArgs e)
+        {
+
+        }
+        protected void Application_PostMapRequestHandler(object sender, EventArgs e)
+        {
+
+        }
+
         void Application_BeginRequest(Object sender, EventArgs e)
         {
             //AWS.Utils.WebUtils.SetLocale( Request );
@@ -92,6 +101,10 @@ namespace AlbumFront
             routes.Add(new Route("{service}.asmx/{*path}", new StopRoutingHandler()));
             routes.Ignore("{*botdetect}", new { botdetect = @"(.*)BotDetectCaptcha\.ashx" });
 
+            // Пример запроса страницы галереи: https://afedorov.info/Pub/Laplandia2020/Laplandia2020.aspx
+            routes.Add("Gallery", new Route("Pub/{*path}",
+                new GalleryPageRouteHandler("~/GalleryGen.aspx")));
+
             routes.Add("Default", new Route(string.Empty, new PageRouteHandler("~/default.aspx")));
             routes.Add("About", new Route("about", new PageRouteHandler("~/about.aspx")));
             routes.Add("Contacts", new Route("contacts", new PageRouteHandler("~/Mail.aspx")));
@@ -117,6 +130,8 @@ namespace AlbumFront
            ));
 
             bundles.Add(new StyleBundle("~/bundles/horizon-css").Include("~/css/horizon.css"));
+            bundles.Add(new StyleBundle("~/bundles/shared-link-icons-css").Include("~/css/shared-link-icons.css"));
+            bundles.Add(new StyleBundle("~/bundles/gallery-css").Include("~/css/normalize.css", "~/css/gallery.css"));
 
 
             //для Mail.aspx, которая не использует masterpage
