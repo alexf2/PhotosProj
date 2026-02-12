@@ -97,6 +97,7 @@
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Components\CatItem.ascx" />
     <Content Include="Components\GalleryItem.ascx" />
+    <Content Include="Components\Laplandia2020.ascx" />
     <Content Include="Components\MailRuCounter.ascx" />
     <Content Include="Components\PageFooter.ascx" />
     <Content Include="Components\SectionHeader.ascx" />
