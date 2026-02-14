@@ -85,6 +85,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\AscxGalleryTransformation.xslt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Content Include="Scripts\my.helpers.js" />
     <Content Include="Scripts\Readme.txt" />

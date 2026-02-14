@@ -53,27 +53,27 @@
             <br />
             <br />
 
-            <uc:CatItem Name="Usa2019" ImgCss="ImgThumbNormal_Myanmar2015" Description="Западная Америка 2019" runat="server" />
-            <uc:CatItem Name="Laplandia2020" ImgCss="ImgThumbNormal_Myanmar2015" Description="Лапландия 2020" runat="server" />
+            <uc:CatItem Name="Usa2019" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Западная Америка 2019" runat="server" />
+            <uc:CatItem Name="Laplandia2020" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Лапландия 2020" runat="server" />
             <uc:CatItem Name="Solovki2019" ImgCss="ImgThumbNormal_Myanmar2015" Description="Соловецкие острова 2019, Белое море" runat="server" />
-            <uc:CatItem Name="Madeira2018" ImgCss="ImgThumbNormal_Myanmar2015" Description="Мадейра 2018" runat="server" />
-            <uc:CatItem Name="Cappadocia2018" ImgCss="ImgThumbNormal_Myanmar2015" Description="Каппадокия 2018" runat="server" />
-            <uc:CatItem Name="Scotland2017" ImgCss="ImgThumbNormal_Myanmar2015" Description="Экспедиция в Шотландию 2017" runat="server" />
-            <uc:CatItem Name="Montblanc2017" ImgCss="ImgThumbNormal_Myanmar2015" Description="Альпы 2017: трек вокруг Монблана (TMB)" runat="server" />
-            <uc:CatItem Name="DolomiteAlps2016" ImgCss="ImgThumbNormal_Myanmar2015" Description="Доломитовые Альпы 2016" runat="server" />
-            <uc:CatItem Name="Moravia2016" ImgCss="ImgThumbNormal_Myanmar2015" Description="Южная Моравия 2016" runat="server" />
-            <uc:CatItem Name="Myanmar2015" Login="myanmar2015" Pwd="mmr2015" ImgCss="ImgThumbNormal_Myanmar2015" Description="Бирма 2015: Янгон, Баган, Мандалай, озеро Инле" runat="server" />
-            <uc:CatItem Name="Usa2017" ImgCss="ImgThumbNormal_Usa2017" Description="Америка 2017: Аризона, Юта, Невада, Калифорния" runat="server" />
-            <uc:CatItem Name="TrollTunga2016" ImgCss="ImgThumbNormal_TrollTunga2016" Description="Норвегия 2016, Язык Тролля и Хордаланн" runat="server" />
-            <uc:CatItem Name="Norway2016" Login="norway2016" Pwd="nrw952" ImgCss="ImgThumbNormal_Norw2016" Description="Норвегия 2016, Тюнсет, Оппдал, Науста" runat="server" />
-            <uc:CatItem Name="Morocco2013" Group="Morocco2013Group" Login="morocco" Pwd="mrk1947845" ImgCss="ImgThumbNormal" Description="Марокко 2013, Север, Юг, Сахара и Атлас" runat="server" />
-            <uc:CatItem Name="India2013" ImgCss="ImgThumbNormal_Ind" Description="Индия 2013 Раджастан" runat="server" />
-            <uc:CatItem Name="Kirgiz2012" ImgCss="ImgThumbNormal_Kgz" Description="Киргизия 2012" MapName="Kirgiz2012" runat="server" />
-            <uc:CatItem Name="Ehypet2012" Group="EhypetGroup" Login="ehypet" Pwd="ehypet08260" MapName="ehypet2012" ImgCss="ImgThumbNormal" Description="Северная Африка 2012" runat="server" />
-            <uc:CatItem Name="SpainFrance2011" Login="SpainFrance" Pwd="spf127" ImgCss="ImgThumbNormal" MapName="spainfrance2011" Description="Испания - Андорра - Франция/катарские замки 2011" runat="server" />
-            <uc:CatItem Name="Iceland2011" Login="Iceland" Pwd="ice952" MapName="iceland2010" ImgCss="ImgThumbNormal_Ice" Description="Экспедиция Исландия 2011" runat="server" />
-            <uc:CatItem Name="Norway2010" Login="Norway" Pwd="nrw952" ImgCss="ImgThumbSmall" Description="Автопробег по Норвегии 2010" runat="server" />
-            <uc:CatItem Name="Adygeya2009" Login="Adygeya" Pwd="ad1278" ImgCss="ImgThumbNormal" Description="Горная Адыгея 2009" runat="server" />
+            <uc:CatItem Name="Madeira2018" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Мадейра 2018" runat="server" />
+            <uc:CatItem Name="Cappadocia2018" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Каппадокия 2018" runat="server" />
+            <uc:CatItem Name="Scotland2017" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Экспедиция в Шотландию 2017" runat="server" />
+            <uc:CatItem Name="Montblanc2017" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Альпы 2017: трек вокруг Монблана (TMB)" runat="server" />
+            <uc:CatItem Name="DolomiteAlps2016" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Доломитовые Альпы 2016" runat="server" />
+            <uc:CatItem Name="Moravia2016" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Южная Моравия 2016" runat="server" />
+            <uc:CatItem Name="Myanmar2015" NewGal="true" Login="myanmar2015" Pwd="mmr2015" ImgCss="ImgThumbNormal_Myanmar2015" Description="Бирма 2015: Янгон, Баган, Мандалай, озеро Инле" runat="server" />
+            <uc:CatItem Name="Usa2017" NewGal="true" ImgCss="ImgThumbNormal_Usa2017" Description="Америка 2017: Аризона, Юта, Невада, Калифорния" runat="server" />
+            <uc:CatItem Name="TrollTunga2016" NewGal="true" ImgCss="ImgThumbNormal_TrollTunga2016" Description="Норвегия 2016, Язык Тролля и Хордаланн" runat="server" />
+            <uc:CatItem Name="Norway2016" NewGal="true" Login="norway2016" Pwd="nrw952" ImgCss="ImgThumbNormal_Norw2016" Description="Норвегия 2016, Тюнсет, Оппдал, Науста" runat="server" />
+            <uc:CatItem Name="Morocco2013" NewGal="true" Group="Morocco2013Group" Login="morocco" Pwd="mrk1947845" ImgCss="ImgThumbNormal" Description="Марокко 2013, Север, Юг, Сахара и Атлас" runat="server" />
+            <uc:CatItem Name="India2013" NewGal="true" ImgCss="ImgThumbNormal_Ind" Description="Индия 2013 Раджастан" runat="server" />
+            <uc:CatItem Name="Kirgiz2012" NewGal="true" ImgCss="ImgThumbNormal_Kgz" Description="Киргизия 2012" MapName="Kirgiz2012" runat="server" />
+            <uc:CatItem Name="Ehypet2012" NewGal="true" Group="EhypetGroup" Login="ehypet" Pwd="ehypet08260" MapName="ehypet2012" ImgCss="ImgThumbNormal" Description="Северная Африка 2012" runat="server" />
+            <uc:CatItem Name="SpainFrance2011" NewGal="true" Login="SpainFrance" Pwd="spf127" ImgCss="ImgThumbNormal" MapName="spainfrance2011" Description="Испания - Андорра - Франция/катарские замки 2011" runat="server" />
+            <uc:CatItem Name="Iceland2011" NewGal="true" Login="Iceland" Pwd="ice952" MapName="iceland2010" ImgCss="ImgThumbNormal_Ice" Description="Экспедиция Исландия 2011" runat="server" />
+            <uc:CatItem Name="Norway2010" NewGal="true" Login="Norway" Pwd="nrw952" ImgCss="ImgThumbSmall" Description="Автопробег по Норвегии 2010" runat="server" />
+            <uc:CatItem Name="Adygeya2009" NewGal="true" Login="Adygeya" Pwd="ad1278" ImgCss="ImgThumbNormal" Description="Горная Адыгея 2009" runat="server" />
             <uc:CatItem Login="Italy" Pwd="gr19655" MapName="italy2009" Description="Италия 2009" runat="server" />
             <uc:CatItem Login="Greece" Pwd="gr19655" Description="Греция 2008" runat="server" />
             <uc:CatItem Login="moscow-reg" Pwd="msc0987" Description="Подмосковье" runat="server" />
@@ -92,53 +92,53 @@
 
         <uc:SectionHeader Name="Мини альбомы Одиссея" runat="server" />
         <section class="SectionBody">
-            <uc:CatItem Path="Winter2024/Frost" Name="Frost" Description="Иней в декабре, 2025" runat="server" />
-            <uc:CatItem Path="Winter2025/Waterfall_Gorodenka" Name="Waterfall_Gorodenka" Description="Водопадик в лесу на роднике около Городенки / Шемякино, 2025" runat="server" />
-            <uc:CatItem Path="Summer2022/Solotchya" Name="Solotchya" Description="Окская часть тропы Паустовского, лето 2022" runat="server" />
-            <uc:CatItem Path="Summer2022/RaiSemenovskoye" Name="RaiSemenovskoye" Description="Райсемёновское, Иванова гора, лето 2022" runat="server" />
-            <uc:CatItem Path="Summer2022/Pogost" Name="Pogost" Description="Село Погост Кассимовского района Рязанской области, лето 2022" runat="server" />
-            <uc:CatItem Path="Summer2022/Krivoborye" Name="Krivoborye" Description="Подкова на Дону около Кривоборья летом 2022" runat="server" />                                                            
-            <uc:CatItem Name="Kasimov" Description="Касимов 2021" runat="server" />
-            <uc:CatItem Name="Vysha_StaroChereevo" Description="Выша и Старочернеево летом 2021" runat="server" />
-            <uc:CatItem Path="Ivanovo2023/YurievPolskii" Name="YurievPolskii" Description="Юрьев Польский зимой 2023" runat="server" />
-            <uc:CatItem Path="Ivanovo2023/ShuyaSobor" Name="ShuyaSobor" Description="Шуя зимой 2023" runat="server" />            
-            <uc:CatItem Path="Ivanovo2023/Dyunilovo" Name="Dyunilovo" Description="Дунилово зимой 2023" runat="server" />
-            <uc:CatItem Path="Ivanovo2023/Ivanovo" Name="Ivanovo" Description="Паровоз П36 в Иваново 2023" runat="server" />
-            <uc:CatItem Name="Buzarovo" Description="Бужарово на Истре" runat="server" />
-            <uc:CatItem Name="Istra" Description="Зимняя Истра и Новый Иерусалим" runat="server" />
-            <uc:CatItem Path="Spring2023/Poschupovo" Name="Poschupovo" Description="Разлив Оки в Пощупово, Иоанно-Богословский монастырь 2023" runat="server" />
-            <uc:CatItem Path="Spring2023/OldRyazan" Name="OldRyazan" Description="Разлив Оки в Старой Рязани 2023" runat="server" />
-            <uc:CatItem Path="Spring2023/Murmino" Name="Murmino" Description="Разлив Оки в Мурмино 2023" runat="server" />
-            <uc:CatItem Path="Spring2023/Ryazan" Name="Ryazan" Description="Разлив Оки в Шумаши 2023" runat="server" />
-            <uc:CatItem Path="Summer2022/SchilovoForest" Name="SchilovoForest" Description="Шиловская аномалия, пьяный лес, лето 2022" runat="server" />
-            <uc:CatItem Path="Autumn2021/Ishutino" Name="Ishutino" Description="Бабье лето 2021 на Ишутинском городище" runat="server" />
-            <uc:CatItem Path="Autumn2021/Suvorov" Name="Suvorov" Description="Бабье лето 2021 на Суворовских карьерах" runat="server" />
-            <uc:CatItem Path="Autumn2021/Tish" Name="Tish" Description="Бабье лето 2021 на озере Тишь" runat="server" />
-            <uc:CatItem Path="Autumn2021/Chekalin" Name="Chekalin" Description="Бабье лето 2021 в Чекалине на Оке" runat="server" />
-            <uc:CatItem Name="Flooding2021" Description="Весенний разлив 2021: Суздаль, Покрова на Нерли, Махра, Крутово, Весь" runat="server" />
-            <uc:CatItem Name="Filipovskoe" Description="Разлив Шерны в Филиповском 2021" runat="server" />
-            <uc:CatItem Name="SmallKonduki" Description="Малые Кондуки, лето 2020" runat="server" />
-            <uc:CatItem Name="Sunflowers" Description="Подсолнухи, лето 2020, Ефремов" runat="server" />
-            <uc:CatItem Name="Dyunilovo" Description="Дунилово, осень 2020" runat="server" />
-            <uc:CatItem Name="Konstantinovo" Description="Константиново, осень 2019" runat="server" />
-            <uc:CatItem Name="Vorgol" Description="Воргольские скалы, лето 2019" runat="server" />
+            <uc:CatItem Path="Winter2024/Frost" NewGal="true" Name="Frost" Description="Иней в декабре, 2025" runat="server" />
+            <uc:CatItem Path="Winter2025/Waterfall_Gorodenka" NewGal="true" Name="Waterfall_Gorodenka" Description="Водопадик в лесу на роднике около Городенки / Шемякино, 2025" runat="server" />
+            <uc:CatItem Path="Summer2022/Solotchya" NewGal="true" Name="Solotchya" Description="Окская часть тропы Паустовского, лето 2022" runat="server" />
+            <uc:CatItem Path="Summer2022/RaiSemenovskoye" NewGal="true" Name="RaiSemenovskoye" Description="Райсемёновское, Иванова гора, лето 2022" runat="server" />
+            <uc:CatItem Path="Summer2022/Pogost" NewGal="true" Name="Pogost" Description="Село Погост Кассимовского района Рязанской области, лето 2022" runat="server" />
+            <uc:CatItem Path="Summer2022/Krivoborye" NewGal="true" Name="Krivoborye" Description="Подкова на Дону около Кривоборья летом 2022" runat="server" />                                                            
+            <uc:CatItem Name="Kasimov" NewGal="true" Description="Касимов 2021" runat="server" />
+            <uc:CatItem Name="Vysha_StaroChereevo" NewGal="true" Description="Выша и Старочернеево летом 2021" runat="server" />
+            <uc:CatItem Path="Ivanovo2023/YurievPolskii" NewGal="true" Name="YurievPolskii" Description="Юрьев Польский зимой 2023" runat="server" />
+            <uc:CatItem Path="Ivanovo2023/ShuyaSobor" NewGal="true" Name="ShuyaSobor" Description="Шуя зимой 2023" runat="server" />            
+            <uc:CatItem Path="Ivanovo2023/Dyunilovo" NewGal="true" Name="Dyunilovo" Description="Дунилово зимой 2023" runat="server" />
+            <uc:CatItem Path="Ivanovo2023/Ivanovo" NewGal="true" Name="Ivanovo" Description="Паровоз П36 в Иваново 2023" runat="server" />
+            <uc:CatItem Name="Buzarovo" NewGal="true" Description="Бужарово на Истре" runat="server" />
+            <uc:CatItem Name="Istra" NewGal="true" Description="Зимняя Истра и Новый Иерусалим" runat="server" />
+            <uc:CatItem Path="Spring2023/Poschupovo" NewGal="true" Name="Poschupovo" Description="Разлив Оки в Пощупово, Иоанно-Богословский монастырь 2023" runat="server" />
+            <uc:CatItem Path="Spring2023/OldRyazan" NewGal="true" Name="OldRyazan" Description="Разлив Оки в Старой Рязани 2023" runat="server" />
+            <uc:CatItem Path="Spring2023/Murmino" NewGal="true" Name="Murmino" Description="Разлив Оки в Мурмино 2023" runat="server" />
+            <uc:CatItem Path="Spring2023/Ryazan" NewGal="true" Name="Ryazan" Description="Разлив Оки в Шумаши 2023" runat="server" />
+            <uc:CatItem Path="Summer2022/SchilovoForest" NewGal="true" Name="SchilovoForest" Description="Шиловская аномалия, пьяный лес, лето 2022" runat="server" />
+            <uc:CatItem Path="Autumn2021/Ishutino" NewGal="true" Name="Ishutino" Description="Бабье лето 2021 на Ишутинском городище" runat="server" />
+            <uc:CatItem Path="Autumn2021/Suvorov" NewGal="true" Name="Suvorov" Description="Бабье лето 2021 на Суворовских карьерах" runat="server" />
+            <uc:CatItem Path="Autumn2021/Tish" NewGal="true" Name="Tish" Description="Бабье лето 2021 на озере Тишь" runat="server" />
+            <uc:CatItem Path="Autumn2021/Chekalin" NewGal="true" Name="Chekalin" Description="Бабье лето 2021 в Чекалине на Оке" runat="server" />
+            <uc:CatItem Name="Flooding2021" NewGal="true" Description="Весенний разлив 2021: Суздаль, Покрова на Нерли, Махра, Крутово, Весь" runat="server" />
+            <uc:CatItem Name="Filipovskoe" NewGal="true" Description="Разлив Шерны в Филиповском 2021" runat="server" />
+            <uc:CatItem Name="SmallKonduki" NewGal="true" Description="Малые Кондуки, лето 2020" runat="server" />
+            <uc:CatItem Name="Sunflowers" NewGal="true" Description="Подсолнухи, лето 2020, Ефремов" runat="server" />
+            <uc:CatItem Name="Dyunilovo" NewGal="true" Description="Дунилово, осень 2020" runat="server" />
+            <uc:CatItem Name="Konstantinovo" NewGal="true" Description="Константиново, осень 2019" runat="server" />
+            <uc:CatItem Name="Vorgol" NewGal="true" Description="Воргольские скалы, лето 2019" runat="server" />
             <uc:CatItem Name="Ishutino" Description="Ишутино среди сезонов" runat="server" />
-            <uc:CatItem Name="Tarusa" Description="Таруса, лето 2020" runat="server" />
-            <uc:CatItem Name="Pronsk" Description="Пронск, лето 2020" runat="server" />
-            <uc:CatItem Name="Epifan2019" Description="Епифань, лето 2020" runat="server" />
-            <uc:CatItem Name="Divnogorie2020" Description="Дивногорье, лето 2020" runat="server" />
-            <uc:CatItem Name="Konduki2019-2" Description="Кондуки, осень 2019" runat="server" />
-            <uc:CatItem Name="Konduki2019" Description="Кондуки, лето 2019" runat="server" />
-            <uc:CatItem Name="PraRafting" Description="Сплав по Пре 50км, 2019" runat="server" />
-            <uc:CatItem Name="PlescheevoLake2019" Description="Поход вокруг Плещеева озера 42км 2019" runat="server" />
-            <uc:CatItem Name="BenskiePorogi2019" Description="Сплав по Волге на Бенские пороги 2019" runat="server" />
-            <uc:CatItem Name="Seliger2019" Description="Сплав по Селигеру 2019" runat="server" />
+            <uc:CatItem Name="Tarusa" NewGal="true" Description="Таруса, лето 2020" runat="server" />
+            <uc:CatItem Name="Pronsk" NewGal="true" Description="Пронск, лето 2020" runat="server" />
+            <uc:CatItem Name="Epifan2019" NewGal="true" Description="Епифань, лето 2020" runat="server" />
+            <uc:CatItem Name="Divnogorie2020" NewGal="true" Description="Дивногорье, лето 2020" runat="server" />
+            <uc:CatItem Name="Konduki2019-2" NewGal="true" Description="Кондуки, осень 2019" runat="server" />
+            <uc:CatItem Name="Konduki2019" NewGal="true" Description="Кондуки, лето 2019" runat="server" />
+            <uc:CatItem Name="PraRafting" NewGal="true" Description="Сплав по Пре 50км, 2019" runat="server" />
+            <uc:CatItem Name="PlescheevoLake2019" NewGal="true" Description="Поход вокруг Плещеева озера 42км 2019" runat="server" />
+            <uc:CatItem Name="BenskiePorogi2019" NewGal="true" Description="Сплав по Волге на Бенские пороги 2019" runat="server" />
+            <uc:CatItem Name="Seliger2019" NewGal="true" Description="Сплав по Селигеру 2019" runat="server" />
         </section>
 
         <uc:SectionHeader Name="Прочее" runat="server" />
         <section class="SectionBody">
             <a href="<%=Page.ResolveUrl("Pub/Jokes/Laps.htm")%>">Таймлапсы</a><br />
-            <a href="<%=Page.ResolveUrl("Pub/Celebrity/Celebrity.htm")%>">Знаменитости</a><br />
+            <a href="<%=Page.ResolveUrl("Pub/Celebrity/Celebrity.ascx")%>">Знаменитости</a><br />
         </section>
     </article>
 </asp:Content>
