@@ -11,7 +11,8 @@
     {     
         Page.Title = "Обновлённый заголовок";
         Page.MetaDescription = "Моё описание страницы из user control.";
-        Page.MetaKeywords = "фотография, альбомы, путешествия";     
+        Page.MetaKeywords = "фотография, альбомы, путешествия";  
+        (Page.FindControl("HtmlRoot") as HtmlGenericControl).Attributes["lang"] = "ru-RU";
     }
 </script>
 

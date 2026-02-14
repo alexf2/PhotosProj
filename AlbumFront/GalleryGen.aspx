@@ -30,7 +30,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#" lang="ru-RU">
+<html id="HtmlRoot" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#" runat="server">
 
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

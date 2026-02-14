@@ -3,7 +3,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Xml.Xsl;
 
-namespace Alexf.PhotoReportGenerator
+namespace Alexf.PhotoReportGenerator.Generators
 {
     [XmlRoot("meta")]
     public sealed class Metadata
@@ -22,8 +22,8 @@ namespace Alexf.PhotoReportGenerator
 
         [XmlElement("title")]
         public string Title { get; set; }
-        
-        public void AddTo (XsltArgumentList xsltParams)
+
+        public void AddTo(XsltArgumentList xsltParams)
         {
             if (!string.IsNullOrEmpty(Lang))
                 xsltParams.AddParam("lang", string.Empty, Lang);

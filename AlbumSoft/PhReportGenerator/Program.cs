@@ -13,7 +13,6 @@ namespace Alexf.PhotoReportGenerator
     /// </summary>
 	public sealed class Program
     {
-        [STAThread]
         static int Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -25,7 +24,6 @@ namespace Alexf.PhotoReportGenerator
 
                    errs => HandleParseError(errs)
                );
-            Environment.ExitCode = res;
 
             return res;
         }
@@ -83,9 +81,7 @@ namespace Alexf.PhotoReportGenerator
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"\n❌ Ошибка:");
-                Console.WriteLine($"   {ex.GetType().Name}");
-                Console.WriteLine($"   Message: {ex.Message}");
+                Console.WriteLine($"❌ Ошибка:\n   {ex.GetType().Name}\n   {ex.Message}");
 
 #if DEBUG
                     Console.WriteLine($"\n📋 Stack trace:\n{ex.StackTrace}");

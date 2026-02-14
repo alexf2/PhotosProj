@@ -69,19 +69,23 @@
     <Compile Include="Generators\AscxGalleryGenerator.cs" />
     <Compile Include="ExifUtils.cs" />
     <Compile Include="Generators\CatalogGenerator.cs" />
+    <Compile Include="CommonUtils.cs" />
     <Compile Include="Generators\IGalleryGenerator.cs" />
     <Compile Include="Generators\HtmlGalleryGenerator.cs" />
     <Compile Include="ImageInfo.cs" />
-    <Compile Include="Metadata.cs" />
+    <Compile Include="Generators\Metadata.cs" />
     <Compile Include="CommandLineOptions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GenPhotoReport.xslt">
+    <EmbeddedResource Include="Resource\HtmlGalleryTransformation.xslt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
-    </Content>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource\AscxGalleryTransformation.xslt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Scripts\my.helpers.js" />
     <Content Include="Scripts\Readme.txt" />
   </ItemGroup>

@@ -11,10 +11,10 @@ namespace Alexf.PhotoReportGenerator.Generators
 {
     internal class CatalogGenerator
     {
-        readonly IGalleryGenerator _generator;
+        readonly IGalleryGenerator generator;
         public CatalogGenerator(IGalleryGenerator generator)
         {
-            _generator = generator;
+            this.generator = generator;
         }
         const string MetaFile = "meta.xml";
         public int Process(string albumFolderPath, string catalogOutPath)
@@ -23,7 +23,7 @@ namespace Alexf.PhotoReportGenerator.Generators
             using (StreamWriter writer = new StreamWriter(outStm, Encoding.UTF8))
             {
                 var meta = LoadMeta(albumFolderPath);
-                _generator.Generate(collectAlbumPhotosData(albumFolderPath, meta), writer, meta);
+                generator.Generate(collectAlbumPhotosData(albumFolderPath, meta), writer, meta);
             }
             return 0;
         }
