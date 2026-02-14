@@ -1,15 +1,10 @@
-﻿using System;
+﻿using Alexf.PhotoReportGenerator.Generators;
+using CommandLine;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Xml.Linq;
-using System.Xml.XPath;
-using System.Text;
-using System.Xml.Xsl;
 using System.IO;
+using System.Linq;
 using System.Reflection;
-using System.Text.RegularExpressions;
-
-using Alexf.PhotoUtils;
 
 namespace Alexf.PhotoReportGenerator
 {
@@ -17,176 +12,114 @@ namespace Alexf.PhotoReportGenerator
     /// Файлы должны быть 
     /// </summary>
 	public sealed class Program
-	{
-		const string TemplateName = "GenPhotoReport.xslt";
-        const string MetaFile = "meta.xml";
-
+    {
         [STAThread]
-		static int Main (string[] args)
-		{
-			int res = 0;
-
-			if (args.Length != 2)
-			{
-                Console.WriteLine("PhotoReportGenerator   path_with_images   out_file_name");
-				res = -1;
-			}
-			else
-			{
-				string srcPath = args[ 0 ];
-				if (!Directory.Exists(srcPath))
-				{
-					Console.WriteLine(string.Format("Path {0} isn't found", srcPath));
-					res = -1;
-				}
-				else
-				{
-					string outf = args[ 1 ];
-					if (outf.IndexOf(".") == -1)
-					{
-						outf += ".htm";
-					}
-
-					try {
-						XslCompiledTransform tr = new XslCompiledTransform(false);
-						tr.Load(getTemplate().CreateNavigator());
-
-						using (FileStream outStm = File.Create(Path.Combine(srcPath, outf)))
-                        using (StreamWriter wrPref = new StreamWriter(outStm, Encoding.UTF8))
-						{                            
-                            wrPref.WriteLine("<!DOCTYPE html>");
-
-							XsltArgumentList prms = new XsltArgumentList();
-                            //Console.WriteLine( getLastDir(srcPath) );
-                            var meta = AddMeta(prms, srcPath);
-                            tr.Transform(getFileList(srcPath, meta).CreateNavigator(), prms, wrPref);
-						}
-					}
-					catch (Exception ex)
-					{
-						Console.WriteLine(string.Format("Error during transformation: {0}", ex));
-						res = -1;
-					}
-				}
-			}
-
-			Environment.ExitCode = res;
-			return res;
-		}
-
-        static Metadata AddMeta(XsltArgumentList prms, string photosDirPath)
+        static int Main(string[] args)
         {
-            var meta = Metadata.FileFactory(Path.Combine(photosDirPath, MetaFile));
-            if (string.IsNullOrEmpty(meta.Title))
-                meta.Title = getLastDir(photosDirPath);
-            meta.AddTo(prms);
-            return meta;
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.InputEncoding = System.Text.Encoding.UTF8;
+
+            var res = Parser.Default.ParseArguments<CommandLineOptions>(args)
+               .MapResult(
+                   (options) => Run(options),
+
+                   errs => HandleParseError(errs)
+               );
+            Environment.ExitCode = res;
+
+            return res;
         }
 
-        static string getLastDir (string path)
-		{
-			string[] comps = path.Split('\\');			
-			return comps.LastOrDefault( s => !string.IsNullOrEmpty(s) );
-		}
-
-        static XDocument getTemplate ()
-		{
-            using (FileStream f = File.OpenRead(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), TemplateName)))
+        static int HandleParseError(IEnumerable<Error> errs)
+        {
+            if (errs.IsVersion())
             {
-                return XDocument.Load(f);
+                var assembly = Assembly.GetExecutingAssembly();
+                var version = assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion
+                           ?? assembly.GetName().Version?.ToString(3)
+                           ?? "dev";
+
+                Console.WriteLine($"PhotoReportGenerator - v{version}");
+                return 0;
             }
-		}
 
-        enum NameType
-		{
-			Main, Thumb, Pub
-		};
+            if (errs.IsHelp())
+            {
+                return 0;
+            }
+            return -1;
+        }
 
-        static XDocument getFileList (string path, Metadata meta)
-		{
-            double timeShift = meta.TimeShift ?? 0;
-            XElement root;
-            XDocument res = new XDocument(root = new XElement("photos"));
+        static int Run(CommandLineOptions opts)
+        {
+            var generator = new CatalogGenerator(
+                opts.Ascx ?
+                    new AscxGalleryGenerator() as IGalleryGenerator : new HtmlGalleryGenerator()
+             );
 
-			//XmlDocument res = new XmlDocument();
-			//XmlElement root = (XmlElement)res.AppendChild(res.CreateElement("photos"));
+            try
+            {
+                ValidateAndAdjustArgs(opts);
 
-			Regex regTypedName = new Regex(@"^(?'name'\w{1,}.+)_(?'stype'pub|pup|thumb)\.jpe?g$",
-				RegexOptions.CultureInvariant|RegexOptions.ExplicitCapture|RegexOptions.IgnoreCase|RegexOptions.Singleline);
+                Console.WriteLine("Albom catalog generation has been started...");
+                var res = generator.Process(opts.PathWithImages, opts.OutFileName);
+                Console.WriteLine("✅ Albom catalog generation finished OK");
+                return res;
+            }
+            catch (DirectoryNotFoundException ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"⚠️  Folder is not found: {ex.Message}");
+                Console.ResetColor();
+                return -3;
+            }
+            catch (FileNotFoundException ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"⚠️  File not found: {ex.Message}");
+                Console.ResetColor();
+                return -4;
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"\n❌ Ошибка:");
+                Console.WriteLine($"   {ex.GetType().Name}");
+                Console.WriteLine($"   Message: {ex.Message}");
 
-			Regex regMainName = new Regex(@"^(?'name'\w{1,}.+)\.jpe?g$",
-				RegexOptions.CultureInvariant|RegexOptions.ExplicitCapture|RegexOptions.IgnoreCase|RegexOptions.Singleline);
+#if DEBUG
+                    Console.WriteLine($"\n📋 Stack trace:\n{ex.StackTrace}");
+#endif
 
-            Dictionary<string, XElement> processed = new Dictionary<string, XElement>(StringComparer.OrdinalIgnoreCase);
-            foreach (string f in Directory.EnumerateFiles(path, "*.jpg", SearchOption.TopDirectoryOnly).Union(Directory.EnumerateFiles(path, "*.jpeg", SearchOption.TopDirectoryOnly)))
-			{
-				string name = Path.GetFileName(f);
+                Console.ResetColor();
+                return -2;
+            }
+        }
 
-				NameType nt = NameType.Main;
-				string baseName;
-				Match m = regTypedName.Match(name);
-				if (m.Success)
-				{
-					baseName = m.Groups[ "name" ].Value;
-					nt = string.Compare(m.Groups["stype"].Value, "thumb", true) == 0 ? NameType.Thumb:NameType.Pub;
-				}
-				else
-				{
-					m = regMainName.Match(name);
-					if (m.Success)
-					{
-						baseName = m.Groups[ "name" ].Value;
-						nt = NameType.Main;
-					}
-					else
-					{
-						Console.WriteLine(string.Format("Warning: file {0} isn't recognized", name));
-						continue;
-					}
-				}
+        static void ValidateAndAdjustArgs(CommandLineOptions opts)
+        {
+            opts.PathWithImages = Path.GetFullPath(opts.PathWithImages);
+            if (!Directory.Exists(opts.PathWithImages))
+            {
+                throw new DirectoryNotFoundException($"Source directory '{opts.PathWithImages}' not found.");
+            }
 
-                XElement fi;
-				if (!processed.TryGetValue(baseName, out fi))
-				{					                    
-                    root.Add(fi = new XElement("f"));
-					processed.Add(baseName, fi);
-				}
+            if (!Path.IsPathRooted(opts.OutFileName))
+            {
+                if (opts.OutFileName.Contains(Path.DirectorySeparatorChar) || opts.OutFileName.Contains(Path.AltDirectorySeparatorChar))
+                    opts.OutFileName = Path.GetFullPath(opts.OutFileName);
+                else
+                    opts.OutFileName = Path.Combine(opts.PathWithImages, opts.OutFileName);
+            }
 
-				switch (nt)
-				{
-					case NameType.Main:
-						fi.SetAttributeValue("main", name);
-						break;
+            if (string.IsNullOrEmpty(Path.GetExtension(opts.OutFileName)))
+                opts.OutFileName = Path.ChangeExtension(opts.OutFileName, opts.Ascx ? ".ascx" : ".htm");
 
-					case NameType.Thumb:
-                        fi.SetAttributeValue("thumb", name);
-                        ImageInfo info = ExifUtils.GetExifData(f, true);
-                        //Console.WriteLine(ExifUtils.DumpGdiExifTags(f));
-                        fi.SetAttributeValue("caption", info.FileNameIsUsed ? baseName:info.Caption);
-						fi.SetAttributeValue("w", info.W.ToString()); fi.SetAttributeValue("h", info.H.ToString());
-                        fi.SetAttributeValue("date", info.Shot.AddHours(timeShift).ToString("dd-MMMM-yyyy HH:mm", System.Globalization.CultureInfo.InvariantCulture));
-                        fi.SetAttributeValue("shot-info", info.GetShotCaption(true));
-                        if (info.Latitude.HasValue)
-                        {
-                            fi.SetAttributeValue("lat", info.Latitude);
-                            fi.SetAttributeValue("long", info.Longitude);
-                        }
-
-                        break;
-
-					case NameType.Pub:
-                        fi.SetAttributeValue("pub", name);
-						break;
-				}
-
-                fi.SetAttributeValue("size", ExifUtils.GetSize(f).ToString());
-			}
-
-
-			return res;
-		}
-
-		
-
-	}
+            string dir = Path.GetDirectoryName(opts.OutFileName);
+            if (!Directory.Exists(dir))
+            {
+                throw new DirectoryNotFoundException($"Output directory '{dir}' not found.");
+            }
+        }
+    }
 }

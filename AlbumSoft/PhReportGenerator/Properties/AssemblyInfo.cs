@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Aleksey Fedorov")]
 [assembly: AssemblyProduct("Photo Report Generator")]
-[assembly: AssemblyCopyright("Copyright © Aleksey Fedorov 2012 - 2014")]
+[assembly: AssemblyCopyright("Copyright © Aleksey Fedorov 2012 - 2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

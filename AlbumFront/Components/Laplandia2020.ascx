@@ -6,6 +6,15 @@
     TagName="GalleryItem"
     Src="~/Components/GalleryItem.ascx" %>
 
+<script runat="server">
+    protected void Page_Init(object sender, EventArgs e)
+    {     
+        Page.Title = "Обновлённый заголовок";
+        Page.MetaDescription = "Моё описание страницы из user control.";
+        Page.MetaKeywords = "фотография, альбомы, путешествия";     
+    }
+</script>
+
 <uc:GalleryItem 
     Title="Хибины 2020, Rukka" File="1I0A4001" ThumbWidth="194" ThumbHeight="129" 
     DataTitle="&lt;b&gt;Хибины 2020, Rukka&lt;/b&gt;&lt;br/&gt;04-January-2020 09:32  &lt;span class=&quot;CShotPInfo&quot;&gt;Canon EOS R; 24-70/2.8 (ISO 100, f/14.0, 35 mm, 4)&lt;/span&gt;" 
