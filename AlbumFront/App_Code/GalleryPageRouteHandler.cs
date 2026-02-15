@@ -17,6 +17,7 @@ public class GalleryPageRouteHandler : IRouteHandler
         // 1. Сохраняем исходный путь (если нужен для логики страницы)
         var originalPath = requestContext.RouteData.Values["path"] as string;
         HttpContext.Current.Items["OriginalGalleryPath"] = originalPath;
+        HttpContext.Current.Items["OriginalAbsoluteUri"] = requestContext.HttpContext.Request.Url.AbsoluteUri;
 
         // 2. Создаём страницу по фиксированному пути
         var page = (Page)BuildManager.CreateInstanceFromVirtualPath(_virtualPath, typeof(Page));

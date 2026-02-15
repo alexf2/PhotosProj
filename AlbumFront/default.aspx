@@ -55,7 +55,7 @@
 
             <uc:CatItem Name="Usa2019" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Западная Америка 2019" runat="server" />
             <uc:CatItem Name="Laplandia2020" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Лапландия 2020" runat="server" />
-            <uc:CatItem Name="Solovki2019" ImgCss="ImgThumbNormal_Myanmar2015" Description="Соловецкие острова 2019, Белое море" runat="server" />
+            <uc:CatItem Name="Solovki2019" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Соловецкие острова 2019, Белое море" runat="server" />
             <uc:CatItem Name="Madeira2018" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Мадейра 2018" runat="server" />
             <uc:CatItem Name="Cappadocia2018" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Каппадокия 2018" runat="server" />
             <uc:CatItem Name="Scotland2017" NewGal="true" ImgCss="ImgThumbNormal_Myanmar2015" Description="Экспедиция в Шотландию 2017" runat="server" />
@@ -122,7 +122,7 @@
             <uc:CatItem Name="Dyunilovo" NewGal="true" Description="Дунилово, осень 2020" runat="server" />
             <uc:CatItem Name="Konstantinovo" NewGal="true" Description="Константиново, осень 2019" runat="server" />
             <uc:CatItem Name="Vorgol" NewGal="true" Description="Воргольские скалы, лето 2019" runat="server" />
-            <uc:CatItem Name="Ishutino" Description="Ишутино среди сезонов" runat="server" />
+            <uc:CatItem Name="Ishutino" NewGal="true" Description="Ишутино среди сезонов" runat="server" />
             <uc:CatItem Name="Tarusa" NewGal="true" Description="Таруса, лето 2020" runat="server" />
             <uc:CatItem Name="Pronsk" NewGal="true" Description="Пронск, лето 2020" runat="server" />
             <uc:CatItem Name="Epifan2019" NewGal="true" Description="Епифань, лето 2020" runat="server" />
@@ -138,7 +138,7 @@
         <uc:SectionHeader Name="Прочее" runat="server" />
         <section class="SectionBody">
             <a href="<%=Page.ResolveUrl("Pub/Jokes/Laps.htm")%>">Таймлапсы</a><br />
-            <a href="<%=Page.ResolveUrl("Pub/Celebrity/Celebrity.ascx")%>">Знаменитости</a><br />
+            <a href="<%=Page.ResolveUrl("Pub/Celebrity/Celebrity.aspx")%>">Знаменитости</a><br />
         </section>
     </article>
 </asp:Content>

@@ -52,6 +52,11 @@
 			</xsl:otherwise>
 		</xsl:choose>
 		<xsl:text>"</xsl:text>
+
+		<xsl:if test="not(@pub) or string(@pub) = ''">
+			<xsl:text>&#10;    NoPub="true"</xsl:text>
+		</xsl:if>
+		
 		<xsl:text>&#10;    ThumbWidth="</xsl:text>
 		<xsl:value-of select="@w"/>
 		<xsl:text>"</xsl:text>

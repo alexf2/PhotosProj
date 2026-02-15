@@ -74,10 +74,10 @@
     <uc:MailRuCounter ID="MailRuCounter" runat="server" />
 
     <form id="form1" runat="server">
-        <main>
+        <main>            
             <ul class="GalleryToolbar">
                 <li>
-                    <a href="javascript:history.back();" class="back-btn" title="Назад">
+                    <a href="<%# BackUrl %>"" class="back-btn" title="Назад" rel="nofollow noopener">
                          <svg 
                              xmlns="http://www.w3.org/2000/svg"
                              aria-hidden="true"

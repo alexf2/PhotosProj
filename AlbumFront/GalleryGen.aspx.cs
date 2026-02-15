@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Web;
 
 namespace AlbumFront
 {
@@ -11,6 +12,25 @@ namespace AlbumFront
             var originalPath = Context.Items["OriginalGalleryPath"]?.ToString() ?? Request.Url.AbsolutePath;
 
             return "https://" + domain + "/Pub/" + originalPath;
+        }
+
+        protected string BackUrl
+        {
+            get
+            {
+                var referrer = Request.UrlReferrer;
+                if (referrer == null)
+                    return ResolveUrl("~/");
+
+                var refHostPath = referrer.Host + referrer.AbsolutePath;
+                var url = new Uri(HttpContext.Current.Items["OriginalAbsoluteUri"]?.ToString() ?? "/");
+                var curHostPath = url.Host + url.AbsolutePath;
+
+                if (string.Equals(refHostPath, curHostPath, StringComparison.OrdinalIgnoreCase))
+                    return ResolveUrl("~/");
+
+                return referrer.ToString();
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)

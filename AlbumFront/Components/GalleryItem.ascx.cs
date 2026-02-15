@@ -23,12 +23,17 @@ namespace AlbumFront.Components
         }
         public string PubFile
         {
-            get => File + "_pub.jpg";
+            get => (NoPub ? File : File + "_pub") + ".jpg";
         }
         public string FullFile
         {
             get => File + ".jpg";
         }
+        public bool NoPub
+        {
+            get;
+            set;
+        } = false;
 
         public string ActiveFile
         {

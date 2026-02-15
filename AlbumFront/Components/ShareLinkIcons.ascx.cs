@@ -34,6 +34,12 @@ namespace AlbumFront.Components
             }
         }
 
+        string RequestedUrl
+        {
+            get => Context.Items["OriginalAbsoluteUri"]?.ToString() ?? Request.Url.AbsoluteUri;
+        }
+
+
         string Description
         {
             get => Page.Title;
@@ -43,7 +49,7 @@ namespace AlbumFront.Components
         {
             get
             {
-                var currentUrl = HttpUtility.UrlEncode(Request.Url.AbsoluteUri);
+                var currentUrl = HttpUtility.UrlEncode(RequestedUrl);
                 return $"https://t.me/share/url?url={currentUrl}&text={Description}";
             }
         }
@@ -52,7 +58,7 @@ namespace AlbumFront.Components
         {
             get
             {
-                var currentUrl = HttpUtility.UrlEncode(Request.Url.AbsoluteUri);
+                var currentUrl = HttpUtility.UrlEncode(RequestedUrl);
                 var imageUrl = HttpUtility.UrlEncode(Request.Url.GetLeftPart(UriPartial.Authority) + "/img/logo_23696-2.png");
                 return $"https://vk.com/share.php?url={currentUrl}&title={Description}&image={imageUrl}";
             }
@@ -62,7 +68,7 @@ namespace AlbumFront.Components
         {
             get
             {
-                var currentUrl = HttpUtility.UrlEncode(Request.Url.AbsoluteUri);
+                var currentUrl = HttpUtility.UrlEncode(RequestedUrl);
                 return $"https://api.whatsapp.com/send?text={Description}%20{currentUrl}";
             }
         }
@@ -71,7 +77,7 @@ namespace AlbumFront.Components
         {
             get
             {
-                var currentUrl = HttpUtility.UrlEncode(Request.Url.AbsoluteUri);
+                var currentUrl = HttpUtility.UrlEncode(RequestedUrl);
                 return $"https://twitter.com/intent/tweet?text={Description}&url={currentUrl}";
             }
         }
