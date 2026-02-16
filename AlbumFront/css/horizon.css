@@ -37,15 +37,6 @@
 .PageContainer .LinkBtn:active {
   transform: translateY(0);
 }
-.PageContainer .ShareLinkPosHorizon {
-  margin-right: 2rem;
-}
-.PageContainer .FooterContainer {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .MenuHeader {
   display: flex;
   align-items: center;
@@ -273,14 +264,6 @@
   }
   .PlainText .StepsList {
     padding-left: 1.2em;
-  }
-  .FooterContainer {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-  .FooterContainer .ShareLinkPosHorizon {
-    margin-right: 0;
-    margin-top: 0.5em;
   }
   .LnkCont a {
     gap: 0.3em;

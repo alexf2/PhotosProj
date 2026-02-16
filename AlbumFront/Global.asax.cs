@@ -149,7 +149,7 @@ namespace AlbumFront
             bundles.Add(new StyleBundle("~/bundles/horizon-css").Include("~/css/horizon.css"));
             bundles.Add(new StyleBundle("~/bundles/shared-link-icons-css").Include("~/css/shared-link-icons.css"));
             bundles.Add(new StyleBundle("~/bundles/page-footer-css").Include("~/css/page-footer.css"));
-            bundles.Add(new StyleBundle("~/bundles/gallery-css").Include("~/css/normalize.css", "~/css/gallery.css"));
+            bundles.Add(new StyleBundle("~/bundles/gallery-norm-css").Include("~/css/normalize.css", "~/css/gallery.css"));
             bundles.Add(new StyleBundle("~/bundles/toggle-css").Include("~/css/toggle.css"));
 
             //для Mail.aspx, которая не использует masterpage

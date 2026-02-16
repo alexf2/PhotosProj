@@ -13,7 +13,7 @@
 </div>
 
 <% if (!string.IsNullOrEmpty(this.ImgCss)) { %>
-    <a href="<%= this.GetPubUrl() %>"><img src="<%=this.GetImgUrl()%>" class="<%=this.GetImgClass() %>" title="<%=this.ReportageDescription%>" alt="<%=this.ReportageDescription%>" /></a>
+    <a href="<%= this.GetPubUrl() %>"><img src="<%=this.GetImgUrl()%>" class="<%=this.GetImgClass() %>" title="<%=this.ReportageDescription%>" alt="<%=this.ReportageDescription%>" loading="lazy" /></a>
     <br /><br />
 <%} %>
 

@@ -1,8 +1,7 @@
-<%@ Master Language="C#" 
-    AutoEventWireup="true" 
+<%@ Master Language="C#"
+    AutoEventWireup="true"
     CodeBehind="OuterMasterPage.master.cs"
-    Inherits="AlbumFront.OuterMasterPage"
-%>
+    Inherits="AlbumFront.OuterMasterPage" %>
 
 <%@ Register TagPrefix="uc"
     TagName="YandexCounter"
@@ -27,12 +26,12 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="yandex-verification" content="d6ff7bab1f833376" />   
-    
+    <meta name="yandex-verification" content="d6ff7bab1f833376" />
+
     <asp:ContentPlaceHolder ID="HeadMeta" runat="server" />
 
     <link rel="canonical" href="<%# GetCanonicalUrl() %>" />
-    <link rel="icon" type="image/png" sizes="16x16" href="<%# Page.ResolveUrl("img/photo_album_blue.png") %>"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="<%# Page.ResolveUrl("img/photo_album_blue.png") %>" />
     <link rel="icon" type="image/png" sizes="128x128" href="<%# Page.ResolveUrl("img/photo_album.png") %>" />
     <link rel="apple-touch-icon" sizes="128x128" href="<%# Page.ResolveUrl("img/photo_album.png") %>" />
     <meta name="theme-color" content="#ffffff" />
@@ -73,55 +72,51 @@
             </header>
 
             <asp:ContentPlaceHolder ID="idMainContent" runat="server" />
-            
+
             <uc:PageFooter CssClass="Lnk" runat="server">
                 <FooterTemplate>
                     <p class="Copyright"><a runat="server" href="<%$RouteUrl:routename=Default %>">Odyssey's Photography</a>, &copy; Aleksey Fedorov 2006 - 2026, All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server" class="Copyright" href="<%$RouteUrl:routename=About %>">About</a></p>
                 </FooterTemplate>
-            </uc:PageFooter>
-
-            <br />
-
-            <asp:PlaceHolder runat="server">
-                <% = Scripts.Render("~/bundles/jquery") %>
-
-                <script type="text/javascript">
-                    /** @type {any} */
-                    var $ = window.jQuery;
-                </script>
-
-                <script language="javascript1.1" type="text/javascript">
-                    function debounce(fn, wait) {
-                        let timer;
-                        return function (...args) {
-                            const ctx = this;
-                            clearTimeout(timer);
-                            timer = setTimeout(function () {
-                                fn.apply(ctx, args);
-                            }, wait);
-                        };
-                    }
-                    $('.FadeOnLoad').each(function () {
-                        if (!this.complete)
-                            $(this).one('load', function () { $(this).css('opacity', '1'); })
-                        else
-                            $(this).css('opacity', '1');
-                    });
-                    window.addEventListener('scroll', debounce(function () {
-                        $('.sticky_header').each(function () {
-                            const { top } = this.getBoundingClientRect();
-
-                            if (top <= 0)
-                                $(this).addClass('is_stuck');
-                            else
-                                $(this).removeClass('is_stuck');
-                        });
-                    }, 100), { passive: true });
-                </script>
-            </asp:PlaceHolder>
-
-            <uc:SeoInformers ID="Informers" CssClass="SeoInformers" runat="server" />            
+            </uc:PageFooter>           
+            <div class="FooterContainer">
+                <uc:SeoInformers ID="Informers" CssClass="SeoInformers" runat="server" />
+            </div>
         </asp:Panel>
-    </form>
+    </form>    
+    <% = Scripts.Render("~/bundles/jquery") %>
+
+    <script type="text/javascript">
+        /** @type {any} */
+        var $ = window.jQuery;
+    </script>
+
+    <script language="javascript1.1" type="text/javascript">
+        function debounce(fn, wait) {
+            let timer;
+            return function (...args) {
+                const ctx = this;
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    fn.apply(ctx, args);
+                }, wait);
+            };
+        }
+        $('.FadeOnLoad').each(function () {
+            if (!this.complete)
+                $(this).one('load', function () { $(this).css('opacity', '1'); })
+            else
+                $(this).css('opacity', '1');
+        });
+        window.addEventListener('scroll', debounce(function () {
+            $('.sticky_header').each(function () {
+                const { top } = this.getBoundingClientRect();
+
+                if (top <= 0)
+                    $(this).addClass('is_stuck');
+                else
+                    $(this).removeClass('is_stuck');
+            });
+        }, 100), { passive: true });
+    </script>    
 </body>
 </html>

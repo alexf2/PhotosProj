@@ -5,11 +5,9 @@
 
 <div id="n">
     <div id="c"><%# Title %></div>
-    <div title="<%# Title %>">
-        <nobr>
-            <a href="<%# ActiveFile %>"  data-rel="pub" data-title="<%# DataTitle %>">
-                <img src="<%# ThumbFile %>" width="<%# ThumbWidth %>" height="<%# ThumbHeight %>" alt="<%# Title %>" />
-            </a>            
-        </nobr>
+    <div title="<%# Title %>">        
+        <a href="<%# ActiveFile %>"  data-rel="pub" data-title="<%# DataTitle %>">
+            <img src="<%# ThumbFile %>" width="<%# ThumbWidth %>" height="<%# ThumbHeight %>" alt="<%# Title %>" loading="lazy" />
+        </a>                    
     </div>
 </div>

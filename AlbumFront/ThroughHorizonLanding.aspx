@@ -194,25 +194,21 @@
             </p>
         </section>
 
-        <uc:PageFooter CssClass="LnkCont" runat="server" />
-
-        <asp:PlaceHolder runat="server">
-            <% = Scripts.Render("~/bundles/jquery") %>
-
-            <script language="javascript1.1" type="text/javascript">
-                $('.FadeOnLoad').each(function () {
-                    if (!this.complete)
-                        $(this).one('load', function () { $(this).css('opacity', '1'); })
-                    else
-                        $(this).css('opacity', '1');
-                });
-            </script>
-        </asp:PlaceHolder>
-
+        <uc:PageFooter runat="server" />
         <div class="FooterContainer">
             <uc:SeoInformers ID="Informers" CssClass="SeoInformers" runat="server" /> 
-            <uc:ShareLinkIcons CssClass="ShareLinkPosHorizon" runat="server" />
+            <uc:ShareLinkIcons runat="server" />
          </div>
-    </main>
+    </main>    
+    <% = Scripts.Render("~/bundles/jquery") %>
+
+    <script language="javascript1.1" type="text/javascript">
+        $('.FadeOnLoad').each(function () {
+            if (!this.complete)
+                $(this).one('load', function () { $(this).css('opacity', '1'); })
+            else
+                $(this).css('opacity', '1');
+        });
+    </script>    
 </body>
 </html>

@@ -52,7 +52,7 @@
     <link rel="manifest" href="<%# Page.ResolveUrl("img/manifest.json") %>" />
 
     <asp:PlaceHolder runat="server">
-        <% = Styles.Render("~/bundles/gallery-css", "~/Scripts/LightBox/themes/classic/jquery.lightbox.css") %>        
+        <% = Styles.Render("~/bundles/gallery-norm-css", "~/Scripts/LightBox/themes/classic/jquery.lightbox.css") %>        
     </asp:PlaceHolder>
     <script type="text/javascript">
         function getUrlVars() {
@@ -100,65 +100,59 @@
             </ul>
             <br />
 
-            <asp:PlaceHolder ID="GalleryContent" runat="server" />            
+            <div class="thumbs">
+                <asp:PlaceHolder ID="GalleryContent" runat="server" />            
+            </div>
 
             <uc:PageFooter CssClass="Lnk" runat="server">
                 <FooterTemplate>
-                    <p class="Copyright"><a runat="server" href="<%$RouteUrl:routename=Default %>">Odyssey's Photography</a>, &copy; Aleksey Fedorov 2006 - 2026, All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server" class="Copyright" href="<%$RouteUrl:routename=HorizonLanding %>">Horizon</a></p>
+                    <p class="Copyright"><a runat="server" href="<%$RouteUrl:routename=Default %>">Odyssey's Photography</a>, &copy; Aleksey Fedorov 2006 - 2026, All rights reserved&nbsp;&nbsp;|&nbsp;&nbsp;<a runat="server" class="Copyright" href="<%$RouteUrl:routename=HorizonLanding %>">Horizon</a></p>                    
                 </FooterTemplate>
             </uc:PageFooter>
-
-            <br />
-
-            <asp:PlaceHolder runat="server">
-                <% = Scripts.Render("~/bundles/jquery", "~/bundles/lightbox") %>
-            </asp:PlaceHolder>
-
             <div class="FooterContainer">
                 <uc:SeoInformers ID="Informers" CssClass="SeoInformers" runat="server" />
-                <uc:ShareLinkIcons CssClass="ShareLinkPosHorizon" runat="server" />
-            </div>
-        </main>
-
-        <script type="text/javascript">
-            var galeryOn = true;
-            var largeOn = false;
-            (function($) {
-                const vars = getUrlVars();
-                
-                if (vars["noviewer"] == "1") {
-                    galeryOn = false;                    
-                }
-                if (vars["large"] == "1") {
-                    largeOn = true;
-                }
-                if (galeryOn) {
-                    $('div#n a').lightbox({ 'move': false });
-                }
-      
-                function switchGalery(ev, optionName, value) {
-                    ev.stopPropagation();
-
-                    const url = new URL(window.location.href);
-                    const params = url.searchParams;
-
-                    if (ev.target.checked == value) {                        
-                        params.set(optionName, '1');
-                    } else {                        
-                        params.delete(optionName);
-                    }
-                    
-                    url.search = params.toString();
-                    window.location.href = url.toString();
-                }
-
-                $('#toggleGallery').prop('checked', galeryOn == true ? true : false);
-                $('#toggleGallery').on('change', (ev) => switchGalery(ev, 'noviewer', false));
-                $('#toggleSize').prop('checked', largeOn == true ? true : false);
-                $('#toggleSize').on('change', (ev) => switchGalery(ev, 'large', true));
-            })(jQuery);
-        </script>
-
+                <uc:ShareLinkIcons runat="server" />
+            </div>            
+        </main>        
     </form>
+    <% = Scripts.Render("~/bundles/jquery", "~/bundles/lightbox") %>
+    <script type="text/javascript">
+        var galeryOn = true;
+        var largeOn = false;
+        (function ($) {
+            const vars = getUrlVars();
+
+            if (vars["noviewer"] == "1") {
+                galeryOn = false;
+            }
+            if (vars["large"] == "1") {
+                largeOn = true;
+            }
+            if (galeryOn) {
+                $('div#n a').lightbox({ 'move': false });
+            }
+
+            function switchGalery(ev, optionName, value) {
+                ev.stopPropagation();
+
+                const url = new URL(window.location.href);
+                const params = url.searchParams;
+
+                if (ev.target.checked == value) {
+                    params.set(optionName, '1');
+                } else {
+                    params.delete(optionName);
+                }
+
+                url.search = params.toString();
+                window.location.href = url.toString();
+            }
+
+            $('#toggleGallery').prop('checked', galeryOn == true ? true : false);
+            $('#toggleGallery').on('change', (ev) => switchGalery(ev, 'noviewer', false));
+            $('#toggleSize').prop('checked', largeOn == true ? true : false);
+            $('#toggleSize').on('change', (ev) => switchGalery(ev, 'large', true));
+        })(jQuery);
+    </script>
 </body>
 </html>

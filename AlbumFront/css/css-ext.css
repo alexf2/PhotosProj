@@ -58,13 +58,6 @@
   display: flex;
   align-items: center;
 }
-.Copyright {
-  font-weight: normal;
-  font-size: 0.9em;
-  font-family: Arial;
-  color: #666699;
-  clear: both;
-}
 .ContainerAbout {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -170,15 +163,6 @@ a.LinkCurr:hover,
 a.LinkCurr:focus-visible {
   text-decoration: none !important;
   color: #666699 !important;
-}
-.Lnk a {
-  color: #666699;
-  text-decoration: none;
-}
-.Lnk a:hover,
-.Lnk a:focus-visible {
-  color: #6666ff;
-  text-decoration: underline;
 }
 .LogoName {
   display: inline;
@@ -382,11 +366,49 @@ input[type=submit][disabled=true],
   -o-transition: 0.8s ease;
   transition: 0.8s ease;
 }
+/* Footer */
+.FooterContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 2rem 1rem 2rem;
+}
+/* Seo indicators container */
 .SeoInformers {
   display: flex;
   gap: 0.5rem;
-  margin: 0.5rem 0 0 2rem;
+  margin: 0;
   align-items: center;
+}
+/* Адаптация футера и шаринга на мобилке */
+@media (max-width: 768px) {
+  .FooterContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+  .SeoInformers {
+    margin: 0.4rem 0 0 0;
+  }
+}
+.Lnk a {
+  color: #666699;
+  text-decoration: none;
+}
+.Lnk a:hover,
+.Lnk a:focus-visible {
+  color: #6666ff;
+  text-decoration: underline;
+}
+.Copyright {
+  font-weight: normal;
+  font-size: 0.9em;
+  font-family: Arial;
+  font-size: 1em;
+  color: #666699;
+  clear: both;
+  padding-top: 0.2rem;
 }
 .ShareLinkPos {
   position: absolute;
