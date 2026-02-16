@@ -8,6 +8,7 @@
     Culture="auto"
     UICulture="auto"
     Title="Сквозь горизонт: хайкинг, легкоходный туризм и фото-поездки налегке" %>
+<%@ OutputCache Duration="3600" VaryByParam="none" Location="Server" %>
 
 <%@ Register TagPrefix="uc"
     TagName="YandexCounter"

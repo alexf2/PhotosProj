@@ -6,6 +6,7 @@
     Culture="auto" UICulture="auto"
     Title="<%$ AppSettings:HomePageTitle %>" 
 %>
+<%@ OutputCache Duration="3600" VaryByParam="none" Location="Server" %>
     
 
 <%@ Register TagPrefix="uc"

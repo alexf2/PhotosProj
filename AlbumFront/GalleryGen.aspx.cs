@@ -37,12 +37,22 @@ namespace AlbumFront
         {
             string galleryPath = Context.Items["OriginalGalleryPath"]?.ToString();
             var virtualPath = "~/Pub/" + galleryPath.Replace(".aspx", "");
+            var controlPath = virtualPath + ".ascx";
 
             if (!IsPostBack)
             {
-                var gallery = LoadControl(virtualPath + ".ascx");
+                var gallery = LoadControl(controlPath);
                 GalleryContent.Controls.Add(gallery);
             }
+
+            var ascxFilePath = Server.MapPath(controlPath);
+            HttpCachePolicy cache = Response.Cache;
+            cache.SetCacheability(HttpCacheability.Public);
+            cache.SetExpires(DateTime.Now.AddDays(1));
+            cache.SetValidUntilExpires(true);
+            Response.AddFileDependency(ascxFilePath);
+            cache.VaryByParams["large"] = true;
+            cache.VaryByParams["noviewer"] = true;
         }
 
         protected override void OnPreRender(EventArgs e)
