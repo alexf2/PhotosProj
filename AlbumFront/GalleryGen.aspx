@@ -129,7 +129,7 @@
                 largeOn = true;
             }
             if (galeryOn) {
-                $('div#n a').lightbox({ 'move': false });
+                $('div.card a').lightbox({ 'move': false });
             }
 
             function switchGalery(ev, optionName, value) {

@@ -115,7 +115,7 @@ ul.GalleryToolbar li a.back-btn svg:hover {
   margin-bottom: 2rem;
   align-items: flex-start;
 }
-.thumbs div#n {
+.thumbs div.card {
   display: inline-grid;
   grid-template-columns: min-content;
   padding: 0.4rem;
@@ -123,7 +123,7 @@ ul.GalleryToolbar li a.back-btn svg:hover {
   box-sizing: border-box;
   align-content: start;
 }
-.thumbs div#n img {
+.thumbs div.card img {
   display: block;
   margin: 0 auto;
   border-color: #c6c6c6;
@@ -132,7 +132,7 @@ ul.GalleryToolbar li a.back-btn svg:hover {
   border-radius: 4px;
   max-width: none;
 }
-.thumbs div#n #c {
+.thumbs div.card .caption {
   display: block;
   width: 0;
   min-width: 100%;
@@ -173,15 +173,15 @@ ul.GalleryToolbar li a.back-btn svg:hover {
   .thumbs {
     justify-content: center;
   }
-  .thumbs div#n {
+  .thumbs div.card {
     grid-template-columns: 100%;
     width: 100%;
   }
-  .thumbs div#n #c {
+  .thumbs div.card .caption {
     white-space: normal;
     width: 100%;
   }
-  .thumbs div#n img {
+  .thumbs div.card img {
     max-width: 100%;
     height: auto;
     max-height: 260px;

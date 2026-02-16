@@ -88,7 +88,7 @@ ul.GalleryToolbar {
     align-items: flex-start;
 
     div {
-        &#n {
+        &.card {
             display: inline-grid;
             grid-template-columns: min-content;
             padding: 0.4rem;
@@ -106,7 +106,7 @@ ul.GalleryToolbar {
                 max-width: none;                
             }
 
-            #c {
+            .caption {
                 display: block;                
                 width: 0; // чтобы текст заголовка обрезался по min-content (в grid layout)
                 min-width: 100%;
@@ -152,7 +152,7 @@ ul.GalleryToolbar {
         // Чтобы на планшетах блоки были в две колонки, но по картинке:
         justify-content: space-around;
 
-        div#n {
+        div.card {
             // flex тут больше не нужен, Grid сам держит размер
         }
     }
@@ -163,11 +163,11 @@ ul.GalleryToolbar {
     .thumbs {
         justify-content: center;
 
-        div#n {
+        div.card {
             grid-template-columns: 100%; // На узких экранах растягиваем
             width: 100%;
 
-            #c {
+            .caption {
                 white-space: normal; // Разрешаем перенос
                 width: 100%;
             }
