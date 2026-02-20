@@ -72,6 +72,7 @@
   font-weight: 600;
   font-style: normal;
   font-size: 11pt;
+  padding-top: 0.5rem;
 }
 .LnkCont a {
   display: inline-flex;
