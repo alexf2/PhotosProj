@@ -7,34 +7,41 @@ body {
     max-width: 100%;
 }
 
-.SectionHeaderBg {
-    height: @sect-header-height;
-    background-image: url(../img/section_header_bg.jpg);
-    white-space: nowrap;
-    display: inline-block;
-    width: 100%;
-}
-
-.SectionHeaderBgCap {
-    height: @sect-header-height;
-    width: @header-bg-width;
-    background-image: url(../img/section_header_bg_cap.jpg);
-    background-repeat: no-repeat;
-}
-
 .SectionHeader {
-    width: 162px;
-    background-image: url(../img/section_header.jpg);
-    background-repeat: no-repeat;
-    font-weight: bold;
-    font-size: 0.84em;
-    color: #0F1B52;
-    font-family: @header-font-family;
-    padding-left: 1em;
-    padding-top: 0.4em;
-    padding-bottom: 0.4em;
-    text-align: left;
+    background-image: url(../img/section_header_bg.jpg);
+    background-repeat: repeat-x;
+
+    .Wrapper {
+        position: relative;
+        font-weight: bold;
+        font-size: 0.84rem;
+        color: #0F1B52;
+        font-family: @header-font-family;
+        padding: 0.5em 0 0.9rem 0.8rem;
+        text-align: left;
+        background-image: url(../img/section_header.jpg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+        z-index: 2;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            height: @sect-header-height;
+            width: @header-bg-width;
+            background-image: url(../img/section_header_bg_cap.jpg);
+            background-repeat: no-repeat;
+        }
+    }
 }
+
+
 
 .SectionBody {
     position: relative;
@@ -45,7 +52,6 @@ body {
     color: @selection-color;
     clear: both;
 }
-
 
 .ContentLnk a {
     color: @selection-color;
@@ -77,10 +83,7 @@ body {
 
     .Left {
         float: left;
-        width: 520px;
-        white-space: -moz-pre-wrap; /* Firefox */
-        white-space: -pre-wrap; /* Opera <7 */
-        white-space: -o-pre-wrap; /* Opera 7 */
+        width: 520px;        
         white-space: normal; /* CSS3 */
         -ms-word-wrap: break-word;
         word-wrap: break-word;
@@ -102,8 +105,6 @@ body {
         }
     }
 }
-
-
 
 .FooterSep {
     clear: both;
@@ -188,11 +189,8 @@ a.LinkCurr {
 
     font-family: Verdana;
     font-size: 9pt;
-    color: #284775;
-
-    -moz-outline-style: none;
+    color: #284775;    
     outline-style: none;
-
     padding-top: 2px;
     padding-bottom: 2px;
 }
@@ -249,8 +247,6 @@ input[type = submit][disabled=true], *.Grayed {
     display: inline-block;
 }
 
-
-
 .FormButtonsPanel {
     clear: both;
     padding: 8px;
@@ -278,7 +274,7 @@ input[type = submit][disabled=true], *.Grayed {
     color: darkred;
     border: 1px solid darkred;
     margin-bottom: 2em;
-    padding: 4px 0 0 4px; /*top right bottom left*/
+    padding: 4px 0 0 4px; 
 }
 
 .OpMessageOK {
@@ -395,6 +391,7 @@ input[type = submit][disabled=true], *.Grayed {
     position: absolute;
     right: 4.6rem;
     top: -1.5rem;
+    z-index: 3;
 }
 
 /* Планшеты и мобильные */
@@ -434,12 +431,22 @@ input[type = submit][disabled=true], *.Grayed {
                 font-size: 0.85em;
                 text-align: center;
             }
-        }
-        /* Колонки складываем одну под другой */
+        }        
     }
 
     .SectionBody {
         padding: 0.3em 1em 2em 1em;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    .SectionHeader {
+        .Wrapper {
+            font-size: 0.9rem;
+            padding: 0.6em 0.6em 0.8em 0.8em;            
+        }
     }
 }
 
@@ -452,20 +459,20 @@ input[type = submit][disabled=true], *.Grayed {
 
     .ContainerAbout {
         padding: 0.3em 0.5em 2em 0.5em;
-    }
+    }    
+}
 
-    .SectionHeaderBg {
-        white-space: normal; // чтобы заголовок переносился
-        height: auto;
-    }
-
+@media (max-width: 480px) {
     .SectionHeader {
-        width: auto;
-        background-size: cover;
-    }
+        .Wrapper {
+            padding: 0.5em 0.5em 1em 0.6em;
+            font-size: 1rem; 
+            line-height: 1.2;
 
-    .SectionHeader2 {
-        width: auto;
-        padding-right: 0.5em;
+            &::after {
+                display: none;
+            }
+        }
     }
 }
+

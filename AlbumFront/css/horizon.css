@@ -66,7 +66,7 @@
   line-height: 110%;
   color: #E35F00;
 }
-.SectionHeaderHorizon {
+.SectionHeader .WrapperHorizon {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -162,7 +162,7 @@
   color: #666699;
 }
 .PlainText > p:first-of-type {
-  margin-block-start: 0.2em;
+  margin-block-start: 0.5em;
 }
 .PlainText > p:last-of-type {
   margin-block-end: 1.5em;

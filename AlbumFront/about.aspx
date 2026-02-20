@@ -5,6 +5,10 @@
     MetaDescription = "Об авторе"
     Culture="auto"  UICulture="auto" Title="Об авторе" %>
 
+<%@ Register TagPrefix="uc"
+    TagName="SectionHeader"
+    Src="~/Components/SectionHeader.ascx" %>
+
 <script language="c#" runat="server">
     public void Page_Load (object sender, EventArgs e)
     {
@@ -23,10 +27,8 @@
 
 <asp:Content ContentPlaceHolderID = "idMainContent" runat = "server" >    
 
-        <article>
-            <div class="SectionHeaderBg">
-                <div class="SectionHeader" style="float:left">Об авторе</div><div class="SectionHeaderBgCap" style="float:right"></div>
-            </div>
+        <article>            
+            <uc:SectionHeader CssClassHeader="SectionHeaderHorizon" Name="Об авторе" runat="server" />
             
             <div class="ContainerAbout">
                 <div class="Left">

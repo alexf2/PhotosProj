@@ -63,8 +63,10 @@ body.horizon {
     }
 }
 
-.SectionHeaderHorizon { 
-    .menu-font-mixin(11pt, 600);
+.SectionHeader {
+    .WrapperHorizon {
+        .menu-font-mixin(11pt, 600);
+    }
 }
 
 .LnkCont a {
@@ -159,7 +161,7 @@ body.horizon {
     color: @selection-color;
 
     > p:first-of-type {
-        margin-block-start: 0.2em;
+        margin-block-start: 0.5em;
     }
 
     > p:last-of-type {

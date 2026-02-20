@@ -147,7 +147,7 @@
         </section>
 
         <section id="instructions" class="PlainText">
-            <uc:SectionHeader CssClassHeader="SectionHeaderHorizon" Name="Как присоединиться к сообществу &quot;Сквозь Горизонт&quot;" runat="server" />
+            <uc:SectionHeader CssClassHeader="WrapperHorizon" Name="Как присоединиться к сообществу &quot;Сквозь Горизонт&quot;" runat="server" />
             
             <p>
                 База походных маршрутов ведётся в форме канала на платформе Boosty, куда и предпочтительно подписываться, так
@@ -195,7 +195,11 @@
             </p>
         </section>
 
-        <uc:PageFooter runat="server" />
+        <uc:PageFooter CssClass="Lnk" runat="server">
+            <FooterTemplate>
+                <p class="Copyright">&copy; Through Horizon 2006 - 2026&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<% = URL_HORIZON %>" class="Copyright" target="_blank" rel="noopener">About</a></p>
+            </FooterTemplate>
+        </uc:PageFooter>
         <div class="FooterContainer">
             <uc:SeoInformers ID="Informers" CssClass="SeoInformers" runat="server" /> 
             <uc:ShareLinkIcons runat="server" />
