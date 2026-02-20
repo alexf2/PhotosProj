@@ -5,6 +5,10 @@
     MetaKeywords = "Алексей Федоров, контакты, форма связи"
     Culture="auto" meta:resourcekey="MailPageResource" UICulture="auto" Codebehind="Mail.aspx.cs" %>
 
+<%@ Register TagPrefix="uc"
+    TagName="SectionHeader"
+    Src="~/Components/SectionHeader.ascx" %>
+
 <script language="c#" runat="server">
     public void Page_Load (object sender, EventArgs e)
     {
@@ -43,10 +47,8 @@
         </Scripts>
     </asp:ScriptManager>
 
-	<article>
-            <div class="SectionHeaderBg">
-                <div class="SectionHeader" style="float:left">Contact</div><div class="SectionHeaderBgCap" style="float:right" ></div>
-            </div>
+	<article>            
+            <uc:SectionHeader Name="Contact" runat="server" />
             
             <div class="FormContainer">
                 <asp:Panel ID="SendingStatus" Visible = "false" CssClass="OpMessageOK" runat="server"><asp:Literal ID="StatusMsg" runat="server" /></asp:Panel>
