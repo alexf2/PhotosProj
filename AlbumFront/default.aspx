@@ -93,6 +93,7 @@
 
         <uc:SectionHeader Name="Мини альбомы Одиссея" runat="server" />
         <section class="SectionBody">
+            <uc:CatItem Path="Spring2026/RainbowPapino" NewGal="true" Name="RainbowPapino" Description="Весна на Наре и водопаде Радужный 2026" runat="server" />
             <uc:CatItem Path="Winter2024/Frost" NewGal="true" Name="Frost" Description="Иней в декабре, 2025" runat="server" />
             <uc:CatItem Path="Winter2025/Waterfall_Gorodenka" NewGal="true" Name="Waterfall_Gorodenka" Description="Водопадик в лесу на роднике около Городенки / Шемякино, 2025" runat="server" />
             <uc:CatItem Path="Summer2022/Solotchya" NewGal="true" Name="Solotchya" Description="Окская часть тропы Паустовского, лето 2022" runat="server" />
