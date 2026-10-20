@@ -125,6 +125,7 @@
             <uc:CatItem Name="SmallKonduki" NewGal="true" Description="Малые Кондуки, лето 2020" runat="server" />
             <uc:CatItem Name="Sunflowers" NewGal="true" Description="Подсолнухи, лето 2020, Ефремов" runat="server" />
             <uc:CatItem Name="Dyunilovo" NewGal="true" Description="Дунилово, осень 2020" runat="server" />
+            <uc:CatItem Name="Kashira2019" NewGal="true" Description="Кашира, лето 2019" runat="server" />
             <uc:CatItem Name="Konstantinovo" NewGal="true" Description="Константиново, осень 2019" runat="server" />
             <uc:CatItem Name="Vorgol" NewGal="true" Description="Воргольские скалы, лето 2019" runat="server" />
             <uc:CatItem Name="Ishutino" NewGal="true" Description="Ишутино среди сезонов" runat="server" />
